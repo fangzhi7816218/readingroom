@@ -1,0 +1,441 @@
+﻿<include file="Public/header" />
+<script type="text/javascript">
+$(function(){
+	//首页左侧导航显示JS
+	//Author:xuying 
+	$(".category > ul > li").hover(function () {
+		var x=$(this).children("ul").offset().top;
+		var xx=x+275;
+	$(this).addClass("selected");
+	$(this).children("a:eq(0)").addClass("h2-tit");
+	$(this).children("ul").show().css('top', "-" + ($(this).offset().top - xx) + "px");
+	},function(){
+		$(this).removeClass("selected");
+		$(this).children(".tit").removeClass("h2-tit");
+		$(this).children("ul").hide();
+	});
+　 
+	changePanel('m_hot',$('#test_id5'),'on','hot_bott', 'changeDID');
+	changePanel('b_hot',$('#test_id8'),'on','hot_bott2', 'changeHID');
+	
+	
+	
+
+});
+
+//2011-7-26 hgds
+window.onload = getMsg;
+window.onresize = resizeDiv;
+window.onerror = function(){}
+function $_(id) {return document.getElementById(id);}
+
+var divT,divL,divW,divH,docH,docW,docST,docSL,objTimer,i = 0;
+function getMsg()
+{
+try{
+divT = parseInt($_("eMeng").style.top,10); //层top位置
+divL = parseInt($_("eMeng").style.left,10); //层left位置
+divH = parseInt($_("eMeng").offsetHeight,10);//层宽
+divW = parseInt($_("eMeng").offsetWidth,10);//层高
+docW = document.documentElement.clientWidth;//窗口宽
+docH = document.documentElement.clientHeight;//窗口高
+docST=document.documentElement.scrollTop;
+docSL=document.documentElement.scrollLeft;
+$_("eMeng").style.top = parseInt(docST,10) + docH + 10+"px";
+$_("eMeng").style.left = parseInt(docSL,10) + docW - divW+"px";
+$_("eMeng").style.visibility="visible";
+objTimer = setInterval("moveDiv()",10);
+}
+catch(e){}
+}
+function resizeDiv()
+{
+try{
+divH = parseInt($_("eMeng").offsetHeight,10);
+divW = parseInt($_("eMeng").offsetWidth,10);
+docW = document.documentElement.clientWidth;
+docH = document.documentElement.clientHeight;
+$_("eMeng").style.top = docH - divH + parseInt(document.documentElement.scrollTop,10)+"px";
+$_("eMeng").style.left = docW - divW + parseInt(document.documentElement.scrollLeft,10)+"px";
+}
+catch(e){}
+}
+function moveDiv()
+{
+try{
+if(parseInt($_("eMeng").style.top,10) <= (docH - divH + parseInt(document.documentElement.scrollTop,10)))
+{
+window.clearInterval(objTimer)
+objTimer = setInterval("resizeDiv()",1)
+}
+divT = parseInt($_("eMeng").style.top,10);
+$_("eMeng").style.top = divT - 3+"px";//速度越大越快
+}
+catch(e){}
+}
+function closeDiv()
+{
+$_('eMeng').style.visibility='hidden';
+if(objTimer) window.clearInterval(objTimer)
+}
+</script>
+<div id="layout"><!--  bd1 第一块 begin====================-->
+<div id="bd1" class="base_box" style="height:565px;"><!--  left begin  -->
+<div class="left">
+		<div class="category" >
+		<div class="category_sound"><a href="__MODULE__/Book/book_new.html" title="新书抢看>新书抢看</a></div>
+		<div class="category_top"><a href="__MODULE__/Book/book_hot.html">热门参与</a></div>
+		<h1>图书分类</h1>
+		
+		<ul>
+			<foreach name="book_cate" item="vo">
+				<li><a href="__MODULE__/Index/book_search.html?cate_id={$vo['id']}" class="tit" title="时尚生活">{$vo['name']}</a></li>
+			</foreach>
+			
+		</ul>
+		<h2>杂志分类</h2>
+		<ul>
+			<foreach name="mag_cate" item="vo">
+				<li><a href="__MODULE__/Index/book_search.html?cate_id={$vo['id']}" class="tit" title="时尚生活">{$vo['name']}</a></li>
+			</foreach>
+		</ul>
+		
+		<dt>
+		<div class="mun_magazine"><a href="__MODULE__/Magazine.html">精选报刊</a>
+		</div>
+		</dt>
+		</div>
+</div>
+<div class="center margin_left12" >
+
+<div class="recommend">
+<div class="title">
+<ul>
+	<li class="one_jx"><a href="javascript:void(0);" onMouseOver="changePanel('day',this,'toHover','cont', 'changePanelID')" is_load="1">每月精选</a></li>
+</ul>
+</div>
+<div class="cont" id="day_jx" changePanelID="cont_0">
+<div class="cont_jx_top cont_jx_top_c coda-slider preload" id="day_mag">
+<div class="panel">
+<!-- 每日精选 -->
+
+
+<foreach name="book_best" item="vo">
+	<div class="jx_magazine">
+		<div class="cover">
+			<a href="__MODULE__/Book/book_detail.html?book_id={$vo['id']}" target="_blank" title="意林">
+				<img style="height: 152px;" src="{$vo['img']}" />
+			</a>
+		</div>
+		<div class="index_title"><a href="__MODULE__/Book/book_detail.html?book_id={$vo['id']}" target="_blank" title="意林"> {$vo['name']} </a>
+		</div>
+		<h5>{$vo['add_time'] | date='Y年m月',###}版</h5>
+	</div>
+</foreach>
+
+
+
+
+
+</div>
+</div>
+
+<script type="text/javascript">$('#day_mag').codaSlider();</script></div>
+<div style="clear: both;"></div>
+
+</div>
+
+</div>
+<!-- ========================== center end ========================== -->
+
+<!-- ========================== right begin ========================== -->
+
+<div class="right" >
+
+<div class="gg margin_top12" style="height:185px;">
+		<div class="title">
+		<ul>
+			<li class="on"><a href="javascript:void(0);" is_load="1">热门书</a></li>
+		</ul>
+		</div>
+		
+		<div class="content" changeBID="content_0" style="height: 10px; display: block; overflow: hidden; border-bottom: 0px; border-right: 1px #D7D7D7 solid; border-left: 1px #D7D7D7 solid;"></div>
+		
+		<div class="content" changeBID="content_0" id="new_action_marquee" style="overflow: hidden;height:140px;">
+		<ul>
+			<foreach name="book_hot" item="vo">
+				<li><a href="__MODULE__/Book/book_detail.html?book_id={$vo['id']}" target="_blank"title="{$vo['name']}">{$vo['name']}</a></li>
+			</foreach>
+		</ul>
+		</div>
+		
+		
+		<!-- ------------------ -->
+		<script type="text/javascript">
+		                var new_action = new Marquee("new_action","new_action_marquee","up",60,1);
+		</script>
+</div>
+
+<div class="editor_recom margin_top12">
+<div class="title">
+<ul>
+	<li class="on"><a href="javascript:void(0);" onMouseOver="changePanel('editor',this,'on','maga_cover', 'changeCID')" is_load="1">本周推荐</a></li>
+</ul>
+</div>
+<div class="maga_cover" changeCID="maga_cover_0" style="overflow: hidden;">
+<ul>
+
+	<foreach name="book_hot" item="vo" key="k">
+		<if condition="$k+1 eq 1">
+			<li class="ico_1">
+				<span>15年第10</span>
+					<a href="__MODULE__/Book/book_detail.html?book_id={$vo['id']}" target="_blank" title="{$vo['name']}">{$vo['name']}</a>
+				</li>
+				<li class="cont_1">
+					<a href="__MODULE__/Book/book_detail.html?book_id={$vo['id']}" target="_blank" title="{$vo['name']}">
+					<img style="width: 55px; height: 75px;" src="{$vo['img']}" /></a>
+				<div class="reason">
+					<dt><img src="__IMAGE__/new.gif" /></dt>
+		
+				</div>
+			</li>
+		<else />
+			<li class="ico_{$k+1} ico_margin"><span>{$vo['add_time']|date='Y年m月',###}</span><a href="__MODULE__/Book/book_detail.html?book_id={$vo['id']}" target="_blank" title="{$vo['name']}">{$vo['name']|msubstr=0,5}</a></li>
+		</if>
+		<if condition="$k+1 eq 10">break;</if>
+	</foreach>
+</ul>
+</div>
+</div>
+
+</div>
+<!-- ========================== right end ========================== -->
+</div>
+<!--  bd1 第一块 end  ====================-->
+
+ <!--  bd2 第二块 begin  ====================-->
+<div class="margin_top12" id="bd2" >
+
+<div class="bd2_title">
+
+<div class="more"><a id="m_type" href="__MODULE__/Magazine.html">更多</a></div>
+</div>
+<div class="bd2_right" changeEID="bd2_right_1">
+<div class="magazine_list">
+<ul>
+<foreach name="book_m" item="vo">
+	<li>
+	<div class="pic"><a href="__MODULE__/Magazine/mag_detail.html?mag_id={$vo['id']}" target="_blank" title="{$vo['name']}">
+	<img style="height: 200px;"	src="{$vo['img']}" /></a>
+		</div>
+	<div class="txt"><a href="__MODULE__/Magazine/mag_detail.html?mag_id={$vo['id']}" title="{$vo['name']}">{$vo['name']}</a>
+	<p>{$vo['add_time']|date='Y年m月',###}</p>
+	
+	</div>
+	</li>
+</foreach>
+</ul>
+</div>
+</div>
+<div class="bd2_left">
+<div class="hot">
+<div>
+<ul class="hot_title">
+	<li><a id="test_id5" href="javascript:void(0);"
+		onMouseOver="changePanel('m_hot',this,'on','hot_bott', 'changeDID')"
+		is_load="1">热门榜</a></li>
+	<li><a href="javascript:void(0);"
+		onMouseOver="changePanel('m_search',this,'on','hot_bott', 'changeDID')"
+		is_load="0"></a></li>
+	<li><a href="javascript:void(0);"
+		onMouseOver="changePanel('m_attention',this,'on','hot_bott', 'changeDID')"
+		is_load="0"></a></li>
+</ul>
+
+<div class="small_title"></div>
+</div>
+<div class="hot_bott" id="hot_bott_0_week" changeDID="hot_bott_0" >
+<ul>
+	
+	
+	<foreach name="book_m_l" item="vo" key="k">
+	<if condition="($k+1 eq 1) or ($k+1 eq 2) or ($k+1 eq 3)">
+		<li class="ico{$k+1}">
+		<div class="pic"><a href="__MODULE__/Magazine/mag_detail.html?mag_id={$vo['id']}" target="_blank" title="{$vo['name']}"><img	style="width: 59px; height: 77px;" src="{$vo['img']}" /></a>
+			<div class="sTit"><img src="__IMAGE__/hot.gif" /></div>
+			<b><a href="__MODULE__/Magazine/mag_detail.html?mag_id={$vo['id']}" target="_blank" title="{$vo['name']}">{$vo['name']}</a></b> <b>
+			<h3>{$vo['add_time']|date="Y年m月",###}</h3>
+		</div>
+	</li>
+	<else />
+		<li class="ico{$k+1}"><span>{$vo['add_time']|date="Y年m月",###}</span><a href="__MODULE__/Magazine/mag_detail.html?mag_id={$vo['id']}" target="_blank" title="三联生活周刊">{$vo['name']|msubstr=0,5}</a></li>
+	</if>
+</foreach>
+</ul>
+</div>
+<div class="hot_bott" id="hot_bott_0_mouth" style="display: none;" changeDID="hot_bott_0_mouth">
+<foreach name="book_m_l2" item="vo" key="k">
+	<if condition="($k+1 eq 1) or ($k+1 eq 2) or ($k+1 eq 3)">
+		<li class="ico{$k+1}">
+		<div class="pic"><a href="__MODULE__/Magazine/mag_detail.html?mag_id={$vo['id']}" target="_blank" title="{$vo['name']}"><img	style="width: 59px; height: 77px;" src="{$vo['img']}" /></a>
+			<div class="sTit"><img src="__IMAGE__/hot.gif" /></div>
+			<b><a href="__MODULE__/Magazine/mag_detail.html?mag_id={$vo['id']}" target="_blank" title="{$vo['name']}">{$vo['name']}</a></b> <b>
+			<h3>{$vo['add_time']|date="Y年m月",###}</h3>
+		</div>
+	</li>
+	<else />
+		<li class="ico{$k+1}"><span>{$vo['add_time']|date="Y年m月",###}</span><a href="__MODULE__/Magazine/mag_detail.html?mag_id={$vo['id']}" target="_blank" title="三联生活周刊">{$vo['name']|msubstr=0,5}</a></li>
+	</if>
+</foreach>
+</div>
+</div>
+
+<div class="hot_2">
+<div class="hot_2_tit red_top">
+<h4>特别推荐</h4>
+
+</div>
+<?php $book_tetui_m=D('book')->where('type="m"')->order('rand()')->find();
+$book_m_buttom=D('book')->where('type="m"')->limit(7)->select();  ?>
+
+<div class="magazine_cont" id="magazine_cont_2_2" ">
+<a href="__MODULE__/Magazine/mag_detail.html?mag_id={$book_tetui_m['id']}" target="_blank" title="{$book_tetui_m['name']}"><img
+	style="width: 82px; height: 108px;"
+	src="{$book_tetui_m['img']}" /></a>
+<div class="title"><a href="__MODULE__/Magazine/mag_detail.html?mag_id={$book_tetui_m['id']} target="_blank" title="{$book_tetui_m['name']}">{$book_tetui_m['name']}</a></div>
+<br>{$vo['add_time']|date="Y年m月",###}
+	</div>
+</div>
+
+<div class="hot_3">
+
+<ul>
+<foreach name="book_m_buttom" item="vo">
+	<li><a href="__MODULE__/Magazine/mag_detail.html?mag_id={$vo['id']}" target="_blank"	title="{$vo['name']}">{$vo['name']}</a>&nbsp;&nbsp;&nbsp;&nbsp;{$vo['add_time']|date="Y年m月",###}</li>
+</foreach>
+</ul>
+</div>
+</div>
+
+
+<div style="clear: both"></div>
+
+</div>
+<!--  bd2 第二块 end    ====================--> <!--  banner02 begin  ====================-->
+
+<!--  banner02 end  ====================--> <!--  bd3 第三块 begin   ====================-->
+<div id="bd3" style="margin-top:30px;">
+<div class="bd3_title margin_top12">
+
+<div class="more"><a href="__MODULE__/Book.html">更多</a></div>
+</div>
+
+<div class="bd3_left" changeGID="bd3_left_1">
+<div class="magazine_list">
+<ul>
+<foreach name="book_b" item="vo">
+	<li>
+		<div class="pic"><a href="__MODULE__/Book/book_detail.html?book_id={$vo['id']}" target="_blank" title="手机短信中的语言学"><img style="height: 200px;" src="{$vo['img']}" /></a></div>
+		<div class="txt"><a href="__MODULE__/Book/book_detail.html?book_id={$vo['id']}" title="手机短信中的语言学">{$vo['name']}</a>
+		<p>{$vo['add_time']|date="Y年m月",###}</p>
+	</li>
+</foreach>
+	
+</ul>
+</div>
+</div>
+<div class="bd3_right">
+<div class="hot">
+<div>
+<ul class="hot_title">
+	<li><a id="test_id8" href="javascript:void(0);"
+		onMouseOver="changePanel('b_hot',this,'on','hot_bott2', 'changeHID')"
+		is_load="1">热门榜</a></li>
+	<li><a href="javascript:void(0);"
+		onMouseOver="changePanel('b_search',this,'on','hot_bott2', 'changeHID')"
+		is_load="0">热搜排行</a></li>
+	<li><a href="javascript:void(0);"
+		onMouseOver="changePanel('b_attention',this,'on','hot_bott2', 'changeHID')"
+		is_load="0">最受关注</a></li>
+</ul>
+<div class="small_title clear" id="new_small"></div>
+</div>
+<div class="hot_bott2" id="hot_bott2_0_week" changeHID="hot_bott2_0">
+<ul>
+	
+	<foreach name="book_b_r" item="vo" key="k">
+	<if condition="($k+1 eq 1) or ($k+1 eq 2) or ($k+1 eq 3)">
+		<li class="bule_ico{$k+1}">
+		<div class="pic"><a href="__MODULE__/Book/book_detail.html?book_id={$vo['id']}" target="_blank" title="{$vo['name']}"><img style="width: 59px; height: 77px;"	src="{$vo['img']}" /></a>
+		<div class="sTit"><img src="__IMAGE__/hot.gif" /></div>
+		<b><a href="__MODULE__/Book/book_detail.html?book_id={$vo['id']}" 22418" target="_blank" title="{$vo['name']}">{$vo['name']}</a></b> <b>
+		<h3>{$vo['add_time']|date="Y年m月",###}</h3>
+		</div>
+	</li>
+	<else />
+		<li class="ico4"><a href="__MODULE__/Book/book_detail.html?book_id={$vo['id']}" 21830" target="_blank" title="《XBOX ONE专辑》Vol.1">{$vo['name']}</a></li>
+	</if>
+</foreach>
+</ul>
+</div>
+<div class="hot_bott2" style="display: none;" id="hot_bott2_0_mouth" changeHID="hot_bott2_0_mouth">
+<ul>
+	<foreach name="book_b_r2" item="vo" key="k">
+	<if condition="($k+1 eq 1) or ($k+1 eq 2) or ($k+1 eq 3)">
+		<li class="bule_ico{$k+1}">
+		<div class="pic"><a href="__MODULE__/Book/book_detail.html?book_id={$vo['id']}"  target="_blank" title="{$vo['name']}"><img style="width: 59px; height: 77px;"	src="{$vo['img']}" /></a>
+		<div class="sTit"><img src="__IMAGE__/hot.gif" /></div>
+		<b><a href="__MODULE__/Book/book_detail.html?book_id={$vo['id']}" 22418" target="_blank" title="{$vo['name']}">{$vo['name']}</a></b> <b>
+		<h3>{$vo['add_time']|date="Y年m月",###}</h3>
+		</div>
+	</li>
+	<else />
+		<li class="ico4"><a href="__MODULE__/Book/book_detail.html?book_id={$vo['id']}" target="_blank" title="{$vo['name']}">{$vo['name']}</a></li>
+	</if>
+</foreach>
+</ul>
+</div>
+</div>
+
+<div class="hot_2">
+<div class="hot_2_tit bule_top">
+<h4>特别推荐</h4>
+
+</div>
+<?php $book_tetui_b=D('book')->where('type="b"')->order('rand()')->find();
+$book_b_buttom=D('book')->where('type="b"')->limit(7)->select();  ?>
+<div class="magazine_cont2" id="magazine_cont2_0_0"	style="display: block;">
+<a href="__MODULE__/Book/book_detail.html?book_id={$book_tetui_b['id']}"  target="_blank" title="{$book_tetui_b['name']}">
+<img style="width: 82px; height: 108px;" src="{$book_tetui_b['img']}" /></a>
+<div class="title"><a href="__MODULE__/Book/book_detail.html?book_id={$book_tetui_b['id']}" target="_blank"	title="中国当代青年作家选集">{$book_tetui_b['name']}"</a></div>
+<div class="title"><b>{$book_tetui_b['add_time']|date="Y年m月",###}"</b></div>
+
+</div>
+
+
+</div>
+
+<div class="hot_3">
+<ul>
+	<foreach name="book_b_buttom" item="vo">
+	<li><a href="__MODULE__/Book/book_detail.html?book_id={$vo['id']}" target="_blank"	title="{$vo['name']}">{$vo['name']|msubstr=0,5}</a>&nbsp;&nbsp;&nbsp;&nbsp;{$vo['add_time']|date="Y年m月",###}</li>
+</foreach>
+</ul>
+</div>
+</div>
+</div>
+
+</div>
+<div></div>
+<!--  bd3 第三块 end   ====================-->
+
+</div>
+<script type="text/javascript">
+
+	$(document).ready(function(){
+		get_adcode('45','');
+
+
+	});
+</script>
+<include file='Public/fooder' />

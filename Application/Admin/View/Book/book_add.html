@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>ESHOP 管理中心 - 添加新图书 </title>
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="__ADMINCSS__/general.css" rel="stylesheet" type="text/css" />
+<link href="__ADMINCSS__/main.css" rel="stylesheet" type="text/css" />
+<script src="__ADMINJS__/jquery.js"></script>
+</head>
+<body>
+
+<h1>
+<span class="action-span"><a href="__URL__/book_list">图书列表</a></span>
+<span class="action-span1"><a href="">ESHOP 管理中心</a> </span><span id="search_id" class="action-span1"> - 添加新图书 </span>
+<div style="clear:both"></div>
+</h1>
+
+<script type="text/javascript">
+//此函数用来切换选项卡
+//参数 item 代表的当前点击的 span 的标识 例如 general
+function changeTab(item) {
+    //根据当前 item的 值，将对应的table显示 或者 隐藏
+    //定义可能性数组
+    var items_arr = ['general', 'detail', 'mix', 'gallery'];
+    //遍历
+    for(var i=0; i<items_arr.length; i++){
+        //判断
+        if(items_arr[i] == item) {
+            //找到当的，将对应的table显示
+            //通过拼凑table 的id 属性 的值 找到当前的 table
+            document.getElementById(items_arr[i] + '-table').style.display = 'table';
+            //找到当前的 span  更改其 class 使用 className代表 class属性
+            document.getElementById(items_arr[i] + '-tab').className = 'tab-front';
+        } else {
+            //不是当前的
+            document.getElementById(items_arr[i] + '-table').style.display = 'none';
+            document.getElementById(items_arr[i] + '-tab').className = 'tab-back';
+
+        }
+    }
+}
+$(document).ready(function (){
+	$('#cate_p_id').change(function(){
+		$('#cate_id').empty();
+		//$('#cate_id option').remove();
+			var p_id=$(this).val();
+			
+			var data={p_id:p_id,ajax:'ajax'};
+			$.post('',data,function(msg){
+				for(var i=0;i<msg.length;i++){
+					var op=new Option(msg[i].name,msg[i].id);
+					$('#cate_id')[0].options.add(op);
+				}
+			},'json');
+	});
+});
+</script>
+
+<!-- start goods form -->
+<div class="tab-div">
+    <!-- tab bar -->
+    <div id="tabbar-div">
+      <p>
+        <span class="tab-front" id="general-tab" onclick="changeTab('general')">通用信息</span>
+        <span class="tab-back" id="detail-tab" onclick="changeTab('detail')">详细描述</span>
+        <span class="tab-back" id="mix-tab" onclick="changeTab('mix')">其他信息</span>
+      </p>
+    </div>
+
+    <!-- tab body -->
+    <div id="tabbody-div">
+      <form enctype="multipart/form-data" action="" method="post" name="theForm" >
+
+        <!-- 通用信息内容 -->
+        <table width="90%" id="general-table" align="center">
+          <tr>
+            <td class="label">图书名称：</td>
+            <td><input type="text" name="name" id="book_name" style="float:left;color:;" size="30" />
+            <span class="require-field">*</span></td>
+          </tr>
+          
+          <tr>
+            <td class="label">作者：</td>
+            <td><input type="text" name="author" id="" style="float:left;color:;" size="30" />
+            <span class="require-field">*</span></td>
+          </tr>
+          
+           <tr>
+            <td class="label">页数：</td>
+            <td><input type="text" name="pages" id="" style="float:left;color:;" size="30" />
+            <span class="require-field">*</span></td>
+          </tr>
+          
+          <tr>
+            <td class="label"> 图书编号： </td>
+            <td><input type="text" name="ibsn" value="" size="20" /><span id="goods_sn_notice"></span><br />
+            <span class="notice-span" style="display:block"  id="noticeGoodsSN">如果您不输入图书编号，系统将自动生成一个唯一的编号。</span></td>
+          </tr>
+          <tr>
+            <td class="label">图书分类：</td>
+            <td><select name="cate_p_id" id="cate_p_id">
+            <option value="">请选择...</option>
+            <foreach name="cates" item="vo">
+            	<option value="{$vo['id']}">{$vo['name']}</option>
+            </foreach>
+            </select>
+            <select name="cate_id" id='cate_id'></select>
+            <span class="require-field">*</span></td>
+          </tr>
+
+
+          <tr>
+            <td class="label">上传图书图片：</td>
+            <td>
+              <input type="file" name="book_img" size="35" /><span>支持上传图片类型 ： 'jpg', 'gif', 'png', 'jpeg'</span>
+            </td>
+          </tr>
+
+        </table>
+        <!-- 图书通用信息内容结束 -->
+
+        <!-- 图书描述 -->
+        <table width="90%" id="detail-table" style="display:none">
+          <tr>
+            <td>
+            <textarea name="description" rows="25" cols="60"></textarea>
+            </td>
+          </tr>
+        </table>
+
+
+        <!-- 图书的其他信息 -->
+        <table width="90%" id="mix-table" style="display:none" align="center">
+
+            <tr>
+            <td class="label">图书库存数量：</td>
+            <td><input type="text" name="number" value="1" size="20" disabled/><br />
+            <span class="notice-span" style="display:block"  id="noticeStorage">库存在图书为虚货或图书存在货品时为不可编辑状态，库存数值取决于其虚货数量或货品数量</span></td>
+          </tr>
+
+          <tr>
+            <td class="label">加入推荐：</td>
+            <td>
+                <input type="checkbox" name="focus" value="1"  />关注
+                <input type="checkbox" name="best" value="1"  />精品书
+                <input type="checkbox" name="new" value="1"  />新书
+                <input type="checkbox" name="hot" value="1"  />热门书
+            </td>
+          </tr>
+
+          <tr id="alone_sale_1">
+            <td class="label" id="alone_sale_2">上架：</td>
+            <td id="alone_sale_3"><input type="checkbox" name="on_sale" value="1" checked="checked" /> 打勾表示允许上架，否则不允许上架。</td>
+          </tr>
+
+           <tr>
+            <td class="label">图书排序：</td>
+            <td><input type="text" name="order" value="50" size="20" />
+            </td>
+          </tr>
+
+        </table>
+
+        <script type="text/javascript">
+        function addImg() {
+            //先找到需要插入行的 表格
+            //
+            var gallery_table = document.getElementById('gallery-table');
+//            alert(gallery_table);
+            //在 table 对象中 插入一行
+            //insertRow(插入位置),其中这个插入位置，如果为0 的话 相当于在table的开始插入一行，如果为当前的行数，相当于在table的最后插入一行。范围就是0  到 表格的行数。
+            //此方法的返回值为当前插入的tr对象。
+            //我们认为在表格的最后插入
+            var gallery_tr = gallery_table.insertRow(3);
+            //在当前的行内在 插入 td
+            //insertCell(插入位置）函数的返回值为当前插入的td对象
+            var gallery_td = gallery_tr.insertCell(0);
+            //最后在当前的td中增加需要的内容即可
+            //通过 innerHTML属性修改即可
+            gallery_td.innerHTML = '<a href="javascript:;" onclick="removeImg(this)">[-]</a>图片描述 <input type="text" name="img_desc[]" size="20" />上传文件 <input type="file" name="img_url[]" />';
+
+        }
+        /**
+         *删除某个tr，我们需要判断出来 当前需要删除那个tr。
+         *我们要删除的是 包含当前 - 的tr
+         *参数为 当前所点击的 链接对象
+         */
+        function removeImg(obj) {
+            //获得当前的table
+            var gallery_table = document.getElementById('gallery-table');
+            //获得当前tr的位置,先获得当前的tr,需要先找到点击 连接 a。
+            var gallery_tr = obj.parentNode.parentNode;
+            var tr_index = gallery_tr.rowIndex;
+
+            //删除
+            gallery_table.deleteRow(tr_index);
+
+        }
+        function check_value(){
+            if($('#book_name').val().trim() == ''){
+				alert('请填写书名');
+				return false;
+            }
+        }
+        </script>
+
+
+        <div class="button-div">
+
+          <input type="submit" value=" 确定 " class="button" onclick="return check_value()" />
+          <input type="reset" value=" 重置 " class="button" />
+        </div>
+        <input type="hidden" name="act" value="insert" />
+      </form>
+    </div>
+</div>
+<!-- end goods form -->
+
+<include file="Public/fooder" />
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> 管理中心 - 添加分类 </title>
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="__ADMINCSS__/general.css" rel="stylesheet" type="text/css" />
+<link href="__ADMINCSS__/main.css" rel="stylesheet" type="text/css" />
+<script src="__ADMINJS__/jquery.js"></script>
+</head>
+<body>
+
+<h1>
+<span class="action-span"><a href="__URL__/article_list">文章列表</a></span>
+<span class="action-span1"><a href="">管理中心</a> </span><span id="search_id" class="action-span1"> - 添加文章</span>
+<div style="clear:both"></div>
+</h1>
+<script>
+function check_title(){
+	if($('#title').val()==''){
+		alert('请填写标题');
+		return false;
+	}
+}
+</script>
+<!-- start add new category form -->
+<div class="main-div">
+
+  <form action="__ACTION__" method="post" name="theForm" >
+  <table width="100%" id="general-table">
+
+      
+      <tr>
+        <td class="label">标题:</td>
+        <td>
+          <input type="text" name="title" id="title" size="80" value="<notempty name="about">{$about['title']}</notempty>"></input>
+        </td>
+      </tr>
+       <tr>
+        <td class="label" id="small_desc"style="display:none">内容:</td>
+        <td class="label" id="big_desc" >内容:</td>
+        <td>
+          <textarea id="contents" name="contents" style="display:none"><notempty name="about">{$about['contents']}</notempty></textarea>
+<iframe ID="eWebEditor1" src="__ADMINJS__/ewebeditor/ewebeditor.htm?id=contents&style=standard" frameborder="0" scrolling="no" width="500" HEIGHT="350"></iframe>
+        </td>
+      </tr>
+      </table>
+
+      <div class="button-div">
+        <input type="submit" value=" 确定 " onclick="return check_title()"/>
+        <input type="reset" value=" 重置 " />
+      </div>
+   <input type="hidden" name="act" value="insert" />
+  </form>
+</div>
+
+
+
+<include file="Public/fooder" />
+
+</body>
+</html>

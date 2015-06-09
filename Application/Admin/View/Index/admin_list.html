@@ -1,0 +1,149 @@
+
+<!-- $Id: goods_list.htm 17126 2010-04-23 10:30:26Z liuhui $ -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>权限管理 - 管理员列表 </title>
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="__ADMINCSS__/general.css" rel="stylesheet" type="text/css" />
+<link href="__ADMINCSS__/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__ADMINJS__/transport.js"></script>
+<script type="text/javascript" src="__ADMINJS__/common.js"></script>
+<script type="text/javascript" src="__ADMINJS__/jquery.js"></script>
+<style>
+	.list-div table td{
+		text-align:center;
+	}
+</style>
+<script>
+$().ready(function(){
+	$('#selectAll').click(function (){
+		var isSelect=$(this).is(':checked');
+		$(this).parent().parent().parent().find('#select_sub').attr('checked',isSelect);
+	});
+} );
+
+
+	function comfor(){
+		if(confirm('确定要删除'))return true;
+		else return false;
+	}
+</script>
+</head>
+<body>
+
+<h1>
+<span class="action-span"><a href="__URL__/admin_add">添加管理员</a></span>
+<span class="action-span1"><a href="index.php?act=main">权限管理</a> </span><span id="search_id" class="action-span1"> - 管理员列表</span>
+<div style="clear:both"></div>
+</h1>
+<script type="text/javascript" src="__ADMINJS__/utils.js"></script><script type="text/javascript" src="js/listtable.js"></script>
+<!-- 商品搜索 -->
+<!-- $Id: goods_search.htm 16790 2009-11-10 08:56:15Z wangleisvn $ -->
+<div class="form-div">
+  <form action="__ACTION__" id="searchForm" method="post">
+    <img src="__ADMINIMAGE__/icon_search.gif" width="26" height="22" border="0" alt="SEARCH" />
+
+   
+           <!-- 上架 -->
+      <select name="root">
+      <option value=''>管理员级别</option>
+      <option value="1">超级管理员</option>
+      <option value="2">普通管理员</option>
+      </select>
+        <!-- 关键字 -->
+     用户名：<input type="text" name="username" size="15" />
+    <input type="submit" value=" 搜索 " class="button" />
+  </form>
+</div>
+
+
+
+<!-- 商品列表 -->
+  <!-- start goods list -->
+<form action="__URL__/admin_remove" method="get">
+	  <div class="list-div" id="listDiv">
+	
+	<table cellpadding="3" cellspacing="1">
+	  <tr>
+	    <th><input type="checkbox" id="selectAll">编号</th>
+	    <th>管理员</th>
+	    <th>真实名字</th>
+	    <th>联系方式</th>
+	    <th>头像</th>
+	    <th>管理员级别</th>
+	    <th>拥有操作权限</th>
+	        <th>操作</th>
+	  </tr>
+	  <notempty name="admin_list">
+	  <foreach name="admin_list" item="vo" key="k" >
+	  <tr>
+	  	<td class="first-cell"><input type="checkbox" id="select_sub" name="ids[]" value="{$vo['id']}">{$vo['id']}</td>
+	  	<td >{$vo['username']}</td>
+	  	<td>{$vo['truename']}</td>
+	  	<td>{$vo['phone']}</td>
+	  	<td>{$vo['img']}</td>
+	  	<td>
+	  		<if condition="($vo['root'] eq 1) "> 超级管理员
+	  		<else /> 普通管理员</if>
+	  	</td>
+	  	<td>
+	<?php if($vo['root']==1)echo '全部权限';
+	  elseif($vo['root'] !=1 && $vo['root_ids'] == '') echo '暂无权限';
+	  else{	
+ ?>
+	  	<select>
+	
+	  	
+	  	<?php 
+	  		$where=1;
+		$ids=$vo['root_ids'] ? $vo['root_ids'] : " ";
+
+  	$where.=" and id in(".$ids.")";
+		$menus=D('menu')->getMenu(0,$where);
+foreach($menus as $v){ ?>
+		<option><?php echo str_repeat('&nbsp;&nbsp;',$v['level'] * 2),$v['menu_name']; ?></option>
+		<?php   }  	 ?>
+	     </select>
+	     <?php } ?>
+	  	</td>
+	  	<td><a href="__URL__/admin_edit?id={$vo['id']}">编辑 </a>|<a href="__URL__/admin_remove?ids={$vo['id']}" onclick=" return comfor()"> 删除</a></td>
+	  	</tr>
+	     </foreach>
+	  <else />
+	    <tr><td class="no-records" colspan="10">没有找到任何记录</td></tr>
+	  </notempty>
+	  </table>
+	<!-- end goods list -->
+	
+	<!-- 分页 -->
+	<table id="page-table" cellspacing="0">
+	  <tr>
+	    <td align="right" nowrap="true">
+	            <div id="turn-page">
+	            {$show}
+	          <select id="gotoPage" onchange="listTable.gotoPage(this.value)">
+	            <option value='1'>1</option>          </select>
+	        </span>
+	      </div>
+	    </td>
+	  </tr>
+	</table>
+	
+	</div>
+	<div class="form-div">
+	    <input type="submit" value=" 批量删除" class="button" onclick="return confirm('确定要删除以上管理员')" />
+	
+	</div>
+</form>
+<script>
+            document.getElementById('searchForm').root.value="{$param['root']}";
+            document.getElementById('searchForm').username.value="{$param['username']}";
+</script>
+
+<include file="Public/fooder" />
+
+</body>
+</html>

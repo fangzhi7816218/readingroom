@@ -1,0 +1,147 @@
+
+<!-- $Id: goods_list.htm 17126 2010-04-23 10:30:26Z liuhui $ -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>权限管理 - 管理员列表 </title>
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="__ADMINCSS__/general.css" rel="stylesheet" type="text/css" />
+<link href="__ADMINCSS__/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__ADMINJS__/transport.js"></script>
+<script type="text/javascript" src="__ADMINJS__/common.js"></script>
+<script src="__ADMINJS__/jquery.js"></script>
+<style>
+	.list-div table td{
+		text-align:center;
+	}
+</style>
+
+</head>
+<body>
+
+<h1>
+<span class="action-span"><a href=""></a></span>
+<span class="action-span1"><a href="">后台布局</a> </span><span id="search_id" class="action-span1"> - 评论列表</span>
+<div style="clear:both"></div>
+</h1>
+<script type="text/javascript" src="__ADMINJS__/utils.js"></script><script type="text/javascript" src="js/listtable.js"></script>
+<!-- 商品搜索 -->
+<!-- $Id: goods_search.htm 16790 2009-11-10 08:56:15Z wangleisvn $ -->
+<div class="form-div">
+  <form action="__ACTION__" id="searchForm" method="post">
+    <img src="__ADMINIMAGE__/icon_search.gif" width="26" height="22" border="0" alt="SEARCH" />
+
+        <!-- 关键字 -->
+     用户名：<input type="text" name="user_name" size="15" />
+     被评论的图书：<input type="text" name="book_name" size="15" />
+    <input type="submit" value=" 搜索 " class="button" />
+  </form>
+</div>
+
+
+
+<!-- 商品列表 -->
+  <!-- start goods list -->
+  <form action="__URL__/com_remove" method="get">
+  <div class="list-div" id="listDiv">
+<table cellpadding="3" cellspacing="1">
+  <tr>
+    <th><input type="checkbox" id="selectAll">编号</th>
+    <th>用户名</th>
+    <th>用户头像</th>
+    <th>评论图书/杂志</th>
+    <th>图书/杂志图片</th>
+    <th>评论内容</th>
+   
+    <th>回复对象</th>
+    <th>评论时间</th>
+    <th>审核</th>
+        <th>操作</th>
+  </tr>
+  <notempty name="coms">
+  <foreach name="coms" item="vo">
+  <tr>
+  	<td class="first-cell"><input type="checkbox" id="select_sub" name="ids[]" value="{$vo['id']}">{$vo['id']}</td>
+  	<td >{$vo['username']}</td>
+  	<td><img src="<notempty name="vo['u_img']">{$vo['u_img']}<else />__ADMINIMAGE__/user_img/user_default.png</notempty>" width="50px" height="45px" /></td>
+  	<td >{$vo['book_name']}</td>
+  	<td><img src="<notempty name="vo['b_img']">{$vo['b_img']}<else />__ADMINIMAGE__/user_img/user_default.png</notempty>" width="50px" height="45px" /></td>
+  	<td >{$vo['contents']}</td>
+  	
+  	<td >
+  		<?php if($vo['reply_id']['u_id']){
+		echo	$reply_username=D('user')->where('id='.$vo['reply_id']['u_id'])->getField('username');
+	}else{echo '一级评论';} ?>
+  	</td>
+  	
+  	<td >{$vo['time']|date="Y年m月d日",###}</td>
+    <td><img src="__ADMINIMAGE__/<?php echo $vo['status'] ? 'yes' : 'no';?>.gif" style="cursor:pointer" onclick="change(this)"/>
+    <input type="hidden" value="{$vo['id']}" />
+    </td>
+    
+    
+  	<td><a href="__URL__/com_remove?ids={$vo['id']}" onclick="return confirm('确定要删除吗？')"> 删除</a></td>
+  	</tr>
+     </foreach>
+  <else />
+    <tr><td class="no-records" colspan="10">没有找到任何记录</td></tr>
+  </notempty>
+  </table>
+<!-- end goods list -->
+
+<!-- 分页 -->
+<table id="page-table" cellspacing="0">
+  <tr>
+    <td align="right" nowrap="true">
+            <div id="turn-page">
+            {$page}
+          <select id="gotoPage" onchange="listTable.gotoPage(this.value)">
+            <option value='1'>1</option>          </select>
+        </span>
+      </div>
+    </td>
+  </tr>
+</table>
+
+</div>
+<div class="form-div">
+	    <input type="submit" value=" 批量删除" class="button" onclick="return confirm('确定要删除以上管理员')" />
+	
+</div>
+</form>
+<script>
+$().ready(function(){
+	$('#selectAll').click(function (){
+		var isSelect=$(this).is(':checked');
+		$(this).parent().parent().parent().find('#select_sub').attr('checked',isSelect);
+	});
+} );
+            document.getElementById('searchForm').book_name.value="{$param['book_name']}";
+            document.getElementById('searchForm').user_name.value="{$param['user_name']}";
+          //单击事件
+        	function change(d){
+        		//获取当前img标签的src属性值
+        		var value = d.src;
+        		var com_id=$(d).parent().find(':input').val();
+        		//判断yes或者no是否在字符串中存在
+        		if(value.match('yes')){
+
+        			$.post('',{act:'no',ajax:'ajax',com_id:com_id},function(msg){
+								if(msg) d.src = '/Public/Admin/images/no.gif';
+            		},'json');
+            		
+        			
+        		}else{
+        			$.post('',{act:'yes',ajax:'ajax',com_id:com_id},function(msg){
+						if(msg)  d.src = '/Public/Admin/images/yes.gif';
+    				},'json');
+        			
+        		}
+        	}
+</script>
+
+<include file="Public/fooder" />
+</body>
+</html>

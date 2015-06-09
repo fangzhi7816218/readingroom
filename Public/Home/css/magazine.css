@@ -1,0 +1,426 @@
+@charset "utf-8";
+/* CSS Document */
+/*  ===================================   public begin  ===================================  */
+*{ margin:0; padding:0;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{ padding:0;margin:0;font-size:12px;}
+fieldset,img {border: 0;}
+ol,ul,li {list-style: none;}
+a{ text-decoration:none;}
+img{ border:0;}
+.clear{ clear:both;}
+.margin_left12{ margin-left:12px;}
+.margin_rihgt12{ margin-rihgt:12px;}
+.margin_top12{ margin-top:12px;}
+.margin_bottom12{ margin-bottom:12px;}
+.m_lines{background:url(http://www.dooland.com/magazine/images/header_fg.jpg) no-repeat right center; padding:0 5px;}
+/*  ===================================   public end  ===================================  */
+
+/*  ===================================   main  ===================================  */
+#magazine_main{ width:990px; margin:0 auto;}
+/*  ===================================   main  ===================================  */
+
+/*  ===================================   m_bd1 第一块 begin  ===================================  */
+#m_bd1{ width:990px; height:900px;}
+/*  ===================================   m_bd1 第一块 left begin  ===================================  */
+#m_bd1 .bd1_left{ width:152px; float:left;} 
+#m_bd1 .bd1_left .m_sort{ width:150px; height:auto;border: 1px solid #D7D7D7; border-top:none; background:#FAFAFA;}
+#m_bd1 .bd1_left .m_sort h1{ width:150px; height:31px; background:url(../images/m_bd1_title.jpg) no-repeat 0 0;}
+#m_bd1 .bd1_left .m_sort dl{ border-top:1px solid #d7d7d7;}
+#m_bd1 .bd1_left .m_sort dl dt{ padding:0 8px; line-height:27px; font-size:12px; background:url(../images/mag_index/m_sort_dt.jpg) no-repeat 80px 12px;}
+#m_bd1 .bd1_left .m_sort dl dt a{color:#333232; font-weight:bold;}
+#m_bd1 .bd1_left .m_sort dl dd{padding:0 2px 2px 8px;line-height:21px;}
+#m_bd1 .bd1_left .m_sort dl dd a{color:#333232; padding-right:3px;_padding-right:3px;}
+#m_bd1 .bd1_left .m_sort dl dd a:hover{ color:#cb1b2a;}
+#m_bd1 .bd1_left .m_sort span{ height:30px;}
+#m_bd1 .bd1_left .m_sort .red{ color:#cb1b2a;}
+#m_bd1 .bd1_left .m_sort .ty{ height:34px;line-height:34px; border-top:1px solid #cb1b2a;}
+#m_bd1 .bd1_left .m_sort .ty a{ color:#d7252e; font-size:14px; padding-left:20px; font-weight:bold; }
+#m_bd1 .bd1_left .left_look{ width:150px; height:317px; border:1px solid #d7d7d7;}
+#m_bd1 .bd1_left .left_look .left_look_ti{ width:150px; height:30px; color:#333232; line-height:30px; text-indent:10px; background:#f7f7f7; font-weight:bold;}
+#m_bd1 .bd1_left .left_look .look_pic{ width:150px; margin: 10px 0; text-align:center;}
+#m_bd1 .bd1_left .left_look ul{margin:0 0 0 10px;}
+#m_bd1 .bd1_left .left_look li{ line-height:20px;}
+#m_bd1 .bd1_left .left_look a{ color:#4b4a4a;}
+/*  ===================================   m_bd1 第一块 left end  ===================================  */
+
+#m_bd1 .bd1_right{ width:827px; float:right;}
+#m_bd1 .bd1_right .h_brand{ float:left;width: 140px;margin-left: 25px; height:30px; overflow:hidden;line-height: 30px;}
+#m_bd1 .bd1_right .h_brand a{ color:#515659;}
+#m_bd1 .bd1_right .h_brand a:hover{ padding:5px 2px;background:#cb1b2a; color:#fff;}
+#m_bd1 .bd1_right .eng_search{ width:825px; height:30px; border:1px solid #d7d7d7;}
+#m_bd1 .bd1_right .eng_search a{ width:17px; height:17px; display:block;  color:#333333; margin:8px 9px 0 0;float:left; text-align:center; line-height:17px;}
+#m_bd1 .bd1_right .eng_search .on,#m_bd1 .bd1_right .eng_search a:hover{ width:17px; height:17px;background:url(../images/mag_index/m_eng_search_bg.jpg) no-repeat right top; color:#fff;}
+#m_bd1 .bd1_right .eng_search .txt{ width:85px; height:30px; line-height:30px; text-align:center; color:#333333; float:left;}
+#m_bd1 .bd1_right .eng_search span a{ width:30px; height:17px;}
+#m_bd1 .bd1_right .eng_search span .on,#m_bd1 .bd1_right .eng_search span a:hover{ width:30px; height:17px;background:url(../images/mag_index/m_eng_search_span_bg.jpg) no-repeat right top;}
+#m_bd1 .bd1_right .right_left01{ width:630px; float:left;}
+#m_bd1 .bd1_right .right_left01 .flash{ width:630px; height:188px; z-index:1;}
+
+/*  ******   最新上线 begin ******  */
+#m_bd1 .bd1_right .right_left01 .news_line{ width:628px; height:960px; border:1px solid #d7d7d7;}
+
+/*  ******   最新上线top begin ******  */
+#m_bd1 .bd1_right .right_left01 .news_line .news_line_top{ width:628px; height:30px;border-bottom: 1px solid #d7d7d7;}
+#m_bd1 .bd1_right .right_left01 .news_line .news_line_top .n_title{ width:236px; height:30px; background:#f7f7f7; float:left;}
+#m_bd1 .bd1_right .right_left01 .news_line .news_line_top .n_title ul{}
+#m_bd1 .bd1_right .right_left01 .news_line .news_line_top .n_title li{ width:117px; height:30px; line-height:30px; float:left; text-align:center;border-right: 1px solid #D7D7D7;border-bottom:1px solid #d7d7d7;}
+#m_bd1 .bd1_right .right_left01 .news_line .news_line_top .n_title li a{ color:#333;font-size:14px; font-weight:bold;}
+#m_bd1 .bd1_right .right_left01 .news_line .news_line_top .n_title .on,#m_bd1 .bd1_right .right_left01 .news_line .news_line_top .n_title li:hover{background: #fff;width:117px; border-bottom:none;padding-bottom: 1px;}
+#m_bd1 .bd1_right .right_left01 .news_line .news_line_top .n_title .on a{color:#cb1b2a; font-size:14px; font-weight:bold;}
+#m_bd1 .bd1_right .right_left01 .news_line .news_line_top .gg_scroll{ width:300px; height:30px; float:left; background:url(../images/mag_index/m_gg_scroll_bg.jpg) no-repeat 10px 10px; line-height:30px;border-bottom:1px solid #d7d7d7; overflow:hidden; }
+#m_bd1 .bd1_right .right_left01 .news_line .news_line_top .gg_scroll ul{ margin-left:10px;}
+#m_bd1 .bd1_right .right_left01 .news_line .news_line_top .gg_scroll li{ width:300px; height:30px; line-height:30px;padding-left:25px;}
+#m_bd1 .bd1_right .right_left01 .news_line .news_line_top .gg_scroll a{ color:#838383; }
+#m_bd1 .bd1_right .right_left01 .news_line .news_line_top .m_more{ width:92px; height:30px;float:right;border-bottom:1px solid #d7d7d7; line-height:30px;}
+#m_bd1 .bd1_right .right_left01 .news_line .news_line_top .m_more .k_sit{ _height: 20px; _overflow: hidden; float:left;}
+#m_bd1 .bd1_right .right_left01 .news_line .news_line_top .m_more b{ width:10px; height:10px;background:#eaeaea; display:block; float:left; margin:10px 2px;}
+#m_bd1 .bd1_right .right_left01 .news_line .news_line_top .m_more .on_b{ background:#9f9f9f;}
+#m_bd1 .bd1_right .right_left01 .news_line .news_line_top .m_more span{ width:45px; height:30px; background:url(../images/mag_index/m_more_bg.jpg) no-repeat 32px 12px; float:right; text-indent:5px;}
+#m_bd1 .bd1_right .right_left01 .news_line .news_line_top .m_more span a{ color:#838383;}
+
+#m_bd1 .bd1_right .right_left01 .mag_banner{ width:630px; height:50px;}
+/*  ******   最新上线top end ******  */
+#m_bd1 .bd1_right .right_left01 .news_line .news_cont{ width:628px; height:232px;}
+#m_bd1 .bd1_right .right_left01 .news_line .news_cont .news_left{ width:28px; height:211px; float:left;}
+#m_bd1 .bd1_right .right_left01 .news_line .news_cont .news_left img,#m_bd1 .bd1_right .right_left01 .news_line .news_cont .news_right img{ margin-top:75px;}
+#m_bd1 .bd1_right .right_left01 .news_line .news_cont .news_center{ width:626px; height:230px; float:left;}
+#m_bd1 .bd1_right .right_left01 .news_line .news_cont .news_right{ width:28px; height:211px; float:right;}
+
+.news_magazine{ width:122px; height:215px; float:left;font-weight:lighter; margin:10px 10px 0 10px;_margin:10px 10px 0 5px;}
+.news_magazine .title{ width:122px; height:20px; overflow:hidden;}
+
+.nl_magazine{ width:122px; height:215px; float:left;font-weight:lighter; margin: 10px 11px 0 11px;_margin:10px 10px 0 12px;}
+.nl_magazine .title{ width:122px; height:20px; overflow:hidden;}
+.nl_magazine img,.news_magazine img{float:left;padding: 3px;border-right: 1px solid #9C9C9C;border-bottom: 1px solid #9C9C9C;border-top: 1px solid #E4E4E4;border-left: 1px solid #E4E4E4; margin-bottom:5px;}
+.nl_magazine a,.news_magazine a{ width:122px; line-height:20px;color:#4b4a4a;float:left; font-weight:bold; overflow:hidden;}
+.nl_magazine h5,.news_magazine h5{ width:122px;color:#777; font-weight:lighter;float:left; line-height:16px; overflow:hidden; height:16px;}
+.nl_magazine b,.news_magazine b{ width:122px; color:#4B4A4A;font-weight:lighter;float:left; }
+.nl_magazine b span,.news_magazine b span{ color:#777777; margin-left:5px; float:left;}
+.nl_magazine b span .zizhi,.news_magazine b span .zizhi{ float:left; text-decoration:none;}
+.nl_magazine b span p,.news_magazine b span p{text-decoration:line-through; float:right;_folat:left;}
+.nl_magazine b strong,.news_magazine b strong{ font-weight:bold;color:#d7252f;}
+
+.pf_magazine{ width:122px; height:235px; float:left;font-weight:lighter; margin:15px 15px 0 15px;_margin:15px 10px 0 15px;}
+.pf_magazine .title{ width:122px; height:20px; overflow:hidden;}
+.pf_magazine img{float:left;padding: 3px;border-right: 1px solid #9C9C9C;border-bottom: 1px solid #9C9C9C;border-top: 1px solid #E4E4E4;border-left: 1px solid #E4E4E4; margin-bottom:5px;}
+.pf_magazine a{ width:122px; line-height:20px;color:#4b4a4a;float:left; font-weight:bold;}
+.pf_magazine h5{ width:122px; line-height:16px;color:#9b9b9b; font-weight:lighter;float:left; height:16px; overflow:hidden;}
+.pf_magazine b{ width:122px; color:#4B4A4A;font-weight:lighter; line-height:16px; float:left; }
+.pf_magazine b span{ color:#777777; margin-left:15px; float:left;}
+.pf_magazine b span .zizhi{ float:left; text-decoration:none;}
+.pf_magazine b span p{text-decoration:line-through; float:right;_folat:left;}
+.pf_magazine b strong{ font-weight:bold; color:#D7252F;}
+.pf_magazine p{color:#5f5f5f; line-height:18px;}
+
+.free_magazine{ width:122px; height:210px; float:left;font-weight:lighter; margin:0 11px 0 11px;_margin:0 10px 0 3px;}
+.free_magazine .title{ width:122px; height:20px; overflow:hidden;}
+.free_magazine img{float:left;border-bottom: 1px solid #9C9C9C;border-left: 1px solid #E4E4E4;border-right: 1px solid #9C9C9C;border-top: 1px solid #E4E4E4;padding: 3px; margin-bottom:5px;}
+.free_magazine a{ width:122px; line-height:22px;color:#4b4a4a;float:left; font-weight:bold;overflow:hidden;}
+.free_magazine h5{ width:122px;color:#777; font-weight:lighter; height:15px; overflow:hidden;}
+
+#m_bd1 .bd1_right .right_left01 .fl_reco{ width:628px; height:728px; border:1px solid #d7d7d7;}
+#m_bd1 .bd1_right .right_left01 .fl_reco .fl_top{ width:628px; height:32px; line-height:32px; text-align:center;color:#333;}
+#m_bd1 .bd1_right .right_left01 .fl_reco .fl_top ul{ float:left;}
+#m_bd1 .bd1_right .right_left01 .fl_reco .fl_top li{ width:69px; line-height:32px; float:left; display:block;}
+#m_bd1 .bd1_right .right_left01 .fl_reco .fl_top a{ color:#838383;}
+#m_bd1 .bd1_right .right_left01 .fl_reco .fl_top .on{width:60px; height:32px; display:block; color:#fff; background:#cb1b2a;}
+#m_bd1 .bd1_right .right_left01 .fl_reco .fl_top .on a{ color:#fff;}
+#m_bd1 .bd1_right .right_left01 .fl_reco .fl_top span{ width:45px; height:32px; background:url(http://www.dooland.com/magazine/images/mag_index/m_more_bg.jpg) no-repeat 40px 12px; float:left; text-indent:5px;}
+#m_bd1 .bd1_right .right_left01 .fl_reco .fl_top .tit{ width:100px; height:32px; float:left; font-size:14px; font-weight:bold;}
+
+#m_bd1 .bd1_right .right_left01 .fl_reco .fl_cont{ width:628px; height:284px;_height:270px; }
+#m_bd1 .bd1_right .right_left01 .fl_reco .fl_cont .fl_maga{ width:578px;padding:0 25px;_padding:0 12px;height:255px;}
+#m_bd1 .bd1_right .right_left01 .fl_reco .fl_cont .fl_cont_bott{ width:628px;border-top:1px solid #d7d7d7; height:48px;}
+#m_bd1 .bd1_right .right_left01 .fl_reco .fl_cont .fl_cont_bott ul li{ width:256px; margin-top:7px;*margin-top:3px;_margin-top:3px;float:left; margin-left:40px;_margin-left:18px; padding-left:10px;background:url(http://www.dooland.com/magazine/images/gg_list_bg.jpg) no-repeat left center;*height:20px;}
+#m_bd1 .bd1_right .right_left01 .fl_reco .fl_cont .fl_cont_bott ul li a{ color:#4b4a4a; display:block; float:left;}
+#m_bd1 .bd1_right .right_left01 .fl_reco .fl_cont .fl_cont_bott span{ float:left; padding-left:10px; color:#777;}
+/*  ******   最新上线 end ******   */
+
+/*  ******   最右边 begin ******  */
+#m_bd1 .bd1_right .right_rihgt02{ width:184px; float:right;_overflow-x: hidden;}
+
+.tag_vip{width:150px;z-index:99;position: relative; top: 85px; height: 45px; padding-top: 5px; left: 65px; margin-top: -50px;}
+.cw_vip{ width:150px;z-index:99;background:url(http://www.dooland.com/magazine/images/cw_vip_03.jpg) no-repeat top center;position: relative; top: 45px; height: 45px; padding-top: 5px;margin-top: -50px;}
+.cw_vip .cw_vip_cont{ width:150px; height:46px;background:#000000;filter:alpha(opacity=70);-moz-opacity:0.7;opacity: 0.7; }
+.cw_vip .cw_vip_wz{ width:150px; height:46px; z-index:1000;}
+.cw_vip .cw_vip_wz p{ width:120px;color:#fff; padding:8px 6px; float:left;}
+.cw_vip .cw_vip_wz b{ float:right; margin:0; padding:0; width:13px; height:12px;}
+.cw_vip .cw_vip_wz b a{font-size:12px; color:#fff;}
+
+#m_bd1 .bd1_right .right_rihgt02 .m_vip{width:182px; height:32px; border:1px solid #cb1b2a;}
+#m_bd1 .bd1_right .right_rihgt02 .m_vip a{ float:left; line-height:32px; margin:0 2px; color:#282828;}
+#m_bd1 .bd1_right .right_rihgt02 .m_vip a strong{ color:#c11226;}
+#m_bd1 .bd1_right .right_rihgt02 .m_vip a:hover{ text-decoration:underline;}
+
+#m_bd1 .bd1_right .right_rihgt02 .hot_update{ width:180px; height:123px;}
+#m_bd1 .bd1_right .right_rihgt02 .hot_update .hot_tit{ width:184px; height:32px;background:#efefef;}
+#m_bd1 .bd1_right .right_rihgt02 .hot_update .hot_tit li{width:92px; height:32px; line-height:32px; float:left; text-align:center;border-bottom:1px solid #d7d7d7;}
+#m_bd1 .bd1_right .right_rihgt02 .hot_update .hot_tit li a{color: #4B4A4A; display: block;height: 32px; }
+#m_bd1 .bd1_right .right_rihgt02 .hot_update .hot_tit .hot_on, #m_bd1 .bd1_right .right_rihgt02 .hot_update .hot_tit li:hover {border:1px solid #d7d7d7; border-bottom:none; background:#fff;color:#000; width:90px;}
+
+#m_bd1 .bd1_right .right_rihgt02 .hot_update .hot_cont{ width:182px; height:190px; border:1px solid #d7d7d7; border-top:none;}
+#m_bd1 .bd1_right .right_rihgt02 .hot_update .hot_cont ul{ padding:0 5px 0 0px;}
+#m_bd1 .bd1_right .right_rihgt02 .hot_update .hot_cont li{ width:175px; line-height:25px; height:25px;}
+#m_bd1 .bd1_right .right_rihgt02 .hot_update .hot_cont li a{ color:#646464; float:left; margin-left:5px;}
+#m_bd1 .bd1_right .right_rihgt02 .hot_update .hot_cont li span{ float:right; color:#a4a4a4;}
+
+#m_bd1 .bd1_right .right_rihgt02 .right_banner{ width:184px; height:67px;}
+
+.xs_cursor{ width:184px; height:585px;}
+.xs_cursor .xs_cursor_top{ width:182px; height:43px;border:1px solid #d7d7d7;border-radius:15px 15px 0 0;text-align:center;line-height:43px;font-size:150%;font-weight:bold;}
+.xs_cursor .xs_cursor_week{width:182px; height:30px; background:#EFEFEF; border-left:1px solid #d7d7d7;border-right:1px solid #d7d7d7;}
+.xs_cursor .xs_cursor_week ul{ width:184px; margin:0 -1px;}
+.xs_cursor .xs_cursor_week li{width:91px; height:30px; line-height:30px; float:left; text-align:center;border-bottom:1px solid #d7d7d7;}
+.xs_cursor .xs_cursor_week li a{color: #4B4A4A; display: block;height: 32px; }
+.xs_cursor .xs_cursor_week .on,.xs_cursor .xs_cursor_week li:hover {border:1px solid #d7d7d7; border-bottom:none;border-top:none; background:#fff;color:#000; width:91px;}
+.xs_cursor .xs_cursor_week02{ width:182px; height:39px;border:1px solid #d7d7d7; border-top:none;}
+.xs_cursor .xs_cursor_week02 li{ width:44px;float:left;text-align:center;}
+.xs_cursor .xs_cursor_week02 li a{width:39px; height:20px; color:#333; line-height:20px; display:block; margin:10px 0 0 5px;}
+.xs_cursor .xs_cursor_week02 li .week_on,.xs_cursor .xs_cursor_week02 li a:hover{ width:39px; height:20px;/*background:url(../images/mag_index/m_week02_bg.jpg) no-repeat left top;*/ }
+.xs_cursor .xs_cursor_week02 li .week_on{font-weight:bold;}
+.xs_cursor .xs_cursor_cont{ width:182px; height:491px; border:1px solid #d7d7d7; border-top:none;}
+.xs_cursor .xs_cursor_cont ul{ width:165px; margin-left:8px;padding-top: 10px;}
+.xs_cursor .xs_cursor_cont li{ padding-left:20px;}
+.xs_cursor .xs_cursor_cont li a{ color:#4b4a4a; line-height:26px;}
+.xs_cursor .xs_cursor_cont li strong{ float:left;}
+.xs_cursor .xs_cursor_cont li span{ float:right; color:#777; line-height:26px;}
+.xs_cursor .xs_cursor_cont .pic{ width:150px; height:87px;}
+.xs_cursor .xs_cursor_cont .pic img{ float:left;}
+.xs_cursor .xs_cursor_cont .pic .sTit{ width:80px; float:left; margin-left:10px; margin-bottom:0px;}
+.xs_cursor .xs_cursor_cont .pic b{ width:80px; float:left; margin-left:10px; font-weight:lighter; line-height:20px; color:#4b4a4a; height:20px; overflow:hidden;}
+.xs_cursor .xs_cursor_cont .pic h3{ color:#777777; font-weight:lighter;}
+.xs_cursor .xs_cursor_cont .pic strong{ color:#d7252f;padding-right: 2px;float: left;}
+.xs_cursor .xs_cursor_cont .pic .magazine_jg{float:left;}
+.xs_cursor .ico1{ background: url(http://www.dooland.com/magazine/images/hot_ico1.jpg) no-repeat left top; margin-bottom:5px; *margin-bottom:2px;_margin-bottom:0px;}
+.xs_cursor .ico2{ background: url(http://www.dooland.com/magazine/images/hot_ico2.jpg) no-repeat left top; margin-bottom:5px; *margin-bottom:2px;_margin-bottom:0px;}
+.xs_cursor .ico3{ background: url(http://www.dooland.com/magazine/images/hot_ico3.jpg) no-repeat left top;}
+.xs_cursor .ico4{ background: url(http://www.dooland.com/magazine/images/hot_ico4.jpg) no-repeat left center;}
+.xs_cursor .ico5{ background: url(http://www.dooland.com/magazine/images/hot_ico5.jpg) no-repeat left center;}
+.xs_cursor .ico6{ background: url(http://www.dooland.com/magazine/images/hot_ico6.jpg) no-repeat left center;}
+.xs_cursor .ico7{ background: url(http://www.dooland.com/magazine/images/hot_ico7.jpg) no-repeat left center;}
+.xs_cursor .ico8{ background: url(http://www.dooland.com/magazine/images/hot_ico8.jpg) no-repeat left center;}
+.xs_cursor .ico9{ background: url(http://www.dooland.com/magazine/images/hot_ico9.jpg) no-repeat left center;}
+.xs_cursor .ico10{ background: url(http://www.dooland.com/magazine/images/hot_ico10.jpg) no-repeat left center;}
+/*  ******   最右边 begin ******  */
+/*  ===================================   m_bd1 第一块 end  ===================================  */
+
+/*  ===================================   banner02  ===================================  */
+#m_banner2{ width:990px; height:70px; margin-top:12px;_margin-top:6px;}
+/*  ===================================  banner02  ===================================  */
+
+/*  ===================================   m_bd2 第二块 begin  ===================================  */
+#m_bd2{ width:990px;}
+/*  ******   bd2 left begin ******  */
+#m_bd2 #m_bd2_left{ width:152px; float:left;}
+#m_bd2 #m_bd2_left .title{ width:150px; height:32px; background:#f7f7f7;line-height:32px; text-indent:10px;color:#333232; font-weight:bold;}
+#m_bd2 #m_bd2_left .m_like{ width:150px; height:340px; border:1px solid #d7d7d7;}
+#m_bd2 #m_bd2_left .m_like .dashed_bot{ width:141px; border-bottom:1px dashed #cdcdcd;}
+#m_bd2 #m_bd2_left .m_like ul{ margin:5px 0;}
+#m_bd2 #m_bd2_left .m_like li{ line-height:32px; width:145px; margin-left:4px;}
+#m_bd2 #m_bd2_left .m_like li a{color:#313131; margin:0 10px;*margin:0 5px;_margin:0 0px;text-indent:10px;}
+#m_bd2 #m_bd2_left .m_like li span{color:#707070;}
+#m_bd2 #m_bd2_left .m_like li .like_magazine{ width:141px; height:200px; text-align:center; padding-top:5px;}
+#m_bd2 #m_bd2_left .m_like li .like_magazine img{ border:1px solid #d7d7d7; _margin-bottom:5px;}
+#m_bd2 #m_bd2_left .m_like li .like_magazine p{}
+#m_bd2 #m_bd2_left .m_like li .like_magazine p a{ margin:0; padding:0; color:#313131; line-height:28px;}
+#m_bd2 #m_bd2_left .m_like li .like_magazine b{ font-weight:lighter; color:#707070; line-height:18px; display:block;}
+
+#m_bd2 #m_bd2_left .bd2_banner2{ width:152px; height:161px;}
+
+#m_bd2 #m_bd2_left .hot_brand{ width:150px; height:284px;  border:1px solid #d7d7d7; }
+#m_bd2 #m_bd2_left .hot_brand ul{ padding-top:5px;}
+#m_bd2 #m_bd2_left .hot_brand li{ line-height:24px; margin-left:10px; text-indent:5px; }
+#m_bd2 #m_bd2_left .hot_brand li a{ color:#646464;}
+.m_ico_1{ background:url(../images/mag_index/1_ico.jpg) no-repeat 0 6px; padding-left:10px;}
+.m_ico_2{ background:url(../images/mag_index/m_2_ico.jpg) no-repeat 0 6px; padding-left:10px;}
+.m_ico_3{ background:url(../images/mag_index/m_3_ico.jpg) no-repeat 0 6px; padding-left:10px;}
+.m_ico_4{ background:url(../images/mag_index/4_ico.jpg) no-repeat 0 6px; padding-left:10px;}
+.m_ico_5{ background:url(../images/mag_index/5_ico.jpg) no-repeat 0 6px; padding-left:10px;}
+.m_ico_6{ background:url(../images/mag_index/6_ico.jpg) no-repeat 0 6px; padding-left:10px;}
+.m_ico_7{ background:url(../images/mag_index/7_ico.jpg) no-repeat 0 6px; padding-left:10px;}
+.m_ico_8{ background:url(../images/mag_index/8_ico.jpg) no-repeat 0 6px; padding-left:10px;}
+.m_ico_9{ background:url(../images/mag_index/9_ico.jpg) no-repeat 0 6px; padding-left:10px;}
+.m_ico_10{ background:url(../images/mag_index/10_ico.jpg) no-repeat 0 6px; padding-left:10px;}
+
+#m_bd2 #m_bd2_left .hz_media{ width:150px; height:264px; }
+#m_bd2 #m_bd2_left .hz_media ul{ margin-top:5px;}
+#m_bd2 #m_bd2_left .hz_media li{ line-height:25px;}
+#m_bd2 #m_bd2_left .hz_media a{ margin:0 0 0 10px; color:#646464;}
+#m_bd2 #m_bd2_left .hz_media li span{ float:right; margin-right:5px;}
+#m_bd2 #m_bd2_left .hz_media li strong{ font-weight:lighter; float:left;}
+#m_bd2 #m_bd2_left .hz_media li p{ clear:both; color:#333333;}
+#m_bd2 #m_bd2_left .hz_media li p a{color:#333333; margin-right:10px;}
+/*  ******   bd2 left end ******  */
+
+/*  ******   bd2 center begin ******  */
+#m_bd2 #m_bd2_center{ width:630px; float:left; margin-bottom:12px;}
+#m_bd2 #m_bd2_center .dy_sale{ width:628px; height:282px; border:1px solid #d7d7d7;}
+#m_bd2 #m_bd2_center .dy_sale .sale_tit{ width:628px; height:39px; border-bottom:1px solid #d7d7d7;}
+#m_bd2 #m_bd2_center .dy_sale .sale_tit h3{height:40px; float:left; color:#333333; font-size:14px;line-height:40px; text-indent:20px;}
+#m_bd2 #m_bd2_center .dy_sale .sale_tit ul{ width:370px; height:40px; float:right;}
+#m_bd2 #m_bd2_center .dy_sale .sale_tit ul li{ width:92px; margin-right:30px;float:left; margin-top: 7px;}
+#m_bd2 #m_bd2_center .dy_sale .sale_tit ul li a{ display:block; width:92px; height:32px; }
+#m_bd2 #m_bd2_center .dy_sale .sale_tit li.sale_3{ width:92px; height:30px; background:url(../images/mag_index/sale3_bg_new.jpg) no-repeat 0 0;}
+#m_bd2 #m_bd2_center .dy_sale .sale_tit li.sale_4{ width:92px; height:30px; background:url(../images/mag_index/sale4_bg.jpg) no-repeat 0 0;}
+#m_bd2 #m_bd2_center .dy_sale .sale_tit li.sale_5{ width:92px; height:30px; background:url(../images/mag_index/sale5_bg.jpg) no-repeat 0 0;}
+#m_bd2 #m_bd2_center .dy_sale .sale_tit li.sale_on,#m_bd2 #m_bd2_center .dy_sale .sale_tit li:hover{ width:92px; height:30px; border:1px solid #d7d7d7; border-bottom:none; background-position:0 -30px; padding-bottom:2px;background-color: white;}
+#m_bd2 #m_bd2_center .dy_sale .dy_cont{ width:620px; height:240px; margin-left:8px;_margin-left:0px; overflow:hidden;}
+.dy_magazine{ width:122px; height:220px; float:left;font-weight:lighter; margin:15px 15px 0 15px;_margin:15px 5px 0 14px;}
+.dy_magazine .title{ width:122px; height:20px; overflow:hidden;}
+.dy_magazine img{float:left;padding: 3px;border-right: 1px solid #9C9C9C;border-bottom: 1px solid #9C9C9C;border-top: 1px solid #E4E4E4;border-left: 1px solid #E4E4E4; margin-bottom:5px;}
+.dy_magazine a{ width:122px; line-height:20px;color:#4b4a4a;float:left; font-weight:bold;}
+.dy_magazine h5{ width:122px; line-height:16px;color:#9b9b9b; height:16px; overflow:hidden;font-weight:lighter;float:left;}
+.dy_magazine b{ width:122px; color:#d7252f;font-weight:lighter; line-height:16px; float:left; }
+.dy_magazine b span{ color:#777777; margin-left:5px; float:left;}
+.dy_magazine b span .zizhi{ float:left; text-decoration:none;}
+.dy_magazine b span p{text-decoration:line-through; float:right;_folat:left;}
+.dy_magazine b strong{ font-weight:bold; float:left;}
+
+#m_bd2 #m_bd2_center .pf_highest{ width:628px; height:330px; border:1px solid #d7d7d7;}
+#m_bd2 #m_bd2_center .pf_highest .pf_title{ width:628px; height:28px; border-bottom:1px solid #d7d7d7;}
+#m_bd2 #m_bd2_center .pf_highest .pf_title ul{}
+#m_bd2 #m_bd2_center .pf_highest .pf_title li{ width:208px; height:28px; line-height:28px; float:left; text-align:center;}
+#m_bd2 #m_bd2_center .pf_highest .pf_title a{ color:#333; font-size:14px;width: 208px;height: 28px;display: block;}
+#m_bd2 #m_bd2_center .pf_highest .pf_title #fg_x{ border-left:1px solid #d7d7d7;border-right:1px solid #d7d7d7;}
+#m_bd2 #m_bd2_center .pf_highest .pf_title .on,#m_bd2 #m_bd2_center .pf_highest .pf_title li:hover,#m_bd2 #m_bd2_center .pf_highest .pf_title li:hover a{ background:url(../images/mag_index/m_cur_bg.jpg) repeat-x 0 0; border-bottom:none; color:#cb1b2a;}
+#m_bd2 #m_bd2_center .pf_highest .pf_cont{ width:610px;_width:610px; height:265px;padding-left:10px;_padding-left:0px; padding-top:15px;}
+#m_bd2 #m_bd2_center .pf_highest .pf_title .on a{color:#cb1b2a;}
+
+#m_bd2 #m_bd2_center .jc_review{ width:628px; height:276px;border:1px solid #d7d7d7;}
+#m_bd2 #m_bd2_center .jc_review .review_title{ width:628px; height:40px;}
+#m_bd2 #m_bd2_center .jc_review .review_title h4{ width:100px; height:40px; line-height:40px; text-indent:20px;font-size:14px; float:left;}
+#m_bd2 #m_bd2_center .jc_review .review_title span{ width:45px; height:40px; background:url(../images/mag_index/m_more_bg.jpg) no-repeat 32px 16px; float:right; text-indent:5px; line-height:40px;}
+#m_bd2 #m_bd2_center .jc_review .review_title span a{ color:#838383;}
+#m_bd2 #m_bd2_center .jc_review .review_cont{ width:628px;}
+#m_bd2 #m_bd2_center .jc_review .review_cont .pic_bd{ width:290px; height:170px; float:left; margin-left:15px;margin-top:25px; display:inline;}
+#m_bd2 #m_bd2_center .jc_review .review_cont .pic_bd .pic{ width:122px; height:160px; float:left;}
+#m_bd2 #m_bd2_center .jc_review .review_cont .pic_bd .pic img{padding: 3px;border-bottom: 1px solid #9C9C9C;
+border-left: 1px solid #E4E4E4;border-right: 1px solid #9C9C9C;border-top: 1px solid #E4E4E4;}
+#m_bd2 #m_bd2_center .jc_review .review_cont .pic_bd h5{ width:156px; float:left; padding-bottom:5px; height:20px; overflow:hidden;}
+#m_bd2 #m_bd2_center .jc_review .review_cont .pic_bd h5 a{ color:#4b4a4a; line-height:21px;}
+#m_bd2 #m_bd2_center .jc_review .review_cont .pic_bd h5 b{ font-weight:lighter; color:#777; margin-left:10px;}
+#m_bd2 #m_bd2_center .jc_review .review_cont .pic_bd h5 b img{ margin:0; padding:0; position:absolute;}
+#m_bd2 #m_bd2_center .jc_review .review_cont .pic_bd .pic b{ color:#777; font-weight:lighter;}
+#m_bd2 #m_bd2_center .jc_review .review_cont .pic_bd ul{ width:156px; float:right; margin-left:10px;}
+#m_bd2 #m_bd2_center .jc_review .review_cont .pic_bd li{ line-height:22px;}
+#m_bd2 #m_bd2_center .jc_review .review_cont .pic_bd li a{ color:#414141;}
+#m_bd2 #m_bd2_center .jc_review .review_cont .pic_bd h6{ width:156px; display:block;font-weight:lighter; line-height:18px; margin-bottom:10px;}
+#m_bd2 #m_bd2_center .jc_review .review_cont .pic_bd h6 a{ color:#414141;}
+#m_bd2 #m_bd2_center .jc_review .review_cont .pic_bd p{width:156px; line-height:18px; color:#808080;}
+
+#m_bd2 #m_bd2_center .free_zq{ width:628px; height:251px;border:1px solid #d7d7d7;}
+#m_bd2 #m_bd2_center .free_zq .free_title{ width:628px; height:40px;}
+#m_bd2 #m_bd2_center .free_zq .free_title h4{ width:100px; height:40px; line-height:40px; text-indent:20px; font-size:14px; float:left;}
+#m_bd2 #m_bd2_center .free_zq .free_title .free_more{ width:100px; height:40px; float:right;}
+#m_bd2 #m_bd2_center .free_zq .free_title .free_more b{ width:10px; height:10px;background:#eaeaea; display:block; float:left; margin:10px 2px;}
+#m_bd2 #m_bd2_center .free_zq .free_title .free_more .on_b{ background:#9f9f9f;}
+#m_bd2 #m_bd2_center .free_zq .free_title span{width:45px; height:40px; background:url(../images/mag_index/m_more_bg.jpg) no-repeat 32px 12px; float:right; text-indent:5px; line-height:30px;}
+#m_bd2 #m_bd2_center .free_zq .free_title span a{color:#838383;}
+
+#m_bd2 #m_bd2_center .free_zq .free_cont{ width:628px; height:211px;}
+#m_bd2 #m_bd2_center .free_zq .free_cont .cont_left{ width:28px; height:211px; float:left;}
+#m_bd2 #m_bd2_center .free_zq .free_cont .cont_left img,#m_bd2 #m_bd2_center .free_zq .free_cont .cont_right img{ margin-top:60px;}
+#m_bd2 #m_bd2_center .free_zq .free_cont .cont_center{ width:630px; height:211px; float:left;}
+#m_bd2 #m_bd2_center .free_zq .free_cont .cont_right{ width:28px; height:211px; float:right;}
+/*  ******   bd2 center end ******  */
+
+/*  ******   bd2 right begin ******  */
+#m_bd2 #m_bd2_right{ width:184px; float:right;}
+.click_cursor{ width:184px; height:534px;}
+.click_cursor .border_bott{ border-bottom:1px solid #eaeaea;}
+.click_cursor .marg_bott{ padding-bottom:5px; margin-top:10px;_margin-top:5px;}
+.click_cursor .click_cursor_top{ width:184px; height:41px;}
+.click_cursor .click_cursor_cont{ width:182px; height:492px; border:1px solid #d7d7d7; border-top:none;}
+.click_cursor .click_cursor_cont ul{ width:166px; margin-left:8px;padding-top: 5px;}
+.click_cursor .click_cursor_cont li{ padding-left:20px;}
+.click_cursor .click_cursor_cont li a{ color:#4b4a4a; line-height:28px;}
+.click_cursor .click_cursor_cont li span{ float:right; color:#777; line-height:28px;}
+.click_cursor .click_cursor_cont .pic{ width:150px; height:78px;}
+.click_cursor .click_cursor_cont .pic img{ float:left;}
+.click_cursor .click_cursor_cont .pic .sTit{ width:80px; float:left; margin-left:10px;}
+.click_cursor .click_cursor_cont .pic b{ width:80px; float:left; margin-left:10px; font-weight:lighter; line-height:20px; color:#4b4a4a; height:20px; overflow:hidden;}
+.click_cursor .click_cursor_cont .pic h3{ color:#777777; font-weight:lighter;}
+.click_cursor .click_cursor_cont .pic strong{ color:#d7252f;padding-right:10px;}
+.click_cursor .click_cursor_cont .pic b span{ text-decoration:line-through; float:right;}
+.click_cursor .ico1{ background: url(../images/mag_index/click_ico1.jpg) no-repeat left top;}
+.click_cursor .ico2{ background: url(../images/mag_index/click_ico2.jpg) no-repeat left top;}
+.click_cursor .ico3{ background: url(../images/mag_index/click_ico3.jpg) no-repeat left top;}
+.click_cursor .ico4{ background: url(../images/mag_index/click_ico4.jpg) no-repeat left center; margin-top:5px;}
+.click_cursor .ico5{ background: url(../images/mag_index/click_ico5.jpg) no-repeat left center;}
+.click_cursor .ico6{ background: url(../images/mag_index/click_ico6.jpg) no-repeat left center;}
+.click_cursor .ico7{ background: url(../images/mag_index/click_ico7.jpg) no-repeat left center;}
+.click_cursor .ico8{ background: url(../images/mag_index/click_ico8.jpg) no-repeat left center;}
+.click_cursor .ico9{ background: url(../images/mag_index/click_ico9.jpg) no-repeat left center;}
+.click_cursor .ico10{ background: url(../images/mag_index/click_ico10.jpg) no-repeat left center;}
+
+#m_bd2 #m_bd2_right .bd2_right_banner{ width:184px; height:160px;}
+
+#m_bd2 #m_bd2_right .editor_recom{ width:184px; height:370px; margin-top:14px;}
+#m_bd2 #m_bd2_right .editor_recom .title { width:184px; height:32px; background:#efefef; }
+#m_bd2 #m_bd2_right .editor_recom .title li{width:90px; height:32px; line-height:32px; float:left; text-align:center;border-bottom:1px solid #d7d7d7;}
+#m_bd2 #m_bd2_right .editor_recom .title li a{color: #4B4A4A; display: block;height: 32px; }
+#m_bd2 #m_bd2_right .editor_recom .title .on, #m_bd2 #m_bd2_right .editor_recom .title li:hover {border:1px solid #d7d7d7; border-bottom:none; background:#fff;color:#d7252f; width:92px;}
+#m_bd2 #m_bd2_right .editor_recom .maga_cover{ width:182px; height:337px; border:1px solid #d7d7d7; border-top:none;}
+#m_bd2 #m_bd2_right .editor_recom .maga_cover ul{ margin-left:10px; padding-top:10px;}
+#m_bd2 #m_bd2_right .editor_recom .maga_cover li{line-height:28px; display:block;}
+#m_bd2 #m_bd2_right .editor_recom .maga_cover li b{ color:#D7252F;}
+#m_bd2 #m_bd2_right .editor_recom .maga_cover li span{ float:right; padding-right:5px; color:#777;}
+#m_bd2 #m_bd2_right .editor_recom .maga_cover a{ color:#4b4a4a;}
+#m_bd2 #m_bd2_right .editor_recom .ico_1{ background:url(http://www.dooland.com/magazine/images/1_ico.jpg) no-repeat 0 10px; padding-left:15px;}
+#m_bd2 #m_bd2_right .editor_recom .ico_2{ background:url(http://www.dooland.com/magazine/images/2_ico.jpg) no-repeat 0 10px; padding-left:15px;}
+#m_bd2 #m_bd2_right .editor_recom .ico_3{ background:url(http://www.dooland.com/magazine/images/3_ico.jpg) no-repeat 0 10px; padding-left:15px;}
+#m_bd2 #m_bd2_right .editor_recom .ico_4{ background:url(http://www.dooland.com/magazine/images/4_ico.jpg) no-repeat 0 10px; padding-left:15px;}
+#m_bd2 #m_bd2_right .editor_recom .ico_5{ background:url(http://www.dooland.com/magazine/images/5_ico.jpg) no-repeat 0 10px; padding-left:15px;}
+#m_bd2 #m_bd2_right .editor_recom .ico_6{ background:url(http://www.dooland.com/magazine/images/6_ico.jpg) no-repeat 0 10px; padding-left:15px;}
+#m_bd2 #m_bd2_right .editor_recom .ico_7{ background:url(http://www.dooland.com/magazine/images/7_ico.jpg) no-repeat 0 10px; padding-left:15px;}
+#m_bd2 #m_bd2_right .editor_recom .ico_8{ background:url(http://www.dooland.com/magazine/images/8_ico.jpg) no-repeat 0 10px; padding-left:15px;}
+#m_bd2 #m_bd2_right .editor_recom .maga_cover .cont_1{ width:170px; height:88px; margin-top:5px; border-bottom:1px dashed #cccccc;}
+#m_bd2 #m_bd2_right .editor_recom .cont_1 img{ float:left;}
+#m_bd2 #m_bd2_right .editor_recom .cont_1 dl{float:left; margin-left:7px;}
+#m_bd2 #m_bd2_right .editor_recom .cont_1 dt{ line-height:20px; width:102px; float:left; margin:0 0 0 8px;}
+#m_bd2 #m_bd2_right .editor_recom .cont_1 dd{ line-height:16px; width:102px; float:left; margin-left:8px; color:#646464;}
+#m_bd2 #m_bd2_right .editor_recom .cont_1 dd img{ margin-top:5px;}
+/*  ******   bd2 right end ******  */
+/*  ===================================   m_bd2 第二块 end  ===================================  */
+
+/*  ===================================   每日精选滚动  ===================================  */
+	.panel h2.title { margin-bottom: 10px }
+	noscript div { background: #ccc; border: 1px solid #900; margin: 20px 0; padding: 15px }
+	
+	.coda-slider-wrapper { padding: 20px 0 }
+	
+	/* Use this to keep the slider content contained in a box even when JavaScript is disabled */
+	.coda-slider-no-js .coda-slider { height: 200px; overflow: auto !important; padding-right: 20px }
+	
+	/* Change the width of the entire slider (without dynamic arrows) */
+	.coda-slider, .coda-slider .panel { width: 576px;} 
+	
+	/* Change margin and width of the slider (with dynamic arrows) */
+	.coda-slider-wrapper.arrows .coda-slider, .coda-slider-wrapper.arrows .coda-slider .panel { width: 600px; _width:555px; overflow: hidden; }
+	.coda-slider-wrapper.arrows .coda-slider { margin: 0 10px }
+	
+	/* Tab nav */
+	.coda-nav ul li a.current { background: #39c }
+	
+	/* Panel padding */
+	.coda-slider .panel-wrapper { padding: 20px }
+	
+	/* Preloader */
+	.coda-slider p.loading { padding: 20px; text-align: center }
+
+/* Don't change anything below here unless you know what you're doing */
+
+	/* Tabbed nav */
+	.coda-nav{display: none;}
+	
+	/* Miscellaneous */
+	.coda-slider-wrapper { clear: both; overflow: auto }
+	.coda-slider { float: left; overflow: hidden; position: relative }
+	.coda-slider .panel { display: block; float: left }
+	.coda-slider .panel-container { position: relative }
+	.coda-nav-left, .coda-nav-right { float: left; width:25px; height:200px; }
+	.coda-nav-left a, .coda-nav-right a { display: block; text-align: center; text-decoration: none;color: #fff; width:25px; height:200px; text-indent:-99999px;}
+	.coda-nav-left a { background: url(../images/cont_jx_top_left.jpg) no-repeat 50% 50%; }
+	.coda-nav-right a { background: url(../images/cont_jx_top_right.jpg) no-repeat 50% 50%; }
+
+/*  ===================================   每日精选滚动  ===================================  */

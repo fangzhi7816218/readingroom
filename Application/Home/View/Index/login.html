@@ -1,0 +1,92 @@
+﻿<include file="Public/header" />
+<link href="__CSS__/index.css?v3" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__JS__/checkform.js" ></script>
+<script type="text/javascript">
+get_adcode2('39','');
+function changeimg(){
+	if(document.getElementById("validateimg")){
+		var timenow = new Date().getTime();
+		document.getElementById("validateimg").src="../kcaptcha/validata.php?rand=" + timenow;
+        document.getElementById("validateimg").style.width = '140px';
+        document.getElementById("validateimg").style.height = '60px';
+	}
+}
+
+$(document).ready(function(){
+    $("#inputvalidate").bind("click",function(){
+        var timenow = new Date().getTime();
+        document.getElementById("validateimg").src= "../kcaptcha/validata.php?rand=" + timenow;
+        document.getElementById("validateimg").style.width = '140px';
+        document.getElementById("validateimg").style.height = '60px';
+        $("#yzmclickshow2").hide();
+        $("#yzmclickshow").show();
+        $("#inputvalidate").unbind("click");
+    });
+});
+</script>
+
+<div class="banner_ad hidden" style="margin: auto; overflow: hidden; width: 990px; height: auto;margin-top:10px;" align="center" id="area_67"></div>
+
+<div class="new_login">
+<div class="login_title"><h1>全民阅读帐户登陆</h1></div>
+<div class="login_center">
+<!--left-->
+<div class="login_left">
+<h1>拥有阅读天下账户，开启阅读新看法</h1>
+<div class="intro">
+<ul>
+<li>海量图书杂志在线看实时更新</li>
+</ul>
+<div class="clear"></div>
+</div>
+
+<div class="introMore">
+<ul>
+
+</ul>
+<div class="clear"></div>
+</div>
+<Div class="reg"><a href="__URL__/register.html">还没有账户？立即创建一个新帐户</a></Div>
+<div class="fqa">
+<h2>常见问题</h2>
+<ul>
+<li><a href="magazine/help/help48.htm" target="_blank">如何找回密码</a></li>
+</ul>
+</div>
+</div>
+<!--left-->
+<!--right-->
+<div class="login_right">
+<form id="formlogin" name="formlogin" method="post" action="__ACTION__" onSubmit="return checkFormLogin();">
+<div class="center">
+<div class="name">帐户名称</div>
+<div class="text_tab"> <input type="text" id="name" name="username" class="logintxtleft" /></div>
+<div class="name">输入密码</div>
+<div class="text_tab"> <input type="password" id="password" name="password" class="logintxtleft" /></div>
+<div class="table"  id="inputvalidatetable">
+<div class="name">验证码</div>
+<div class="text_tab" style="">
+    <input style="float:left;width:90px;" type="text" class="logintxtleft2" name="verify" />
+        <img id="validateimg" src="__URL__/verify" onclick="src='__URL__/verify/'+Math.random()" style="cursor:pointer;margin-left:15px;" />
+
+</div>
+</div>
+<div class="cookie">
+<div class="clear"></div>
+</div>
+</div>
+<div class="submit">
+<input type="hidden" name="referer" value="" />
+ <input type="image" src="__IMAGE__/login.gif"  name="login" class="login"  />
+ <div class="clear"></div>
+</div>
+</form>
+<div class="hezuo" style="width: 295px;height: 30px;line-height: 30px;padding: 50px 20px 0 20px;">
+</div>
+</div>
+<!--right-->
+<div style="clear:both;"></div>
+</div>
+<div><img src="__IMAGE__/login_foot.gif" /></div>
+</div>
+<include file="Public/fooder" />

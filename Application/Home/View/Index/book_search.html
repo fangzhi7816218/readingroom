@@ -1,0 +1,221 @@
+﻿<include file="Public/header" />
+<!--center-->
+<div id="center">
+
+<!--category left-->
+<aside class="category">
+<!--分类-->
+<section class="nav">
+<h1 class="top"><b><a href="">图书分类</a></b>
+
+</h1>
+<nav class="center">
+
+<div class="mag_sort">
+<foreach name="big_cate" item="vo">
+             	<dl>
+				<dt>
+				<a href="__URL__/book_search.html?cate_id={$vo['id']}">{$vo['name']}</a>
+				</dt>
+				<dd>
+	             	<foreach name="small_cate" item="vo1">
+	             		<if condition="$vo1['p_id'] eq $vo['id'] ">
+	             			<a href="__MODULE__/Index/book_search.html?cate_id={$vo1['id']}"> {$vo1['name']} </a>
+	             		</if>
+	             	</foreach>
+             	</dd>
+				</dl>
+             		
+ </foreach> 
+
+
+
+
+
+
+</div>
+</nav>
+<div class="bottom"></div>
+</section>
+<!--分类-->
+
+
+
+
+
+
+
+<div class="banner_ad" id="area_56"></div>
+<div class="banner_ad" id="area_57"></div>
+
+<!--支持终端-->
+<!--支持终端-->
+</aside>
+
+<!--category end-->
+<!--中部-->
+<div class="bosom mag_index">
+
+
+<!--flash--> 
+<div class="flash" id="banner_flash"> 
+<div id="content"> 
+	<div class="ad" > 
+		 <ul class="slider" > 
+		  </ul> 
+		  <ul class="num" > 
+		  </ul> 
+	</div> 
+</div> 
+</div> 
+<script> 
+get_adcode2('35','');
+</script> 
+<!--flash end--> 
+
+
+
+
+<!--list-->
+<div class="mag_list" style="background:">
+<!--title-->
+<div class="book_title">
+<div class="left_title">最新上架</div>
+<div class="right_page"><div></div></div>
+</div>
+<!--title end-->
+
+
+
+<!--mag list-->
+<div class="list">
+<notempty name="book_new">
+<!--小模块，可重用-->
+<ul>
+<foreach name="book_new" item="vo">
+	<li class="li_bg" onmouseover="this.className=' li_bg_now '" onmouseout="this.className=' li_bg '">
+<div class="pic">
+<div><a href="__MODULE__/Book/book_detail.html?book_id={$vo['id']}" title="{$vo['name']}" target="_blank" ><img alt="{$vo['name']}" src="{$vo['img']}"></a></div>
+</div>
+<div class="txt bookname">
+<a href="book/22925" title="{$vo['name']}" target="_blank" >{$vo['name']}</a>
+
+<span><a href="__MODULE__/Book/book_detail.html?book_id={$vo['id']}" target="_blank">阅读</a>{$vo['public']}</span>
+</div>
+</li>
+</foreach>
+
+
+
+</ul>
+
+
+<else /><span style="font-size:250%;font-weight:blod;line-height:350px;margin-left:200px;">暂无该分类书籍</span></notempty>
+
+
+<div class="clear"></div>
+
+<!--page-->
+
+<!--page-->
+
+</div>
+<!--mag list end-->
+
+
+
+</div>
+<!--list end-->
+<div style="width:100%;margin-left:150px">{$page}</div>
+</div>
+<!--中部-->
+
+
+<!--右边登陆品牌-->
+<aside class="login_brand">
+
+
+
+
+<!--new-->
+<!--new-->
+
+
+<section class="banner" id="area_39">
+</section>
+
+
+
+
+
+
+<section class="frame">
+<h3 class="top sale">
+阅读排行榜
+<div class="ico"><img src="images/book_index_35-13.jpg" /></div>
+</h3>
+<div class="table">
+
+<article class="more2">
+
+<ul id="relate">
+<foreach name="book_r" item="vo" key="k">
+	<li class="now" onmouseover="relate_tab_convert(this,0);">
+	<div class="pic">
+	<div>
+	<a href="__MODULE__/Book/book_detail.html?book_id={$vo['id']}" target="_blank" title="{$vo['name']}">
+	<img src="{$vo['img']}" style="width: 114px; height: 152px;" />
+	</a>
+	</div>
+	</div><div class="txt">
+	<table width="100%" border="0">
+	  <tr>
+	    <td valign="top" class="nub">{$k+1}</td>
+	    <td valign="top" class="name"><a href="__MODULE__/Book/book_detail.html?book_id={$vo['id']}" target="_blank" title="{$vo['name']}">{$vo['name']|msubstr=0,5}</a></td>
+	  </tr>
+	</table>
+	
+	</div>
+	</li>
+</foreach>
+
+
+
+
+</ul>
+
+</article>
+
+</div>
+<div class="bottom"></div>
+</section>
+<!--cooperation end-->
+<!--web-->
+<!--web end-->
+
+
+<!--link-->
+<!--link end-->
+
+
+
+
+
+
+
+<!--
+
+
+-->
+
+
+</aside>
+<!--右边登陆品牌-->
+
+
+
+<div class="clear"></div>
+
+</div>
+<!--center end-->
+<include file="Public/fooder" />

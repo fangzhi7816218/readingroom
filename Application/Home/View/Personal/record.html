@@ -1,0 +1,168 @@
+﻿<include file="Public/header" />
+<!--  header  end====================-->
+<link href="__CSS__/yonghu.css" rel="stylesheet" type="text/css" />
+<link href="__CSS__/individual_center.css" type="text/css" rel="stylesheet" />
+
+<div class="mainlaycenter">
+
+  <div class="user_left">
+<div class="top"><img src="__IMAGE__/personal/personal_center_top.jpg" /></div>
+<div class="leftlaycenter">
+	<div id="myTab1">
+	<h3 class="sortleftttcenter bgicon01_center">我的书架：</h3>
+         <ul>
+          <li id="6" class="linormal_center"><a href="__URL__/collect.html">我的收藏</a></li>
+          <li id="7" class="linormal_center"><a href="__URL__/record.html">阅读记录</a></li>
+           
+         </ul>
+     	<div style="clear:both"></div>
+
+
+  		<h3 class="sortleftttcenter bgicon04_center">个人信息:</h3>
+         <ul  style="border-bottom:none;">
+			<li id="8" class="linormal_center"><a href="__URL__/index.html">个人中心</a></li>
+          <li id="3" class="linormal_center"><a href="__URL__/change_info.html">修改个人信息</a></li>
+          <li id="4" class="linormal_center"><a href="__URL__/logout.html">退出登录</a></li>
+         </ul>
+		<div style="clear:both"></div>
+		<!--
+		<h3 class="sortleftttcenter bgicon04_center">最新活动:</h3>
+         <ul>
+
+          <li id="19" class="linormal_center"><a href="customer_commend.php">推荐用户</a></li>
+         </ul>
+
+     	<div style="clear:both"></div>
+		-->
+
+    </div>
+
+
+     <div style="clear:both;"></div>
+  </div>
+  <div class="bottom"><img src="__IMAGE__/personal/personal_center_bottom.gif" /></div>
+  </div>
+<script>
+var tid = '7';
+
+if(tid == ''){ tid = 6;}
+
+function nTabs(tid){
+	document.getElementById(tid).className = "liactive_center";
+/*
+	for(i=3; i <=30; i++)
+	{
+	  if (i == tid)
+	  {
+		if(document.getElementById(i)){
+		document.getElementById(i).className = "liactive_center";
+		}
+	  }else{
+		if(document.getElementById(i)){
+			document.getElementById(i).className = "linormal_center";
+		}
+
+	  }
+	}
+*/
+}
+nTabs(tid);
+</script>  <div class="content_center" id="content" >
+      <!-- <div class="addiv_r"><a href="customer_commend.php"><img src="__IMAGE__/center_banner.gif" /></a></div> -->
+      <div id="rght">
+	  
+	  
+<div class="ent_c2">
+        <!--
+							 <div class="bq2">
+								  <ul id="oUlTab">
+								
+		<li id="aLiTab_2" class="on"><a href="#">看过的杂志</a></li>                         
+							   </ul><div class="bqr" style="width:587px;"></div>
+			  </div>
+         -->
+		
+		<div class="ent_c2">
+                <div class="progress">
+<div class="pro_left"></div>
+<div class="center">
+<!--月号-->
+
+<h1 style="text-align:left;">
+看过的杂志
+</h1>
+
+
+<!--月号-->
+
+</div><div class="pro_right"></div>
+
+
+</div>
+<div class="clear"></div>
+        </div>
+
+        
+							  <!---多窗口操作--->
+		
+		 <div class="bq_d" id="oDivTab2">
+							
+			<div class="shjcontent" >
+			
+			<notempty name="books">
+				<foreach name="books" item="vo">
+				<div class="bookcontainer">
+				<div class="booktu">
+				  <a href="__MODULE__/Book/book_detail.html?book_id={$vo['id']}" title="{$vo['name']}" target="_blank"><img src="{$vo['img']}" alt="{$vo['name']}" /></a></div>
+				<div class="bookright">
+				<ul>
+				<li><span><a href="__MODULE__/Book/book_detail.html?book_id={$vo['id']}" title="{$vo['name']}" target="_blank">{$vo['name']}{$vo['add_time']|date="Y年m月",###}</a></span></li>
+				
+				</ul>
+				</div>
+				</div>
+				</foreach>
+			<else />
+				<span style="margin-left:300px;">暂没有阅读记录</span>
+			</notempty>			
+			
+			<div style="clear:both"></div>
+		  </div>		 
+		 </div>
+		 
+		<div style="clear:both"></div> 
+		</div>
+		
+		<div style="clear:both"></div>
+		</div>
+
+          
+  </div>
+<div class="center_right">
+<div class="top">快速导航</div>
+<div class="list">
+<ul>
+<li><a href="http://www.dooland.com">杂志首页</a></li>
+<li><a href="http://www.dooland.com/magazine/category.php?act=list&p_id=6">新闻人物</a></li>
+<li><a href="http://www.dooland.com/magazine/category.php?act=list&p_id=5">商业财经</a></li>
+<li><a href="http://www.dooland.com/magazine/category.php?act=list&p_id=3">运动健康</a></li>
+<li><a href="http://www.dooland.com/magazine/category.php?act=list&p_id=1">时尚生活</a></li>
+<li><a href="http://www.dooland.com/magazine/category.php?act=list&p_id=2">娱乐休闲</a></li>
+<li><a href="http://www.dooland.com/magazine/category.php?act=list&p_id=4">教育科技</a></li>
+<li><a href="http://www.dooland.com/magazine/category.php?act=list&p_id=7">文化艺术</a></li>
+</ul>
+<div class="clear"></div>
+</div>
+<div><img src="__IMAGE__/personal/center_right_bottom.gif" /></div>
+
+
+
+
+</div>
+  
+   <div style="clear:both"></div>
+</div>
+
+
+<!--  footer begin   ====================-->
+<include file="Public/fooder" />

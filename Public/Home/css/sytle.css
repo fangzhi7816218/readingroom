@@ -1,0 +1,542 @@
+@charset "utf-8";
+*{ margin:0; padding:0;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{ padding:0;margin:0;font-size:12px; font-family:'宋体';}
+fieldset,img {border: 0;}
+ol,ul,li {list-style: none;}
+a{ text-decoration:none;}
+img{ border:0;}
+
+/*头部广告*/
+.topAd {
+    margin: 0 auto;
+    position: relative;
+    width: 990px;
+}
+.topAd span {
+    display: block;
+    height: 14px;
+    position: absolute;
+    right: 3px;
+    top: 5px;
+    width: 14px;
+}
+
+
+/*微信二维码*/
+.weixin_ew{position:fixed; left:50%; top:50%; margin-left: -623px; width: 108px; height:132px;margin-top: -65px;z-index:9; }
+.weixin_ew .close{ display:block; width:20px; height:20px; position:absolute; right:0; top:0; cursor:pointer; z-index:9999;}
+
+/*  ===================================   public  ===================================  */
+#layout{ width:990px; height:auto; margin:0 auto;}
+.base_box{ width:990px; margin:0 auto;}
+.red{ color:#d7252f;}
+.clear{ clear:both;}
+.margin_left12{ margin-left:12px;}
+.margin_rihgt12{ margin-rihgt:12px;}
+.margin_top12{ margin-top:12px;}
+.margin_bottom12{ margin-bottom:12px;}
+.lines{background:url(http://www.dooland.com/magazine/images/header_fg.jpg) no-repeat right center; padding:0 5px;}
+.lines_01{background:url(http://www.dooland.com/magazine/images/header_fg.jpg) no-repeat right center;padding:0 2px;}
+.a.more{ color:#dadada; font-size:12px;background:;}
+.fg{ background:url(http://www.dooland.com/magazine/images/nav_fg.jpg) no-repeat right center;}
+.lan_x{ border-top:1px solid #f2852a;}
+.lan_x a:hover{ color:#F2852A;}
+.red_x{ border-top:1px solid #d7252e; }
+.ico_margin{ margin-top:4px;}
+/*  ===================================   public  ===================================  */
+
+
+
+/*  ===================================   header  ===================================  */
+#header{ width:auto; height:116px;}
+#header_top{ width:990px; height:83px; position:relative; z-index:999;}
+#header_top .logo{ width:151px; height:59px; padding-top:24px; float:left;}
+#header_top .header_login{ width:748px; height:30px; float:left;}
+#header_top .header_login a{ padding:10px 5px 0 5px; float:left; font-size:12px; color:#4e4e4e; height:30px;}
+#header_top .header_login span{padding:10px 5px 0 97px; float:left; font-size:12px; color:#4e4e4e;}
+#header_top .header_login .sina{ background:url(http://www.dooland.com/magazine/images/sina_login.jpg) no-repeat 15px 10px; padding-left:40px;}
+#header_top .header_login .qq{ background:url(http://www.dooland.com/magazine/images/QQ_login.jpg) no-repeat 5px 11px; padding-left:25px;}
+#header_top .header_login .free{ color:#da343d; background: url(http://www.dooland.com/magazine/images/header_fg.jpg) no-repeat right center; margin-left:5px; height:25px; margin-right:140px; }
+#header_top .qq_login_xf{ width:162px; height:28px; position:absolute; top:30px; left:450px; background:url(http://www.dooland.com/magazine/images/qq_login_bg.jpg) no-repeat 0 0; color:#a09f9f; padding:8px 5px;}
+#header_top .search{ width:305px; float:right; height:83px;}
+#header_top .header_login li{ width:auto;display:block; float:left; font-size:12px; color:#333333; margin:0 4px 0 0;}
+#header_top .mybg{ background:url(http://www.dooland.com/magazine/images/my_bg.jpg) no-repeat 75px 10px; height:25px; margin-top:5px; width:87px; float:right; line-height:25px; text-align:center;}
+#header_top .mybg a{color:#4E4E4E;}
+#header_top .mybg a:hover{ color:#DA343D;}
+#header_top .my_menu_hover{ width:87px; border:1px solid #858585; _margin-bottom: -30px;}
+#header_top .fg{background: url(http://www.dooland.com/magazine/images/header_fg.jpg) no-repeat right 10px; float:left;}
+#header_top .header_login strong{ color:#da343d;}
+
+.ac_results ul{ z-index:99999;margin-top: 28px;background:#fff;width: 153px;border: 1px solid #C8C8C8;*position:absolute; *margin-left:-302px;_margin-left:-304px;}
+.ac_results li{ width:153px; height:30px; text-indent:10px; line-height:30px; display:block;}
+.ac_results li a{ width:153px; height:30px; display:block; color:#a3a3a3;}
+.ac_results li a:hover{width:153px; height:30px; display:block; background:#e4e4e4; color:#000;}
+.ac_results .cls{width: 143px;height: 25px;line-height: 25px;text-align: right; }
+.ac_results .cls a{color:#a3a3a3;}
+/* =====================================  个人中心 ===================================== */
+.my_menu{ display:block;position:relative;z-index:500;margin:0 1px 0;height:29px;float:right;width:93px;}
+.my_menu .menu{display:none;position:absolute;width:87px;height:180px;border:1px solid #858585;top:25px;right:-1px;z-index:2000;background:#fff;_top: 25px; _left: -1px;}
+.my_menu_hover{display:block;z-index:500;border:1px solid #858585;padding:0;border-bottom:1px solid #fff;background:#fff;margin:0; border-bottom:none;}
+.my_menu_hover .menu{display:block;}
+.my_menu .menu ul li{display:block;text-align:center;padding:1px;height:28px;line-height:28px;margin:0;overflow:hidden}
+.my_menu .menu ul li a{padding:0;display:block;float:none;margin-top:0;margin:0;height:28px;overflow:hidden;}
+.my_menu .menu ul li a:hover{background:url(http://www.dooland.com/magazine/images/my_li_bg.gif) repeat-x}
+
+#header_top .search_botm{ width:305px; float:left; position:absolute; right:0; bottom:10px;}
+#header_top .search_02{ width:273px; height:25px;border:1px solid #979797; float:left;}
+#header_top .search_02 .search_text1{ width:19px; height:23px; background:url(http://www.dooland.com/magazine/images/search_01bg.jpg) no-repeat; float:left;}
+#header_top .search_02 .search_text2{ width:133px; height:25px; float:left; border:0; line-height:25px; color:#c1c1c1;}
+#header_top .search_03{ width:40px; height:25px; float:left; font-size:12px; font-weight:bold; color:#333333; line-height:25px; border-left:1px solid #979797; padding-left:8px;}
+.s_book { width:50px; height:25px; font-size:12px; margin-top:25px; margin-left:152px;*margin-left:-44px; font-weight:bold; position:absolute; color:#333333; line-height:25px; border:1px solid #979797; background:#FFF; overflow:hidden;}
+.s_mag {width: 40px;height: 25px;font-size: 12px;padding-left:10px;margin-top: 50px;/*margin-left: 152px;*/font-weight: bold;position: absolute;
+color: #333;line-height: 25px;border: 1px solid #979797;background: white;overflow: hidden;border-top: none;}
+#header_top  .magazine_bg{background:url(http://www.dooland.com/magazine/images/my_bg.jpg) no-repeat 36px 10px; width:35px;}
+#header_top .search_04{ width:70px; height:25px; background:#333333; float:right; font-size:14px; line-height:25px; text-align:center; color:#FFF; border:0;}
+#header_top .search_05,#header_top  .search_05 a{width:25px; height:27px;float:left; color:#a1a1a1; font-size:12px; padding-left:2px;}
+#header_top .header_login li.login_up{ width:300px;}
+
+#nav{ width:auto;height:33px; background:#cb1b2a;}
+#nav_content{  width:990px; height:33px;}
+#nav_content ul{}
+#nav_content li{ font-size:14px; display:block; float:left; height:33px; line-height:33px;}
+#nav_content li a{color:#fff; padding:0 25px;display:block;}
+#nav_content li a:hover{ display:block; background:#ab0210; padding: 0 25px; margin: 0 -1px;border-left:1px solid #890a21;border-right:1px solid #890a21;}
+#nav_content .sy{ width:150px; text-align:center; background:#ab0210; border-left:1px solid #890a21;border-right:1px solid #890a21;margin-right: 1px;
+}
+#nav_content .fg{ padding-right:1px; background:url(http://www.dooland.com/magazine/images/nav_fg.jpg) no-repeat right center;}
+#nav_content .shop{ width:181px; height:23px; margin-top:5px; float:right;}
+#nav_content .shop .num{ width:90px; height:23px; float:left; background:url(http://www.dooland.com/magazine/images/shop_bg.jpg) no-repeat 0 0; color:#333333; line-height:23px; padding-left:22px;}
+#nav_content .shop .num a{ color:#333;}
+#nav_content .shop .but{ width:61px; height:23px; float:left;}
+/*  ===================================   header ===========================================   */
+
+
+/*  ===================================   bd1 第一块 ===========================================   */
+#bd1{ width:990px; height:615px;}
+#bd1 .left{ width:152px; float:left;}
+#bd1 .left .category{ width:150px; height:550px; background:#fafafa; border: 1px solid #bdbdbd; border-top:none;}
+#bd1 .left .category a{color:#4e4d4d;}
+#bd1 .left .category .category_top{ width:150px; height:30px;border-bottom:1px solid #cb1b2a;padding-bottom: 5px;}
+#bd1 .left .category .category_top a{padding:10px 0 0 25px; font-size:14px; font-weight:bold; color:#d7252e; line-height:33px;}
+#bd1 .left .category .category_sound{ width:150px; height:25px; background:url(http://www.dooland.com/magazine/images/new-bg-gif.gif) no-repeat 90px 8px;}
+#bd1 .left .category .category_sound a{padding:10px 0 0 25px; font-size:14px; font-weight:bold; color: #D7252E; line-height:33px;}
+#bd1 .left .category h1{ font-size:14px; color:#cb1b2a; padding:10px 0 0 23px; background:url(http://www.dooland.com/magazine/images/category_magazine_bg.jpg) no-repeat 90px 16px;}
+#bd1 .left .category h2{ font-size:14px; color:#f2852a; padding:10px 0 0 23px; border-top:1px solid #f2852a; background:url(http://www.dooland.com/magazine/images/category_book_bg.jpg) no-repeat 90px 16px;}
+#bd1 .left .category ul{ margin-top:5px;_ margin-top:0px;}
+#bd1 .left .category li{ display:block; position:relative; width:116px; height:29px;*height:25px;_height:27px;margin:0 0 0 24px;_margin:0 0 0 24px;line-height:29px;_line-height:27px; background:url(http://www.dooland.com/magazine/images/category_ico.jpg) no-repeat right center; }
+#bd1 .left .category li ul{position:absolute; margin:0; padding:0;background:#fff;border:1px #999999 solid; top:-100px; left:125px;display:none;width:642px;}
+#bd1 .left .category li ul li{margin:0; background:none;}
+#bd1 .left .category ul li .tit{display:block;}
+#bd1 .left .category li.selected{z-index:99; }
+#bd1 .left .category li.selected .h2-tit{position:absolute; z-index:88; border:1px solid #999999; border-right:0; border-left:0; background-color:#fff;width:126px; margin-left:-24px; padding-left:24px; height:28px; line-height:26px;}
+#bd1 .left .category dt{ width:127px; height:29px; line-height:29px; padding-left: 16px; border-top:1px solid #9f9f9f;}
+#bd1 .left .category dt .mun_magazine{width:125px; height:40px;line-height:40px; font-size:14px; font-weight:bold; background:;}
+#bd1 .left .category dt .mun_magazine a{ color:#1856a3; padding: 0 8px; border-right: 1px solid #bdbdbd;}
+#bd1 .left .category dt .mun_magazine a.last{ color:#449858; border:none;}
+
+#bd1 .left .seco_nav_left{width:512px; float:left;}
+#bd1 .left .seco_nav_left .clear_x{border-bottom:1px dashed #cccccc;}
+#bd1 .left .seco_nav_left dl{ width:500px; height:90px; margin-left:10px; overflow:hidden;padding: 10px 0;}
+#bd1 .left .seco_nav_left dt{ width:70px; height:90px; float:left; border:none; margin:0;color:#4e4d4d;background:url(http://www.dooland.com/magazine/images/category_ico.jpg) no-repeat right 11px;padding-right: 10px;
+padding-left: 10px;}
+#bd1 .left .seco_nav_left dt a{ color:#4E4D4D; line-height:18px; margin-top:5px;}
+#bd1 .left .seco_nav_left dd{ width:400px; float:left; height:90px; overflow:hidden;}
+#bd1 .left .seco_nav_left a{color:#8c8c8c;height:30px; font-style:normal; float:left; margin:0 8px; display:block;}
+#bd1 .left .seco_nav_left dd a { *white-space: nowrap; }
+#bd1 .left .seco_nav_left a:hover{ color:#cb1b2a;}
+#bd1 .left .seco_nav_left span{ float:right; margin-right:10px;}
+#bd1 .left .seco_nav_right{width:128px; float:right; background:#efefef;}
+#bd1 .left .seco_nav_right a,#bd1 .left .seco_nav_right b{ width:113px; margin-left:15px; display:block;color:#666; line-height:24px;}
+#bd1 .left .seco_nav_right b{ margin-top:12px;}
+#bd1 .left .seco_nav_right img{ padding-top:10px; padding-bottom:7px;}
+#bd1 .left .banner{ width:150px;height: 48px; border:1px solid #dadada; overflow:hidden;}
+
+#bd1 .center{ width:630px; float:left;}
+#bd1 .center .flash{ width:630px; height:188px;}
+#bd1 .center .recommend{ width:630px; height:344px; margin-top:8px;}
+#bd1 .center .recommend .title ul{ width:589px; margin-top:5px; padding-left:40px;margin-top: 0px; }
+#bd1 .center .recommend .title li{float:left; height:36px; line-height:40px;width: 120px;overflow: hidden; } /**/
+#bd1 .center .recommend .title li a{  font-size:12px;height: 42px;float: left; color:#8a8a8a;width: 119px;text-align: center; }
+/*#bd1 .center .recommend .title li a:hover{background:#646464 url(http://www.dooland.com/magazine/images/recommend_hover.jpg) no-repeat center bottom;height:39px; margin-top:4px; color:#fff;line-height:35px;}*/
+#bd1 .center .recommend .title li.toHover{background:#646464 url(http://www.dooland.com/magazine/images/recommend_hover.jpg) no-repeat center bottom;margin-top:4px; color:#fff; line-height:32px;}
+#bd1 .center .recommend .title li.toHover a { color:#fff; }
+#bd1 .center .recommend .title .one_jx{ width:109px;}
+#bd1 .center .recommend .title .one_jx a{width:110px; padding:0; margin:0;font-weight:bold; font-size:14px; text-align:center; color:#414141;}
+#bd1 .center .recommend .title{ width:630px; height:44px; background:url(http://www.dooland.com/magazine/images/recommend_title.jpg) no-repeat 0 0;}
+#bd1 .center .recommend .title .sele,#bd1 .center .recommend .title .sele a{ width:110px; font-size:14px; color:#333333; font-weight:bold; text-indent:10px;}
+#bd1 .center .recommend .cont{ width:589px; height:275px; padding:25px 0 0 39px; border:1px solid #d7d7d7; border-top:none; clear:both; position:relative;}
+#bd1 .center .recommend .cont img{ float:left;}
+#bd1 .center .recommend .cont .magazine_title{ width:360px; margin-left:24px; float:left; line-height:20px; color:#414141; font-size:14px;}
+#bd1 .center .recommend .cont .magazine_title span{ color:#d7252e; margin-right:15px; float:left; font-weight:bold;}
+#bd1 .center .recommend .cont .magazine_title strong{float:left; width:90px; height:20px; overflow:hidden;}
+#bd1 .center .recommend .cont .magazine_title b{float:right; font-size:12px;}
+#bd1 .center .recommend .cont .magazine_title b em{ font-style:normal; color:#D7252E;}
+#bd1 .center .recommend .cont .weeb_label{width:360px; margin-left:24px; float:left; line-height:30px; color:#414141; font-size:14px;height: 30px;overflow: hidden;}
+#bd1 .center .recommend .cont .weeb_label li{ float:left; padding-right:20px; line-height:30px; color:#6E6E6E;}
+#bd1 .center .recommend .cont .weeb_label li a{color:#414141; margin-right:5px;color:#6E6E6E;}
+
+#bd1 .center .recommend .cont p{ width:360px; margin:5px 0 0 24px; line-height:20px; float:left; color:#6e6e6e; text-indent:18px;height: 80px;
+overflow: hidden;}
+#bd1 .center .recommend .cont .pic{width:164px; height:231px;padding:3px;border-right: 1px solid #9C9C9C;border-bottom: 1px solid #9C9C9C;border-top: 1px solid #E4E4E4;border-left: 1px solid #E4E4E4; float:left; overflow:hidden;}
+#bd1 .center .recommend .cont .mag_ebook{ width:373px;position: absolute;bottom: 30px;right:20px;float:left;}
+#bd1 .center .recommend .cont .mag_ebook li{ width:360px; line-height:25px;}
+#bd1 .center .recommend .cont .mag_ebook .index_choice{ width:360px; height:37px; border-left:1px solid #D7D7D7;margin-bottom: 30px;}
+#bd1 .center .recommend .cont .mag_ebook .index_choice .choice_div{ width:35px; height:35px; float:left;border:1px solid #D7D7D7; border-left:none;}
+#bd1 .center .recommend .cont .mag_ebook .dz_price{ width:100px; font-size:12px; color:#d7252f; float:left;}
+#bd1 .center .recommend .cont .mag_ebook .market_price{ color:#777777; float:left;}
+#bd1 .center .recommend .cont .mag_ebook .market_price span{ text-decoration:line-through;}
+#bd1 .center .recommend .cont .mag_ebook .gm_but{ width:100px; height:39px; float:right;position: absolute;right:14px;bottom:6px;}
+#bd1 .center .recommend .cont .mag_ebook .sixmon,#bd1 .center .recommend .cont .mag_ebook .yaer,#bd1 .center .recommend .cont .mag_ebook .total{ margin-right:15px; float:left; color:#333333;}
+
+#bd1 #day_jx{width: 628px; height:497px; border:1px solid #d7d7d7; border-top:none; clear:both; padding:0;}
+#bd1 .center .recommend .cont .cont_jx_top{ width:632px; height:236px;}
+#bd1 .center .recommend .cont .cont_jx_top_l{ width:25px; height:236px; float:left; line-height:236px;}
+#bd1 .center .recommend .cont .cont_jx_top_l img{ margin:70px 0 0 10px;}
+#bd1 .center .recommend .cont .cont_jx_top_c{ width:578px; height:236px; float:left;_margin-left: -10px; }
+.cont_jx_top_c .jx_magazine{ width:122px; height:215px; float:left;font-weight:lighter; margin:12px 5px 0 17px;_margin:12px 10px 0 10px; line-height:15px;}
+.cont_jx_top_c .jx_magazine .index_title{ width:114px; height:25px; overflow:hidden;}
+.cont_jx_top_c .jx_magazine .cover{ width:114px; height:152px;padding: 3px;border-right: 1px solid #9C9C9C;border-bottom: 1px solid #9C9C9C;border-top: 1px solid #E4E4E4; border-left: 1px solid #E4E4E4; overflow:hidden;}
+.cont_jx_top_c .jx_magazine img{float:left;}
+.cont_jx_top_c .jx_magazine a{ width:114px; line-height:25px;color:#4b4a4a;float:left; font-weight:bold;}
+.cont_jx_top_c .jx_magazine h5{ width:114px;color:#9b9b9b; font-weight:lighter;float:left;}
+.cont_jx_top_c .jx_magazine b{ width:114px; color:#4B4A4A;font-weight:lighter;float:left;}
+.cont_jx_top_c .jx_magazine b span{color:#777777; text-decoration:line-through;}
+.cont_jx_top_c .jx_magazine b strong{ font-weight:bold;color:#d7252f;}
+.cont_jx_top_r{ width:25px; height:236px; float:right;line-height:236px;}
+#bd1 .center .recommend .cont .cont_jx_top_r img{ margin:70px 0 0 0;}
+#bd1 .center .recommend .cont .cont_jx_bott{ width:628px; height:55px; border-top:1px solid #d7d7d7; clear:both;}
+#bd1 .center .recommend .cont .cont_jx_bott ul{ margin-top:8px;}
+#bd1 .center .recommend .cont .cont_jx_bott ul li{ width:256px;float:left; margin-left:40px;_margin-left:20px; padding-left:10px;background:url(http://www.dooland.com/magazine/images/gg_list_bg.jpg) no-repeat left center;height: 25px;line-height: 25px}
+#bd1 .center .recommend .cont .cont_jx_bott ul li a{ color:#4B4A4A; display:block;}
+#bd1 .center .recommend .cont .cont_jx_bott ul li span{ color:#777; width:66px; height:20px; overflow:hidden;}
+
+#bd1 .center .center_banner{ width:630px; height:50px;}
+
+.tag_vip{width:150px;z-index:99;position: relative; top: 85px; height: 45px; padding-top: 5px; left: 65px; margin-top: -50px;}
+.cw_vip{ width:150px;z-index:99;background:url(http://www.dooland.com/magazine/images/cw_vip_03.jpg) no-repeat top center;position: relative; top: 45px; height: 45px; padding-top: 5px;margin-top: -50px;}
+.cw_vip .cw_vip_cont{ width:150px; height:46px;background:#000000;filter:alpha(opacity=70);-moz-opacity:0.7;opacity: 0.7; }
+.cw_vip .cw_vip_wz{ width:150px; height:46px; z-index:1000;}
+.cw_vip .cw_vip_wz p{ width:120px;color:#fff; padding:8px 6px; float:left;}
+.cw_vip .cw_vip_wz b{ float:right; margin:0; padding:0; width:13px; height:12px;}
+.cw_vip .cw_vip_wz b a{font-size:12px; color:#fff;}
+
+
+#bd1 .right{ width:184px; float:right; _overflow-x:hidden;}
+#bd1 .right .vip{ width:182px; height:32px; border:1px solid #cb1b2a;}
+#bd1 .right .vip a{ float:left; line-height:32px; margin:0 2px; color:#282828;}
+#bd1 .right .vip a strong{ color:#c11226;}
+#bd1 .right .vip a:hover{ text-decoration:underline;}
+#bd1 .right .gg{ width:184px; height:141px;}
+#bd1 .right .gg .title{ width:184px; height:32px; background:#efefef;}
+#bd1 .right .gg .title li{width:60px; height:32px; line-height:32px; float:left; text-align:center;border-bottom:1px solid #d7d7d7;}
+#bd1 .right .gg .title li a{ color:#4B4A4A; display:block;height:32px;}
+#bd1 .right .gg .title .on{ border:1px solid #d7d7d7; border-bottom:none; background:#fff;
+color:#000; width:62px;}
+#bd1 .right .gg .content{ width:182px; height:97px; border:1px solid #d7d7d7; border-top:none;}
+#bd1 .right .gg .content ul{margin-left:10px;}
+#bd1 .right .gg .content li{ width:165px; line-height:20px; /*background:url(http://www.dooland.com/magazine/images/gg_list_bg.jpg) no-repeat left center;*/ display:block; float:left;}
+#bd1 .right .gg .content a{ color:#4b4a4a; float:left; }
+#bd1 .right .gg .content span{ float:right; color:#777; margin-right:5px;}
+/*#bd1 .right .cooper{ width:182px; height:48px; border:1px solid #d7d7d7; background:url(http://www.dooland.com/magazine/images/ebook.jpg) no-repeat top left;}   2013-06-17 jojokuang修改*/
+#bd1 .right .cooper{height:48px; background:url(http://www.dooland.com/magazine/images/pad_bannner4.jpg) no-repeat top left;}
+#bd1 .right .cooper a{ float:left;margin: 25px 0px 0 0px;}
+#bd1 .right .cooper a img{ padding:0 9px;}
+#bd1 .right .editor_recom{ width:184px; height:342px;}
+#bd1 .right .editor_recom .title { width:184px; height:32px; background:#efefef; }
+#bd1 .right .editor_recom .title li{width:91px; height:32px; line-height:32px; float:left; text-align:center;border-bottom:1px solid #d7d7d7;}
+#bd1 .right .editor_recom .title li a{color: #4B4A4A; display: block;height: 32px; }
+#bd1 .right .editor_recom .title .on, #bd1 .right .editor_recom .title li:hover {border:1px solid #d7d7d7; border-bottom:none; background:#fff;color:#000; width:91px;}
+#bd1 .right .editor_recom .title .on a{ color:#D7252F;}
+#bd1 .right .editor_recom .maga_cover{ width:182px; height:309px;_height:299px; border:1px solid #d7d7d7; border-top:none;}
+#bd1 .right .editor_recom .maga_cover ul{ margin-left:10px; padding-top:10px;*padding-top:10px;_padding-top:0px;}
+#bd1 .right .editor_recom .maga_cover li{line-height:25px;color:#646464;}
+#bd1 .right .editor_recom .maga_cover a{ color:#4b4a4a;}
+#bd1 .right .editor_recom .maga_cover a b{ font-weight:lighter;color:#4b4a4a; float:left;}
+#bd1 .right .editor_recom .maga_cover span{ float:right; margin-right:10px; color:#777;}
+#bd1 .right .editor_recom .ico_1{ background:url(http://www.dooland.com/magazine/images/1_ico.jpg) no-repeat 0 7px; padding-left:15px;}
+#bd1 .right .editor_recom .ico_2{ background:url(http://www.dooland.com/magazine/images/2_ico.jpg) no-repeat 0 7px; padding-left:15px;}
+#bd1 .right .editor_recom .ico_3{ background:url(http://www.dooland.com/magazine/images/3_ico.jpg) no-repeat 0 7px; padding-left:15px;}
+#bd1 .right .editor_recom .ico_4{ background:url(http://www.dooland.com/magazine/images/4_ico.jpg) no-repeat 0 7px; padding-left:15px;}
+#bd1 .right .editor_recom .ico_5{ background:url(http://www.dooland.com/magazine/images/5_ico.jpg) no-repeat 0 7px; padding-left:15px;}
+#bd1 .right .editor_recom .ico_6{ background:url(http://www.dooland.com/magazine/images/6_ico.jpg) no-repeat 0 7px; padding-left:15px;}
+#bd1 .right .editor_recom .ico_7{ background:url(http://www.dooland.com/magazine/images/7_ico.jpg) no-repeat 0 7px; padding-left:15px;}
+#bd1 .right .editor_recom .ico_8{ background:url(http://www.dooland.com/magazine/images/8_ico.jpg) no-repeat 0 7px; padding-left:15px;}
+#bd1 .right .editor_recom .cont_1{ width:160px; height:85px; margin-top:5px;border-bottom:1px dashed #cccccc;}
+#bd1 .right .editor_recom .cont_1 img{ float:left;}
+#bd1 .right .editor_recom .cont_1 dl{float:left; margin-left:7px;}
+#bd1 .right .editor_recom .cont_1 dt{ line-height:20px; width:95px; float:left; margin:0 0 0 8px;}
+#bd1 .right .editor_recom .cont_1 dd{ line-height:16px; width:95px; float:left; margin-left:8px;}
+#bd1 .right .editor_recom .cont_1 dd img{ margin-top:5px;}
+#bd1 .right .editor_recom .cont_1 dd b{ color:#D7252F;}
+/*  ===================================   bd1 第一块 ===========================================   */
+
+#banner01{ width:990px; height:70px; margin-top:12px;}
+
+/*  ===================================   bd2 第一块 ===========================================   */
+#bd2{ width:990px; zoom:1; *position:relative;}
+#bd2 .bd2_title{ width:990px; height:35px; background:#d7252e url(http://www.dooland.com/magazine/images/bd2_title_bg.jpg) no-repeat left center; overflow:hidden;}
+#bd2 .bd2_title ul{ width:440px; height:29px; float:left; text-align:center;padding-top:7px; padding-left:500px; }
+#bd2 .bd2_title li{width:92px; height:29px; float:left; line-height:29px;}
+#bd2 .bd2_title li a{font-size:14px; color:#fff;display:block;}
+#bd2 .bd2_title .on{width:92px; height:29px; background:url(http://www.dooland.com/magazine/images/bd2_title_hover.jpg) no-repeat 0 0; margin-left: -1px;}
+#bd2 .bd2_title .on a{color:#d7252e;}
+#bd2 .bd2_title .more{ width:45px; float:right; height:35px; line-height:35px; background:url(http://www.dooland.com/book/images/book_img/m_more_bg_r.jpg) no-repeat 28px 14px;} 
+#bd2 .bd2_title .more a{ color:#fff;}
+#bd2 .bd2_right{ width:751px; height:917px; float:right; border-right:1px solid #d7d7d7;border-bottom:1px solid #d7d7d7;*float: none; *margin-left: 238px;
+}
+#bd2 .bd2_left{ width:234px; height:917px; float:left; border:1px solid #d7d7d7; border-top:none; *position:absolute; *top:35px; overflow:hidden;}
+.hot{ width:235px; height:522px; border-bottom:1px solid #d7d7d7; border-bottom:none;}
+.hot .hot_title{ width:236px; height:29px; background:#efefef;margin: 0 -1px;}
+.hot .hot_title li{width:79px; height:29px; line-height:29px; float:left; text-align:center;border-bottom:1px solid #d7d7d7;}
+.hot .hot_title li a{ color:#4B4A4A; display:block;height:29px;}
+.hot .hot_title .on,.hot .hot_title li:hover { border:1px solid #d7d7d7; border-bottom:none;background:#fff;
+color:#f2852a; width:76px;}
+.hot .hot_title li:hover { width: 76px;}
+.hot .small_title{ width:234px; height:40px;}
+.hot .small_title li{ width:117px; float:left; line-height:40px; text-align:center;}
+.hot .small_title a{ color:#707070; padding:2px 11px;}
+.hot .small_title .on{color:#d7252e; font-weight:bold;}
+.hot .small_title .bule_on{color:#f2852a;font-weight:bold;}
+.hot .ico1{ background: url(http://www.dooland.com/magazine/images/hot_ico1.jpg) no-repeat left top;}
+.hot .ico2{ background: url(http://www.dooland.com/magazine/images/hot_ico2.jpg) no-repeat left top;}
+.hot .ico3{ background: url(http://www.dooland.com/magazine/images/hot_ico3.jpg) no-repeat left top;}
+.hot .ico4{ background: url(http://www.dooland.com/magazine/images/hot_ico4.jpg) no-repeat left top;}
+.hot .ico5{ background: url(http://www.dooland.com/magazine/images/hot_ico5.jpg) no-repeat left top;}
+.hot .ico6{ background: url(http://www.dooland.com/magazine/images/hot_ico6.jpg) no-repeat left top;}
+.hot .ico7{ background: url(http://www.dooland.com/magazine/images/hot_ico7.jpg) no-repeat left top;}
+.hot .ico8{ background: url(http://www.dooland.com/magazine/images/hot_ico8.jpg) no-repeat left top;}
+.hot .ico9{ background: url(http://www.dooland.com/magazine/images/hot_ico9.jpg) no-repeat left top;}
+.hot .ico10{ background: url(http://www.dooland.com/magazine/images/hot_ico10.jpg) no-repeat left center;}
+
+.hot .bule_ico1{ background: url(http://www.dooland.com/magazine/images/bule_hot_ico1.jpg) no-repeat left top;}
+.hot .bule_ico2{ background: url(http://www.dooland.com/magazine/images/bule_hot_ico2.jpg) no-repeat left top;}
+.hot .bule_ico3{ background: url(http://www.dooland.com/magazine/images/bule_hot_ico3.jpg) no-repeat left top;}
+.hot .hot_bott{}
+.hot .hot_bott ul{ width:210px; margin-left:23px;}
+.hot .hot_bott li{ padding-left:20px; margin-top:9px;*margin-top:8px;_margin-top:9px;width: 180px; float:left;}
+@-moz-document url-prefix(){.hot .hot_bott li{ margin-top:7px;}}
+.hot .hot_bott li a{ color:#4b4a4a; float:left; overflow:hidden;}
+.hot .hot_bott li span{color:#777; float:right;}
+.hot .hot_bott .pic{ width:185px; height:78px; margin-bottom:5px;_margin-bottom:0px;}
+.hot .hot_bott .pic img{ float:left;}
+.hot .hot_bott .pic .sTit{ width:116px; float:left; margin-left:10px;}
+.hot .hot_bott .pic b{ width:116px; float:left; margin-left:10px; font-weight:lighter; line-height:20px; color:#4b4a4a; height:20px; overflow:hidden;}
+.hot .hot_bott .pic h3{ color:#777777; font-weight:lighter;}
+.hot .hot_bott .pic strong{ color:#d7252f; padding-right:10px;}
+.hot .hot_bott .pic b h4{ text-decoration:line-through; font-weight:lighter;}
+.hot .hot_bott .pic b h5{font-weight:lighter; float:left;}
+.hot .hot_bott .pic b span{text-decoration: line-through;}
+
+.hot .hot_bott2{}
+.hot .hot_bott2 ul{ width:210px; margin-left:23px; margin-bottom:10px;}
+.hot .hot_bott2 li{ padding-left:20px; margin-top:10px;*margin-top:9px;_margin-top:8px;}
+@-moz-document url-prefix(){.hot .hot_bott2 li{ margin-top:7px;}}
+.hot .hot_bott2 a{ color:#4b4a4a;}
+.hot .hot_bott2 .pic{ width:185px; height:78px; margin-bottom:12px;}
+.hot .hot_bott2 .pic img{ float:left;}
+.hot .hot_bott2 .pic .sTit{ width:116px; float:left; margin-left:10px;}
+.hot .hot_bott2 .pic b{ width:116px; float:left; margin-left:10px; font-weight:lighter; line-height:20px; color:#4b4a4a; height:20px; overflow:hidden;}
+.hot .hot_bott2 .pic h3{ color:#777777; font-weight:lighter;}
+.hot .hot_bott2 .pic strong{ color:#d7252f;padding-right:10px;}
+.hot .hot_bott2 .pic b span{ text-decoration:line-through;}
+
+.hot_2{ width:234px; height:170px; border-bottom:1px solid #d7d7d7;}
+.hot_2 .hot_2_tit,.hot_3 .hot_3_tit{ width:234px; height:32px; background:#f7f7f7; line-height:32px;}
+.red_top{border-top:1px solid #D7252F;}
+.bule_top{border-top:1px solid #f2852a;}
+.hot_2 .hot_2_tit h4,.hot_3 .hot_3_tit h4{ width:120px;color:#333333;text-indent:20px; float:left;}
+.hot_3 .hot_3_tit .more{ width:45px; float:right; color:#999; font-size:12px;background:url(http://www.dooland.com/book/images/book_img/m_more_bg.png) no-repeat 28px 13px;}
+.hot_3 .hot_3_tit .more a{ color:#777;}
+.hot_2 .hot_2_tit .k_sit{ width:50px; float:right;_height: 18px; _overflow: hidden;}
+.hot_2 .hot_2_tit .k_sit a{ width:6px; height:6px;float:left; margin:12px 0px 0px 6px;background:#9e9e9e;}
+.hot_2 .hot_2_tit .k_sit .bule_on{ background:#f2852a;}
+.hot_2 .hot_2_tit .k_sit .on{ background:#d7252e;}
+.hot_2 .magazine_cont{ width:185px; height:108px; padding:15px 23px;}
+.hot_2 .magazine_cont .title{ width:90px; height:20px; overflow:hidden;}
+.hot_2 .magazine_cont img{ float:left; margin-right:10px;}
+.hot_2 .magazine_cont a{ color:#4b4a4a;line-height:22px; font-weight:bold;}
+.hot_2 .magazine_cont b{ width:120px;font-weight:lighter; color:#777777; line-height:16px; }
+.hot_2 .magazine_cont b img{ margin-top:9px;}
+.hot_2 .magazine_cont p{ margin-top:5px;color:#d7252f;}
+.hot_3{ width:234px; height:215px;}
+.hot_3 ul{ width:225px; margin:10px 0 0 10px;_margin:0 0 0 10px;}
+.hot_3 li{ line-height:28px;_line-height:26px; background:url(http://www.dooland.com/magazine/images/gg_list_bg.jpg) no-repeat left center; padding-left:8px;width: 225px;height: 28px;overflow: hidden;}
+.hot_3 a{ color:#333333;}
+.hot_3 span{ color:#777777;}
+.hot_2 .magazine_cont2{ width:210px; height:108px; padding: 15px 0 0 20px;}
+.hot_2 .magazine_cont2 .title{ width:115px; height:18px; overflow:hidden; line-height:25px;}
+.hot_2 .magazine_cont2 img{ float:left; margin-right:10px;}
+.hot_2 .magazine_cont2 a{ color:#4b4a4a;line-height:22px;}
+.hot_2 .magazine_cont2 b{ width:120px;font-weight:lighter; color:#777777; line-height:16px; }
+.hot_2 .magazine_cont2 b img{ margin-top:5px;}
+.hot_2 .magazine_cont2 p{ margin-top:10px;color:#d7252f;}
+
+.magazine_list{ width:750px;}
+.magazine_list ul{ clear:both;}
+.magazine_list li{ width:165px;height:280px; float:left; display:block; margin: 20px 11px 0 11px;_margin: 20px 6px 0 10px; }
+.magazine_list .pic{ width:154px; height:200px; margin-left:3px;padding: 3px;border-right: 1px solid #9C9C9C;border-bottom: 1px solid #9C9C9C;border-top: 1px solid #E4E4E4;border-left: 1px solid #E4E4E4; text-align:center; overflow:hidden;}
+.magazine_list .txt{ width:162px; margin-left:3px; padding-top:10px;}
+.magazine_list .txt a{ color:#4b4a4a; line-height:18px; font-weight:bold; width:162px; height:20px; overflow:hidden; display:block;}
+.magazine_list .txt p{ color:#777777; line-height:22px; width:162px; height:22px; overflow:hidden;}
+.magazine_list .txt b{color:#4B4A4A; font-weight:lighter;}
+.magazine_list .txt b strong{color:#d7252f; padding-right:1px;}
+.magazine_list .txt span{text-decoration:line-through; color:#777777;}
+.news_magazine{ width:988px; height:335px; border:1px solid #d7d7d7; border-top:none;}
+.news_magazine .news_title{ width:988px; height:38px; background:#F7F7F7;}
+.news_magazine .news_title ul{margin-left: 3px; float:left;}
+.news_magazine .news_title li{ width:123px; float:left; line-height:38px; text-align:center; z-index: 1; position: relative;}
+.news_magazine .news_title li a{width:123px; height:39px; background:url(http://www.dooland.com/magazine/images/ti_fg.jpg) no-repeat right center; display:block; font-size:14px; color:#4d4d4d;}
+.news_magazine .news_title li.ti_fg_red *{ width:123px; height:38px; background:#fff;color:#cb1b2a; font-weight:bold; margin-left:-2px; }
+.news_magazine .news_title li.ti_fg_red{ margin-left: -1px;z-index: 2; }
+.news_magazine .news_title li.ti_fg_bule *{color:#f2852a; font-weight:bold; margin-left:-2px; background:#fff;}
+.news_magazine .news_title li.ti_fg_bule{ margin-left: -1px;z-index: 2;}
+.news_magazine .right_more{margin-left:120px;}
+.news_magazine .magezine_more{ float:right; height:39px; line-height:39px;padding-right: 10px; background:url(http://www.dooland.com/book/images/book_img/m_more_bg.png) no-repeat 28px 16px; margin-right:10px;_margin-right:5px;}
+.news_magazine .magezine_more a{ color:#777;}
+.news_list{ width:988px; height:300px;}
+.news_list ul{}
+.news_list li{ width:136px;height:250px; float:left; display:block; margin: 24px 30px 0 30px;_margin: 24px 25px 0 20px; }
+.news_list .pic{ width:130px; margin-left:3px; padding:3px;border-right: 1px solid #9C9C9C;border-bottom: 1px solid #9C9C9C;border-top: 1px solid #E4E4E4;border-left: 1px solid #E4E4E4; text-align:center;}
+.news_list .txt{ width:138px; margin-left:3px; padding-top:10px;}
+.news_list .txt a{ color:#4b4a4a; line-height:18px; font-weight:bold; width:138px; height:20px; overflow:hidden; display:block;}
+.news_list .txt p{ color:#777777; line-height:22px;width:138px; height:22px; overflow:hidden;}
+.news_list .txt b{color:#4B4A4A;font-weight:lighter;}
+.news_list .txt b strong{ color:#d7252f; margin-right:10px;}
+.news_list .txt span{text-decoration:line-through; color:#777777;}
+
+.news_list2{ width:988px; height:300px; clear:both;}
+.news_list2 ul{}
+.news_list2 li{ width:136px;height:250px; float:left; display:block; margin: 24px 30px 0 30px;_margin: 24px 25px 0 20px; }
+.news_list2 .pic{ width:130px; margin-left:3px;padding:3px;border-right: 1px solid #9C9C9C;border-bottom: 1px solid #9C9C9C;border-top: 1px solid #E4E4E4;border-left: 1px solid #E4E4E4; text-align:center; overflow:hidden;}
+.news_list2 .txt{ width:135px; margin-left:3px; padding-top:10px;}
+.news_list2 .txt a{ color:#4b4a4a; line-height:18px; font-weight:bold; width:135px; height:20px; overflow:hidden; display:block;}
+.news_list2 .txt p{ color:#777777; line-height:22px; width:135px; height:22px; overflow:hidden;}
+.news_list2 .txt b{color:#4B4A4A; font-weight:lighter;}
+.news_list2 .txt b strong{color:#d7252f;  margin-right:10px; }
+.news_list2 .txt span{text-decoration:line-through; color:#777777;}
+/*  ===================================   bd2 第一块 ===========================================   */
+
+/*  ===================================   banner02 ===========================================   */
+#banner_02{ width:990px; height:135px; overflow:hidden;}
+/*  ===================================   banner02 ===========================================   */
+
+/*  ===================================   bd3 第三块 ===========================================   */
+#bd3{ width:990px; *position:relative;}
+#bd3 .bd3_title{ width:990px; height:35px; background:#f2852a url(http://www.dooland.com/magazine/images/bd3_title_bg.jpg) no-repeat 0 0; overflow:hidden; z-index:3;}
+#bd3 .bd3_title ul{ width:464px; height:29px; float:left; text-align:center;padding-top:7px; padding-left:385px; }
+#bd3 .bd3_title li{width:92px; height:29px; float:left; line-height:29px;}
+#bd3 .bd3_title li a{font-size:14px; color:#fff;display:block;}
+#bd3 .bd3_title .on{width:92px; height:29px; background:url(http://www.dooland.com/magazine/images/bd2_title_hover.jpg) no-repeat 0 0;  margin-left:-1px;}
+#bd3 .bd3_title .on a{color:#f2852a;}
+#bd3 .bd3_title .more{color: #fff; font-size:12px; width:45px;background:url(http://www.dooland.com/book/images/book_img/m_more_bg_o.jpg) no-repeat 28px 14px; float:right;height: 35px;line-height: 35px;}
+#bd3 .bd3_title .more a{ color:#fff;}
+#bd3 .bd3_left{margin-bottom:30px; width:741px; height:917px; float:left; border-left:1px solid #d7d7d7;border-bottom:1px solid #d7d7d7;*position:absolute;*left:0px;}
+#bd3 .bd3_right{margin-bottom:30px; width:234px; height:917px;  border:1px solid #d7d7d7; border-top:none;float:right;*float: none; *margin-left: 754px; overflow:hidden;}
+
+/*  ===================================   bd3 第三块 ===========================================   */
+
+/*  ===================================   bd4 第四块 ===========================================   */
+#bd4{ width:990px; height:280px; margin:0px auto; margin-top:12px;}
+#bd4 .bd4_left{ width:198px; height:280px; float:left;}
+#bd4 .bd4_left .title{ width:196px; height:30px; background:#F7F7F7; text-indent:20px; color:#404040; line-height:30px; font-weight:bold;border:1px solid #d7d7d7; border-bottom:none;}
+#bd4 .bd4_left .bott_banner1{ width:196px; height:71px; border:1px solid #d9dad9; margin-top:9px;}
+#bd4 .bd4_left ul{ padding:5px 10px;border:1px solid #d7d7d7; border-top:none;}
+#bd4 .bd4_left ul li a{ color:#575656; line-height:26px; padding:0 7px; }
+#bd4 .bd4_left ul li a .fg{background:url(http://www.dooland.com/magazine/images/bd4_fg.jpg) no-repeat right center;}
+#bd4 .bd4_center{ width:548px; height:280px; float:left;}
+#bd4 .bd4_center .title{ width:546px; height:30px;background:#f7f7f7;text-indent:20px; color:#404040; line-height:30px; border:1px solid #D7D7D7; border-bottom:none;}
+#bd4 .bd4_center .title h6{float:left;}
+#bd4 .bd4_center .title .js_k{ float:right;}
+#bd4 .bd4_center .sina_weibo{ width:546px; height:248px; position:relative;border: 1px solid #D7D7D7;border-top: none;}
+#bd4 .bd4_right{ width:219px; height:280px; float:right;}
+/*  ===================================   bd4 第四块 ===========================================   */
+
+/*  ===================================   footer ===========================================   */
+#footer{ width:auto; height:245px; background:url(http://www.dooland.com/magazine/images/footer_title_bg.jpg) repeat-x 0 0; margin-top:12px;}
+#footer #bottom{ width:990px; margin:0 auto; height:60px;text-align:center;line-height:60px;}
+#footer #bottom a{ color:#313143;margin:0 5px; height:60px;line-height:60px; }
+##footer #bottom .fg_x{ background:url(images/bd4_fg.jpg) no-repeat left center;}
+#footer #zc{ width:988px; height:58px; border:1px solid #d1d1d1; margin:0 auto;}
+#footer #zc a{ float:left; padding-left:1px;}
+#footer #zc img{ float:left; margin-top:8px;}
+#footer #zc .zc_img_fg{ background:url(images/zc_img_fg.jpg) no-repeat left 17px;}
+#footer #zc .zc_zi_margin{ margin-left:15px;}
+#footer .bottom3{ width:990px; margin:0 auto; height:50px; text-align:center; margin-top:5px;}
+#footer .bottom3 b{ color:#888888; font-weight:lighter; line-height:25px;}
+#footer .bottom4{ width:990px; margin:0 auto; text-align:center;}
+#footer .bottom4 img{ margin-top:15px; padding-bottom:20px;}
+.skin01 .tblog_main{border-left: none; border-right:none;}
+/*  ===================================   footer ===========================================   */
+/* ==================================== adv广告 ======================================= */
+.SlideShow{width:630px;margin:0 auto;padding-top:0px;display:none}
+.SlideShow .ad{margin-bottom:10px;width:630px;height:188px;overflow:hidden;position:relative;margin:0 auto; z-index:1;}
+.SlideShow .slider,.SlideShow .num{position:absolute}
+.SlideShow .slider li{list-style:none;display:inline}
+.SlideShow .slider img{width:630px;height:188px;display:block}
+.SlideShow .num{right:10px;bottom:5px; z-index:100;}
+.SlideShow .num li{float:left;text-align:center;line-height:10px;width:10px;height:10px;cursor:pointer;overflow:hidden;margin:3px 3px;background-color:#CCC;#-moz-opacity:0.8;opacity:0.8;_filter:Alpha(Opacity=80)}
+.SlideShow .num li.on{color:#333;line-height:12px;width:12px;height:12px;border:0;background-color:#333;font-weight:bold;#-moz-opacity:1;opacity:1;_filter:Alpha(Opacity=100)}
+.SlideShow .adstitle{ background:#333; width:630px; height: 30px; position:absolute; bottom:0px;filter: Alpha(opacity=45); /*IE*/-moz-opacity:.1; /*老版本FireFox 1.0 以前*/opacity:0.45; /*新版本FireFox*/ z-index:0; line-height:30px; }
+.SlideShow .title_txt{width: 630px;height: 30px; z-index:10; color:#fff;position: absolute;bottom: 0;font-size: 14px;line-height: 30px; text-indent:25px; font-weight:bold;}
+.SlideShow .title_txt a{ color:#fff;}
+.SlideShow .adstitle #adsname{ font-size:14px; font-family:Verdana; color:#FFF; margin-left:50px; margin-top:5px; }
+
+/* ===================================== 购物车 ==================================================== */
+#float_cart_container{top:110px;right:198px;overflow:hidden;padding:0}
+.gwc02{width:auto;padding-top:4px;background:#fffbf0;height:30px;line-height:30px;margin-top:5px}
+.gwc02left{padding-left:10px;height:25px;line-height:25px;float:left;color:#DC2618;font-size:12px;font-weight:bold;text-align:left}
+.gwc02right{width:145px;float:right;height:25px; line-height:25px;padding-right:5px; vertical-align:middle;}
+.gwc02right a{float:right; color:#999;}
+.gwc_jixu{padding-right:10px; line-height:25px; float:right;}
+.maglist_shoppingcar{width:248px;height:auto;padding-bottom:10px;padding-left:10px;overflow:hidden;border-bottom:1px dashed #dcdcdc;margin-bottom:10px}
+.shygouwuchelist{height:112px;margin-bottom:8px;padding-bottom:5px;overflow:hidden;line-height:18px} 
+.shygouwuchelisttu{width:66px;height:89px;margin-right:5px;float:left;padding-left:5px}
+.shygouwuchelisttu img{width:58px;height:81px;background-color:#f1f1f1;padding:3px;border:1px solid #ccc}
+.shygouwuchelisright{width:200px;height:auto;float:left;overflow:hidden;text-align:left}
+.shygouwuchelisright ul{margin:0px;padding:0px;list-style:none}
+.shygouwuchelisright li{color:#666;font-size:12px;line-height:20px;display:block;font-family:"&#23435;&#20307;";font-family:Arial,Helvetica,sans-serif;}
+.shygouwuchelisright li a{ color:#DC2618; text-decoration:none;}
+.shygouwuchelisright li img{border:0px solid}
+.shygouwuchelisright li span a:hover{text-decoration:underline}
+
+/*  ===================================   每日精选滚动  ===================================  */
+	.panel h2.title { margin-bottom: 10px }
+	noscript div { background: #ccc; border: 1px solid #900; margin: 20px 0; padding: 15px }
+	
+	.coda-slider-wrapper { padding: 20px 0 }
+	
+	/* Use this to keep the slider content contained in a box even when JavaScript is disabled */
+	.coda-slider-no-js .coda-slider { height: 200px; overflow: auto !important; padding-right: 20px }
+	
+	/* Change the width of the entire slider (without dynamic arrows) */
+	.coda-slider, .coda-slider .panel { width: 578px;} 
+	
+	/* Change margin and width of the slider (with dynamic arrows) */
+	.coda-slider-wrapper.arrows .coda-slider, .coda-slider-wrapper.arrows .coda-slider .panel { width: 600px; }
+	.coda-slider-wrapper.arrows .coda-slider { margin: 0 10px }
+	
+	/* Tab nav */
+	.coda-nav ul li a.current { background: #39c }
+	
+	/* Panel padding */
+	.coda-slider .panel-wrapper { padding: 20px }
+	
+	/* Preloader */
+	.coda-slider p.loading { padding: 20px; text-align: center }
+
+/* Don't change anything below here unless you know what you're doing */
+
+	/* Tabbed nav */
+	.coda-nav{display: none;}
+	
+	/* Miscellaneous */
+	.coda-slider-wrapper { clear: both; overflow: auto }
+	.coda-slider { float: left; overflow: hidden; position: relative }
+	.coda-slider .panel { display: block; float: left }
+	.coda-slider .panel-container { position: relative }
+	.coda-nav-left, .coda-nav-right { float: left; width:25px; height:235px; }
+	.coda-nav-left a, .coda-nav-right a { display: block; text-align: center; text-decoration: none;color: #fff; width:25px; height:230px; text-indent:-99999px;}
+	.coda-nav-left a { background: url(../images/cont_jx_top_left.jpg) no-repeat 50% 50%; }
+	.coda-nav-right a { background: url(../images/cont_jx_top_right.jpg) no-repeat 50% 50%; }
+
+/*  ===================================   每日精选滚动  ===================================  */

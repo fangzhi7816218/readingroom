@@ -1,0 +1,29 @@
+#layout{ width:990px; margin:0 auto;}
+
+#SmallClass_left{ width:152px; float:left;}
+#SmallClass_left .title{width: 150px;height: 32px;line-height: 32px;text-indent: 10px;color: #333232;font-weight: bold;}
+#SmallClass_right{ width:826px; float:right;}
+#SmallClass_right .banner{ width:826px; height:70px;}
+#SmallClass_right .mag_content{ width:826px;}
+#SmallClass_right .title{ width:824px; height:38px;border: 1px solid #D7D7D7; background:url(../images/category/mag_SmallClass_px_bg.jpg) repeat-x 0 0;}
+#SmallClass_right .title .tit-left{ width: 430px; height:38px; float:left; line-height:38px;color: #4B4A4A;}
+#SmallClass_right .title .tit-left .search_str{ height: 22px; line-height: 22px; width: 140px; padding: 0 7px; float: left; margin-top: 7px; border: 1px solid #dbdbdb;}
+#SmallClass_right .title .tit-left .search_str_btn{ height:24px; width: 50px; margin-left: 9px; float: left; margin-top: 7px; background: #fff; border: 1px solid #dbdbdb; display: inline; cursor:pointer;}
+#SmallClass_right .title .tit-left h1{ font-size:16px; padding:0 10px 0 20px;background:url(../images/category/center-fg.jpg) no-repeat right center; float:left; margin-right:10px;}
+#SmallClass_right .title .tit-left span{color: #D7252E;}
+
+.Sort-tit{ float:left;height:17px;margin-top:12px;}
+.Sort{ width: 132px; height:17px;border: 1px solid #D7D7D7; border-right:none; background:#fff; float:left; margin-top:10px; }
+.Sort .Sort-news{ width:43px; height:17px; float:left; background:url(../images/category/Sort-news-bg.jpg) no-repeat 90% 50%;border-right: 1px solid #D7D7D7; line-height:17px; text-indent:3px; }
+
+.Sort-book{ width: 132px; height:17px;border: 1px solid #D7D7D7; border-right:none; background:#fff; float:left; margin-top:10px; }
+.Sort-book .Sort-news{ width:43px; height:17px; float:left; background:url(../images/category/Sort-news-bg.jpg) no-repeat 90% 50%;border-right: 1px solid #D7D7D7; line-height:17px; text-indent:3px; }
+
+.Sort-news-on{width:43px; height:17px; background:url(../images/category/Sort-news-bg-on.jpg) no-repeat 90% 50%; float:left; line-height:17px; text-indent:3px;border-right: 1px solid #D7D7D7;  }
+.Sort a{ color:#777;}
+.Sort-book a{ color:#777;}
+#SmallClass_right .title .tit-center{ width:200px; height:38px; float:left;color: #4B4A4A;}
+#SmallClass_right .title .tit-right{ width:115px; height:20px; float:right;color: #4B4A4A;margin-top:10px;margin-right: 25px;}
+#SmallClass_right .title .tit-right .num{ width:35px; float:left; height:20px; line-height:20px; }
+#SmallClass_right .title .tit-right .Previous{ width:20px; height:20px; float:left;}
+#SmallClass_right .title .tit-right .Next-page{ width:59px; height:20px; float:right; }

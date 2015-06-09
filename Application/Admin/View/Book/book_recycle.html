@@ -1,0 +1,111 @@
+
+<!-- $Id: goods_list.htm 17126 2010-04-23 10:30:26Z liuhui $ -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>权限管理 - 管理员列表 </title>
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="__ADMINCSS__/general.css" rel="stylesheet" type="text/css" />
+<link href="__ADMINCSS__/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__ADMINJS__/transport.js"></script>
+<script type="text/javascript" src="__ADMINJS__/common.js"></script>
+<script src="__ADMINJS__/jquery.js"></script>
+<style>
+	.list-div table td{
+		text-align:center;
+	}
+</style>
+
+</head>
+<body>
+
+<h1>
+<span class="action-span"><a href="__URL__/book_list">图书列表</a></span>
+<span class="action-span1"><a href="index.php?act=main">后台</a> </span><span id="search_id" class="action-span1"> - 图书回收站</span>
+<div style="clear:both"></div>
+</h1>
+<script type="text/javascript" src="__ADMINJS__/utils.js"></script><script type="text/javascript" src="js/listtable.js"></script>
+<!-- 商品搜索 -->
+<!-- $Id: goods_search.htm 16790 2009-11-10 08:56:15Z wangleisvn $ -->
+<div class="form-div">
+  <form action="__ACTION__" id="searchForm" method="post">
+    <img src="__ADMINIMAGE__/icon_search.gif" width="26" height="22" border="0" alt="SEARCH" />
+
+        <!-- 关键字 -->
+     图书名称：<input type="text" name="book_name" size="15" />
+      图书编号：<input type="text" name="book_ibsn" size="15" />
+    <input type="submit" value=" 搜索 " class="button" />
+  </form>
+</div>
+
+
+
+<!-- 商品列表 -->
+  <!-- start goods list -->
+  <form action="__URL__/book_remove" method="get">
+  <div class="list-div" id="listDiv">
+<table cellpadding="3" cellspacing="1">
+  <tr>
+    <th><input type="checkbox" id="selectAll">编号</th>
+    <th>书名</th>
+    <th>图书编号</th>
+    <th>数量</th>
+    <th>所属分类</th>
+    <th>图片</th>
+        <th>操作</th>
+  </tr>
+  <notempty name="book_list">
+  <foreach name="book_list" item="vo">
+  <tr>
+  	<td class="first-cell"><input type="checkbox" id="select_sub" name="ids[]" value="{$vo['id']}">{$vo['id']}</td>
+  	<td >{$vo['name']}</td>
+  	<td >{$vo['ibsn']}</td>
+  	<td >{$vo['number']}</td>
+  	<td >{$vo['cate_name']['name']}</td>
+  	<td><img src="<notempty name="vo['img']">{$vo['img']}<else />__ADMINIMAGE__/user_img/user_default.png</notempty>" width="50px" height="45px" /></td>
+  	<td><a href="__URL__/book_remove?ids={$vo['id']}&restore=1">还原 </a>|<a href="__URL__/book_remove?ids={$vo['id']}&remove=1"> 删除</a></td>
+  	</tr>
+     </foreach>
+  <else />
+    <tr><td class="no-records" colspan="10">没有找到任何记录</td></tr>
+  </notempty>
+  </table>
+<!-- end goods list -->
+
+<!-- 分页 -->
+<table id="page-table" cellspacing="0">
+  <tr>
+    <td align="right" nowrap="true">
+            <div id="turn-page">
+            {$page}
+          <select id="gotoPage" onchange="listTable.gotoPage(this.value)">
+            <option value='1'>1</option>          </select>
+        </span>
+      </div>
+    </td>
+  </tr>
+</table>
+
+</div>
+<div class="form-div">
+ 		<input type="submit" value=" 批量还原" class="button" name='restore' />
+	    <input type="submit" value=" 批量删除" class="button" name='remove' onclick="return confirm('确定要删除以上图书')" />
+	
+</div>
+</form>
+<script>
+$().ready(function(){
+	$('#selectAll').click(function (){
+		var isSelect=$(this).is(':checked');
+		$(this).parent().parent().parent().find('#select_sub').attr('checked',isSelect);
+	});
+} );
+            document.getElementById('searchForm').book_name.value="{$param['book_name']}";
+            document.getElementById('searchForm').book_ibsn.value="{$param['book_ibsn']}";
+</script>
+
+<include file="Public/fooder" />
+</body>
+</html>

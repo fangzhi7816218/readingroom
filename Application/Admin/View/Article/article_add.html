@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> 管理中心 - 添加分类 </title>
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="__ADMINCSS__/general.css" rel="stylesheet" type="text/css" />
+<link href="__ADMINCSS__/main.css" rel="stylesheet" type="text/css" />
+<script src="__ADMINJS__/jquery.js"></script>
+<script>
+$().ready(function (){
+	$('#book_id_value').change(function(){
+		$('#big_title_value').empty();
+		//$('#cate_id option').remove();
+			var b_id=$(this).val();
+			$('#big_title_value')[0].options.add(new Option('选择所属章节','0'));
+			var data={b_id:b_id,ajax:'ajax'};
+			$.post('',data,function(msg){
+				for(var i=0;i<msg.length;i++){
+					if(msg[i].level){
+						var op=new Option("--"+msg[i].title,msg[i].id);
+					}else{
+						var op=new Option(msg[i].title,msg[i].id);
+					}
+					
+					$('#big_title_value')[0].options.add(op);
+				}
+			},'json');
+	});
+	
+	$('#a_type').change(function (){
+		if($(this).val()==1){
+			$('#small_desc').hide();
+			 $('#big_desc').show();
+			 $('#is_big_title').hide();
+		}else if($(this).val()==2){
+			$('#small_desc').show();
+			 $('#big_desc').hide();
+			 $('#is_big_title').show();
+		}else{
+			$('#is_big_title').hide();
+		}
+
+	});
+});
+function is_null(){
+	if($('#title').val().trim()==''){
+		alert('标题不能为空');
+		return false;
+	}
+	
+	if($('#a_type').val()=='0'){
+		alert('请选择标题类型');
+		return false;
+	}
+	if($('#a_type').val()==2 && $('#big_title_value').val() == 0){
+		alert('请选择所属大标题');
+		return false;
+	}
+}
+</script>
+</head>
+<body>
+
+<h1>
+<span class="action-span"><a href="__URL__/article_list">文章列表</a></span>
+<span class="action-span1"><a href="">管理中心</a> </span><span id="search_id" class="action-span1"> - 添加文章</span>
+<div style="clear:both"></div>
+</h1>
+<!-- start add new category form -->
+<div class="main-div">
+
+  <form action="__ACTION__" method="post" name="theForm" >
+  <table width="100%" id="general-table">
+
+      <tr>
+        <td class="label">所属书本:</td>
+        <td>
+          <select name="b_id" id="book_id_value"onchange="">
+          <option>请选择书本</option>
+		  <foreach name="books" item='vo'>
+		  	 <option value="{$vo['id']}">{$vo['name']}</option>
+		  </foreach>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td class="label" >标题类型:</td>
+        <td>
+          <select name="a_type" id="a_type" onchange="fang()">
+          <option value="0">标题类型</option>
+			<option value="1">大章节</option>
+		  	 <option value="2">小标题</option>
+          </select>
+        </td>
+      </tr>
+      
+      <tr id="is_big_title" style="display:none">
+        <td class="label" >所属大标题:</td>
+        <td>
+          <select name="p_id" id="big_title_value">
+          </select>
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="label">标题:</td>
+        <td>
+          <input type="text" name="title" id="title" size="80"></input>
+        </td>
+      </tr>
+       <tr>
+        <td class="label" id="small_desc"style="display:none">内容:</td>
+        <td class="label" id="big_desc" >章节描述:</td>
+        <td>
+          <textarea id="contents" name="contents" style="display:none"></textarea>
+<iframe ID="eWebEditor1" src="__ADMINJS__/ewebeditor/ewebeditor.htm?id=contents&style=standard" frameborder="0" scrolling="no" width="500" HEIGHT="350"></iframe>
+        </td>
+      </tr>
+      </table>
+
+      <div class="button-div">
+        <input type="submit" value=" 确定 " onclick="return is_null()"/>
+        <input type="reset" value=" 重置 " />
+      </div>
+   <input type="hidden" name="act" value="insert" />
+  </form>
+</div>
+
+
+
+<include file="Public/fooder" />
+
+</body>
+</html>

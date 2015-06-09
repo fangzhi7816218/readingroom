@@ -1,0 +1,250 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*top begin*/
+.toplaycenter {
+  width:960px;
+  height:36px;
+  margin-left:auto;
+  margin-right:auto;
+  line-height:36px;
+  background-image:url(../images/topbg_center.gif);
+  background-repeat:repeat-x;
+  background-position:center bottom;
+  margin-bottom:8px;
+  }
+.toplay01center,.toplay02center,.toplay03center {
+   height:28px;
+   line-height:28px;
+   float:left;
+   font-size:12px;
+   color:#888;
+   text-decoration:none;
+   margin-left:2px;
+   }
+.toplaycenter span {
+   color:#e75c12;
+   white-space:pre;
+   }
+.colorredcenter {
+   color:#ff0000;
+   }
+.toplay01center a,.toplay01center a:visited,.toplay02center a,.toplay02center a:visited,.toplay03center a,.toplay03center a:visited{
+   color:#888;
+   font-size:12px;
+   text-decoration:none;
+   }
+.toplay01center a:hover,.toplay02center a:hover,.toplay03center a:hover {
+   color:#e75c12;
+   text-decoration:underline;
+   }
+.toplay01center {
+   width:550px;
+   }
+.toplay02center {
+   width:300px;
+   text-align:right;
+   }
+.toplay03center {
+   width:60px;
+   float:right;
+   text-align:right;
+   background-image:url(../images/blog_info_icon.gif);
+   background-repeat:no-repeat;
+   background-position:right 5px;
+   padding-right:25px;
+   }
+/*end begin*/
+
+.mainlaycenter {
+   width:990px;
+   height:auto;
+   margin-left:auto;
+   margin-right:auto;
+   margin-bottom:8px; margin-top:10px;
+   }
+
+   .mainlaycenter #rght .progress { z-index:90;}
+
+/*left begin*/
+.leftlaycenter {
+  width:141px;
+  height:785px;
+  border-right:1px solid #DADADA; border-left:1px solid #DADADA;border-top:1px solid #DADADA;
+  padding:0px;}
+  .user_left { margin-right:16px; width:143px;  float:left;height:850px;}
+.user_left .top {width:143px;height:45px;}
+.user_left .bottom {}
+.leftlaycenter h3 {
+   margin:0px;
+   padding:0;
+   padding-left:14px;
+   font-size:12px;
+   font-weight:bold;
+   color:#121212;
+   }
+   .leftlaycenter h3.bgicon01_center { border-bottom:none;}
+.sortleftttcenter {
+
+   height:25px;
+   line-height:28px;
+   text-align:left;
+   background-repeat:no-repeat;
+   background-position:left center;
+   }
+.bgicon01_center {
+   }
+.bgicon02_center {
+   backg/round:url(../images/left_icon_center.gif) no-repeat 0px 5px;
+   }
+.bgicon03_center {
+   backg/round:url(../images/left_icon_center.gif) no-repeat 0px 5px;
+   }
+.bgicon04_center {
+   backg/round:url(../images/left_icon_center.gif) no-repeat 0px 5px;
+   }
+.bgicon05_center {
+   backgr/ound:url(../images/left_icon_center.gif) no-repeat 0px 5px;
+   }
+.bgicon06_center {
+   backg/round:url(../images/left_icon_center.gif) no-repeat 0px 5px;
+   }
+
+
+/*li*/
+.leftlaycenter ul {
+   margin:5px 0px 0 0;
+   padding:0 0 5px;
+   list-style:none; display: inherit;   border-bottom:1px solid #ebebeb;
+   }
+.leftlaycenter li {
+   height:24px;
+   line-height:26px;
+   font-size:12px;
+   padding-left:14px; color:#DC2618;
+   width:auto;
+   overflow:hidden;display:block;
+   }
+.leftlaycenter li a,.leftlaycenter li a:visited {
+   font-size:12px;
+   }
+.leftlaycenter li a:hover {
+   text-decoration:none;
+   color:#e60011;
+   }
+.leftlaycenter li.liactive_center a:hover { color:#fff;}
+
+/*li end*/
+
+
+
+.linormal_center {
+   text-decoration:none;
+   width:auto;
+   font-size:14px;
+   padding-left:8px;
+   color:#666;
+    }
+.linormal_center a,.linormal_center a:visited {
+   color:#3d3d3d;
+   font-size:12px;
+   text-decoration:none;
+   }
+.linormal_center a:hover {
+   text-decoration:underline;
+   color:#dc2618;
+   }
+.liactive_center {
+   text-decoration:none;
+   width:auto;
+   font-size:14px;
+   padding-left:8px;
+   color:#fff; background:#dc2618;
+    }
+#myTab1 .liactive_center a,#myTab1 .lliactive_center a:visited {
+   color:#fff;
+   font-size:12px;
+   text-decoration:none;
+   }
+.liactive_center a:hover {
+   text-decoration:underline;
+   color:#e75c12;
+   }
+.none {display:none;}
+.content_center {
+  width:689px;
+  height:auto;
+  float:left;
+  color:#666;
+  font-size:12px;
+  }
+.content_center table{
+border:1px solid #ededed;
+font-size:12px;
+line-height:18px;
+float:left;}
+.content_center table p b{
+ font-size:12px;
+ font-weight:bold;
+ margin:0px;
+ padding:0px;}
+.content_center table p{
+margin:0;
+padding:0;
+margin-left:10px;
+margin-bottom:10px;
+}
+.content_center table p strong{ margin-left:10px;}
+.content_center .jifen{
+width:689px;
+height:28px;
+background:#f8f8f8;
+text-indent:10px;
+line-height:28px;
+margin-bottom:15px;
+border:1px solid #dadada;
+color:#ee1a0e;
+font-weight:bold;
+}
+
+/*left end*/
+
+.addiv_r {
+   margin-bottom:5px;
+   width:734px;
+   float:left;
+   }
+.addiv_r img {
+   border:none;
+   }
+   .banner_ad { padding-bottom:15px; height:60px;}
+
+
+#vip8-banner{ width:689px; height:264px;}
+#vip8-user{ width:689px; height:130px; font-size:16px; color:#361f04; line-height:30px;padding-top:30px;}
+#vip8-sale{ width:670px; height:198px; margin-left:10px; border-bottom:1px dotted #ccc;}
+#vip8-sale .title{ width:670px; height:30px; color:#361f04; font-size:16px; font-weight:bold; background:url(http://www.dooland.com/magazine/images/vip8-title-ico.jpg) no-repeat left top; text-indent:40px;}
+
+#vip8-sale .title span{ color:#cb1b2a;}
+#vip8-sale .cont{ width:669px; height:141px; background:url(http://www.dooland.com/magazine/images/vip8-but-bg.jpg) no-repeat 0 0; position:relative;}
+/*#vip8-sale .cont .but{ width:160px; height:59px; position:absolute; left:210px; top:27px;}*/
+#vip8-sale .cont .but{ width:160px; height:59px; position:absolute; left:420px; top:27px;}
+/*2012-09-24 少欣修改 strat*/
+.but_seclet{ padding-top:18px;  width:600px; height:13px; padding-left:15px;font-family:'微软雅黑'; color:#000;font-size:16px; margin:0px 5px 0px 0px;}
+.but_seclet b{ font-weight:bold; font-family:'微软雅黑'; font-size:16px; color:#000; padding-top:25px;}
+/*2012-09-24 少欣修改 end*/
+
+#vip8-sale .cont .m-txt{ width:297px; height:20px; position:absolute; left:378px; top:50px; line-height:20px; font-weight:bold; color:#361f04; font-size:16px;}
+#vip8-sale .cont .m-txt span{ color:#e8a100;}
+#vip8-sale .cont .bz-txt{ width:670px; height:35px; line-height:35px; color:#ff0000; font-size:16px; text-indent:20px; position:absolute; left:0; bottom:0;}
+#vip8-explain{ width:660px; height:255px; margin-left:10px; font-size:12px; color:#313131; line-height:24px; padding-left:10px; margin-top:10px;}
+
+#vip8-baijing{ width:670px; height:198px; margin-left:10px; border-bottom:1px dotted #ccc;}
+#vip8-baijing .title{ width:670px; height:30px; color:#361f04; font-size:16px; font-weight:bold; background:url(http://www.dooland.com/magazine/images/vip8-title-ico.jpg) no-repeat left top; text-indent:40px;}
+#vip8-baijing .title span{ color:#cb1b2a;}
+#vip8-baijing .cont{ width:669px; height:141px; background:url(http://www.dooland.com/magazine/images/vip8-but-bg.jpg) no-repeat 0 0; position:relative;}
+#vip8-baijing .cont .but{ width:200px; height:59px; position:absolute; left:205px; top:27px;}
+#vip8-baijing .cont .m-txt{ width:297px; height:20px; position:absolute; left:410px; top:50px; line-height:20px; font-weight:bold; color:#361f04; font-size:16px;}
+#vip8-baijing .cont .m-txt span{ color:#e8a100;}
+#vip8-baijing .cont .bz-txt{ width:670px; height:35px; line-height:35px; color:#ff0000; font-size:16px; text-indent:20px; position:absolute; left:0; bottom:0;}

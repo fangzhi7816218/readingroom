@@ -1,0 +1,235 @@
+﻿<include file="Public/header" />
+
+<!--  header  end====================-->
+<script type="text/javascript">
+$(function(){
+	show_mag('0');
+	//ajax切换
+	//Author:xuying
+	changePanel('m_mouth',$('#m_g'),'on','xs_cursor_cont', 'changeMID_g')
+	changePanel('m_fenlei',$('#m_c'),'on','fl_cont', 'changeMID_c','1');
+});
+
+</script>
+<!--==================== magazine_main begin  ====================-->
+<div id="magazine_main">
+<!--==================== bd1 begin   ====================-->
+
+<div id="m_bd1" class="margin_top12 margin_bottom12">
+<!--==================== bd1_left begin   ====================-->
+<div class="bd1_left"><!--===== bd1_left 杂志分类 begin   =====-->
+<div class="m_sort">
+<h1><img src="__IMAGE__/b_bd1_title.jpg" /></h1>
+<foreach name="big_cate" item="vo">
+             	<dl><dt class="red"><a href="__MODULE__/Index/book_search.html?cate_id={$vo['id']}" >{$vo['name']}</a></dt>
+             		<dd>
+             	<foreach name="small_cate" item="vo1">
+             		<if condition="$vo1['p_id'] eq $vo['id'] ">
+             			 <a href="__MODULE__/Index/book_search.html?cate_id={$vo1['id']}" > {$vo1['name']} </a>
+             		</if>
+             	</foreach>
+             		</dd></dl>
+ </foreach>  
+
+
+</div>
+</div>
+<div class="bd1_right">
+
+<div class="clear"></div>
+<!--===== bd1_right right_left01 begin   =====-->
+<div class="right_left01 clear margin_top12">
+ <!--===== bd1_right 最新上线 begin   =====-->
+<div class="news_line margin_top12"><!--= bd1_right 最新上线 top begin  =-->
+<div class="news_line_top">
+<div class="n_title">
+<ul>
+	<li class="on"><a href="javascript:void(0);" is_load="1">最新上线</a></li>
+</ul>
+</div>
+
+<div class="news_cont" changeMID_b="news_cont_0">
+<div class="news_center">
+<div class="cont_jx_top cont_jx_top_c coda-slider preload"
+	id="coda-slider_sx">
+<div class="panel">
+
+<foreach name="book_new" item="vo">
+	<div class="news_magazine">
+		<a href="__MODULE__/Book/book_detail.html?book_id={$vo['id']}"	target="_blank" title="财智天下">
+		<img style="width: 114px; height: 152px;" src="{$vo['img']}">
+		</a>
+		<div class="title"><a href="__URL__/mag_detail.html?mag_id={$book_tetui_m['id']}" target="_blank"	title="财智天下">{$vo['name']}</a></div>
+		<h5>{$vo['add_time'] | date='Y年m月',###}版</h5>
+	</div>
+
+</foreach>
+
+	
+</div>
+
+
+</div>
+</div>
+<script type="text/javascript">$('#coda-slider_sx').codaSlider();</script>
+</div>
+</div>
+<!--= bd1_right 最新上线 top end =--></div>
+<!--===== bd1_right 最新上线 end   =====--> <!--===== bd1_right banner begin   =====-->
+
+<!--===== bd1_right banner end    =====--> <!--===== bd1_right 分类推荐 begin   =====-->
+<div class="fl_reco margin_top12">
+<div class="fl_top">
+<ul>
+	<div class="tit">执门推荐</div>
+	<li></li>
+	<li></li>
+	<li></li><li></li><li></li><li></li><li></li>
+</ul>
+</div>
+
+<div class="fl_maga">
+
+<foreach name="book_new2" item="vo">
+	<div class="news_magazine">
+		<a href="__MODULE__/Book/book_detail.html?book_id={$vo['id']}"	target="_blank" title="财智天下">
+		<img style="width: 114px; height: 152px;" src="{$vo['img']}">
+		</a>
+		<div class="title"><a href="__URL__/mag_detail.html?mag_id={$vo['id']}" target="_blank"	title="财智天下">{$vo['name']|msubstr=0,5}</a></div>
+		<h5>{$vo['add_time'] | date='Y年m月',###}版</h5>
+	</div>
+
+</foreach>
+
+
+</div>
+
+</div>
+
+</div>
+<!--===== bd1_right 分类推荐 end   =====--> <!--===== bd1_right right_left01 end     =====-->
+
+<!--===== bd1_right right_rihgt02 begin     =====-->
+<div class="right_rihgt02">
+<div class="tag_vip"></div>
+
+<div class="hot_update margin_top12">
+<div class="hot_tit">
+<ul>
+	<li class="hot_on"><a href="javascript:void(0);"onMouseOver="changePanel('m_gengxin',this,'hot_on','hot_cont', 'changeMID_a')"	is_load="1">更新推荐</a></li>
+</ul>
+</div>
+<div class="hot_cont"
+	style="border-bottom: 0px; border-left: #d7d7d7 1px solid; display: block; height: 10px; overflow: hidden; border-right: #d7d7d7 1px solid;"
+	changeMID_a="hot_cont_0"></div>
+<div class="hot_cont" changeMID_a="hot_cont_0" id="m_gengxin_marquee"	style="display: block; overflow: hidden;">
+<ul>
+<foreach name="book_new" item="vo">
+	<li><span>{$vo['add_time']|date="Y年m月",###}</span> <a href="" target="_blank" title="科学导报•少年科学">{$vo['name']}</a></li>
+</foreach>
+	
+</ul>
+</div>
+<script type="text/javascript">
+                var _m = new Marquee("_m","m_gengxin_marquee","up",60,1);
+</script>
+
+
+<!--===== bd1_right 销售排行 begin   =====-->
+<div class="margin_top12 xs_cursor">
+<div class="xs_cursor_top">阅读排行</div>
+<div>
+<div class="xs_cursor_week">
+<ul>
+	<li><a href="javascript:void(0);" id="m_g" onclick="" is_load="1">每月</a></li>
+</ul>
+</div>
+<div class="xs_cursor_week02 clear"></div>
+<div class="xs_cursor_cont" id="xs_cursor_cont_0_new"	changeMID_g="xs_cursor_cont_0">
+<ul>
+
+<foreach name="book_m_r" item="vo" key="k">
+	<if condition="($k+1 eq 1) or ($k+1 eq 2) or ($k+1 eq 3)">
+		<li class="ico{$k+1}">
+		<div class="pic"><a href="__URL__/book_detail.html?book_id={$vo['id']}" target="_blank" title="{$vo['name']}"><img	style="width: 59px; height: 77px;" src="{$vo['img']}" /></a>
+			<div class="sTit"><img src="__IMAGE__/hot.gif" /></div>
+			<b><a href="__URL__/book_detail.html?book_id={$vo['id']}" target="_blank" title="{$vo['name']}">{$vo['name']}</a></b> <b>
+			<h3>{$vo['add_time']|date="Y年m月",###}</h3>
+		</div>
+	</li>
+	<else />
+		<li class="ico{$k+1}"><span>{$vo['add_time']|date="Y年m月",###}</span><a href="__URL__/book_detail.html?book_id={$vo['id']}" target="_blank" title="三联生活周刊">{$vo['name']|msubstr=0,5}</a></li>
+	</if>
+</foreach>
+
+</ul>
+</div>
+<div class="xs_cursor_cont" id="xs_cursor_cont_0_business"
+	changeMID_g="xs_cursor_cont_0_business">
+<ul>
+<foreach name="book_m_r2" item="vo" key="k">
+	<if condition="($k+1 eq 1) or ($k+1 eq 2) or ($k+1 eq 3)">
+		<li class="ico{$k+1}">
+		<div class="pic"><a href="__MODULE__/Magazine/mag_detail.html?mag_id={$vo['id']}" target="_blank" title="{$vo['name']}"><img	style="width: 59px; height: 77px;" src="{$vo['img']}" /></a>
+			<div class="sTit"><img src="__IMAGE__/hot.gif" /></div>
+			<b><a href="__MODULE__/Magazine/mag_detail.html?mag_id={$vo['id']}" target="_blank" title="{$vo['name']}">{$vo['name']}</a></b> <b>
+			<h3>{$vo['add_time']|date="Y年m月",###}</h3>
+		</div>
+	</li>
+	<else />
+		<li class="ico{$k+1}"><span>{$vo['add_time']|date="Y年m月",###}</span><a href="__MODULE__/Magazine/mag_detail.html?mag_id={$vo['id']}" target="_blank" title="三联生活周刊">{$vo['name']|msubstr=0,5}</a></li>
+	</if>
+</foreach>
+</ul>
+</div>
+<div class="xs_cursor_cont" id="xs_cursor_cont_0_finance"
+	changeMID_g="xs_cursor_cont_0_finance">
+<ul>
+	<foreach name="book_m_r1" item="vo" key="k">
+	<if condition="($k+1 eq 1) or ($k+1 eq 2) or ($k+1 eq 3)">
+		<li class="ico{$k+1}">
+		<div class="pic"><a href="__MODULE__/Magazine/mag_detail.html?mag_id={$vo['id']}" target="_blank" title="{$vo['name']}"><img	style="width: 59px; height: 77px;" src="{$vo['img']}" /></a>
+			<div class="sTit"><img src="__IMAGE__/hot.gif" /></div>
+			<b><a href="__MODULE__/Magazine/mag_detail.html?mag_id={$vo['id']}" target="_blank" title="{$vo['name']}">{$vo['name']}</a></b> <b>
+			<h3>{$vo['add_time']|date="Y年m月",###}</h3>
+		</div>
+	</li>
+	<else />
+		<li class="ico{$k+1}"><span>{$vo['add_time']|date="Y年m月",###}</span><a href="__MODULE__/Magazine/mag_detail.html?mag_id={$vo['id']}" target="_blank" title="三联生活周刊">{$vo['name']|msubstr=0,5}</a></li>
+	</if>
+</foreach>
+</ul>
+</div>
+<div class="xs_cursor_cont" id="xs_cursor_cont_0_fashion"
+	changeMID_g="xs_cursor_cont_0_fashion">
+<ul>
+	<foreach name="book_m_r3" item="vo" key="k">
+	<if condition="($k+1 eq 1) or ($k+1 eq 2) or ($k+1 eq 3)">
+		<li class="ico{$k+1}">
+		<div class="pic"><a href="__MODULE__/Magazine/mag_detail.html?mag_id={$vo['id']}" target="_blank" title="{$vo['name']}"><img	style="width: 59px; height: 77px;" src="{$vo['img']}" /></a>
+			<div class="sTit"><img src="__IMAGE__/hot.gif" /></div>
+			<b><a href="__MODULE__/Magazine/mag_detail.html?mag_id={$vo['id']}" target="_blank" title="{$vo['name']}">{$vo['name']}</a></b> <b>
+			<h3>{$vo['add_time']|date="Y年m月",###}</h3>
+		</div>
+	</li>
+	<else />
+		<li class="ico{$k+1}"><span>{$vo['add_time']|date="Y年m月",###}</span><a href="__MODULE__/Magazine/mag_detail.html?mag_id={$vo['id']}" target="_blank" title="三联生活周刊">{$vo['name']|msubstr=0,5}</a></li>
+	</if>
+</foreach>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="m_bd2" class="margin_top12">
+<div id="m_bd2_left">
+</div>
+<div id="m_bd2_center" class="margin_left12">
+
+</div>
+
+<!--===== bd2_right end =====--></div>
+<!--==================== bd2 end   ====================--></div>
+<include file="Public/fooder" />

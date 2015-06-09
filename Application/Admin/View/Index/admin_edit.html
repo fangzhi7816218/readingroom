@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>ESHOP 管理中心 - 编辑分类 </title>
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="__ADMINCSS__/general.css" rel="stylesheet" type="text/css" />
+<link href="__ADMINCSS__/main.css" rel="stylesheet" type="text/css" />
+<script src="__ADMINJS__/jquery.js" ></script>
+<script>
+$(document).ready(function (){
+
+	var powers=document.getElementById('power').value="{$data['root']}";
+	if(powers ==1) $('#power1').show();
+	else if(powers ==2)$('.power2').show();
+	
+	$('.input_menu').click(function (){
+		var isChecked=$(this).is(':checked');//alert(isCheck);
+		//var otherChecked=$().siblings(":input_submenu").is(":checked");
+		if(isChecked == true){
+			$(this).parent().find('.input_submenu').attr('checked',true);
+			$(this).parent().find('.input_submenu').checked= true;
+		}else{
+			$(this).parent().find('.input_submenu').attr('checked',false);
+			$(this).parent().find('.input_submenu').checked= false;
+		}//attr()获取指定属性的值
+		
+	});
+	$('.input_submenu').click(function (){
+		var isChecked2=$(this).is(':checked');
+		if(isChecked2 == true){
+			$(this).parent().find('input:first').attr('checked',true);
+		}
+	});
+});
+
+	function p_show(obj){
+		var power=$(obj).val();
+		if(power == '1') {
+			$('#power1').show();
+			$('.power2').hide();
+		}else if(power == '2'){
+			$('#power1').hide();
+			$('.power2').show();
+		}
+	}
+	function check_input(){
+		if($('#username').val()=='' ||$('#passwd').val()=='' ||$('#t_passwd').val()==''){
+			alert('请填写完整信息');
+			return false;
+		}
+		if($('#passwd').val() != $('#t_passwd').val()){
+			alert('两次输入密码不一致');
+			return false;
+		}
+	}
+</script>
+<style>
+td.label {
+  text-align: left;
+  vertical-align: top;
+  font-weight: bold;
+  padding: 5px 1em;
+  width: 28%;
+  padding-left: 150px;
+}
+</style>
+</head>
+<body>
+
+<h1>
+<span class="action-span"><a href="__URL__/admin_list">管理员列表</a></span>
+<span class="action-span1"><a href="">后台管理</a> </span><span id="search_id" class="action-span1"> - 编辑</span>
+<div style="clear:both"></div>
+</h1>
+<!-- start add new category form -->
+<div class="main-div">
+
+  <form action="__ACTION__?id={$data['id']}" method="post" name="theForm">
+  <table width="100%" id="general-table" border='0'>
+      <tr>
+        <td class="label">管理员名称:</td>
+        <td>
+          <input type='text' name='username' id="username" value="{$data['username']}"  size='27' />
+        </td></tr><tr>
+        <td class="label">管理员真实姓名:</td>
+        <td>
+          <input type='text' name='truename' id="truename" value="{$data['truename']}" size='27' />
+        </td>
+      </tr>        
+        <tr><td class="label">联系方式:</td>
+        <td>
+          <input type='text' name='phone' id="phone" value="{$data['phone']}" size='27' />
+        </td></tr>
+        <tr><td class="label">头像:</td>
+        <td>
+          <input type='text' name='img' value="{$data['img']}"  size='27' />
+        </td></tr>
+      <tr>
+        <td class="label" >权限:</td>
+        <td>
+          <select name="power" id="power" onchange="p_show(this)")>
+          <option value="0">请选择</option>
+			<option value="1" >超级管理员</option>
+			<option value="2" >普通管理员</option>
+          </select>
+          <span id="power1" class="label" style="display:none;color:red"> &nbsp;&nbsp;超级管理员拥有全部权限</span>
+        </td>
+      </tr>
+      
+      	
+      	<foreach name="menu1" item="vo">
+      		<tr class="power2" style="display:none;">
+      		<td colspan="2" class="label" style="text-align:left;padding-left:147px;">
+      		<input type="checkbox" class="input_menu" name="menu_ids[]" value="{$vo['id']}" <?php if(strpos($data['root_ids'],$vo['id']) !==false ) echo 'checked'; ?> />
+      		{$vo['menu_name']}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      		<foreach name="menu2" item="vo1">
+      			<if condition="$vo1['p_id'] eq $vo['id']">
+      			<input type="checkbox" class="input_submenu" name="menu_ids[]" value="{$vo1['id']}" <?php if(strpos($data['root_ids'],$vo1['id']) !==false ) echo 'checked'; ?> />
+      			<span style="font-weight:normal;">{$vo1['menu_name']}</span>
+      			</if>
+      		</foreach>
+      		
+      	</td>
+      		</tr>
+      	</foreach>
+
+      
+      </table>
+
+      <div class="button-div">
+        <input type="submit"  value=" 确定 " onclick="return check_input()" />
+        <input type="reset" value=" 重置 " />
+      </div>
+  </form>
+</div>
+
+<script>
+
+</script>
+
+<include file="Public/fooder" />
+
+</body>
+</html>

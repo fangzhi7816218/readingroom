@@ -1,0 +1,231 @@
+body{color:#666;font-size:12px;line-height:1.5;font-family:"ËÎÌå";background:#fff}
+select,input,img,select{vertical-align:middle}
+#wrap{width:950px;margin:0 auto}
+.content,.content-lr,.content-rl{position:relative;zoom:1;z-index:1;}
+.main,.sidebar{display:inline}
+.content-lr .main{float:left}
+.content-lr .sidebar{float:right}
+.content-rl .main{float:right}
+.content-rl .sidebar{float:left}
+.content-rl .content-lr .main{float:left}
+.content-rl .content-lr .sidebar{float:right}
+.w730{width:760px}
+.w677{width:677px}
+.w630{width:630px}
+.w310{width:310px}
+.w270{width:270px}
+.w210{width:210px}
+.content{margin-bottom:10px;}
+.pink{color:#F06;}
+.green{color:#060;}
+.orange{color:#f30;}
+a{color:#1952FF;text-decoration:none}
+a:hover{color:#f60;text-decoration:underline}
+.sub_nav{background:url(http://img.readnovel.com/web/lhl_all_title.png) no-repeat;height:36px;position:relative;zoom:1;overflow:hidden}
+.sub_nav h2{font:700 18px/38px "Î¢ÈíÑÅºÚ", "ºÚÌå", "ËÎÌå";color:#FF0041;margin:0 0 0 15px;letter-spacing:0.1em}
+.sub_nav h2 span{}
+.sub_nav_m{position:absolute;top:10px;right:5px;text-align:right;}
+.xy .sub_nav{background-position:0 -40px;}
+.xy .sub_nav h2{color:#360}
+.fy .sub_nav{background-position:0 -80px;}
+.fy .sub_nav h2{color:#333}
+.mod{border:1px solid #cdcdcd;border-top:0;background:#fff url(http://img.readnovel.com/web/sprite-repeat1.png) repeat-x}
+.mod .x1,.mod .x1a{display:none;}
+.mod .button{position:absolute;right:10px;bottom:10px;background:url(http://img.readnovel.com/web/lhl_all_button.png) no-repeat}
+.mod .button a span{display:none;}
+.mod .main{background:#fff url(http://img.readnovel.com/web/lhl_all_title.png) repeat-x 0 -120px;padding-top:16px;height:484px}
+.mod .sidebar{background:#fff url(http://img.readnovel.com/web/sprite-repeat.png) repeat-x 0 -771px;height:500px}
+.end .main{height:444px}
+.end .sidebar{height:460px}
+.picList1{position:relative;zoom:1;padding-left:18px}
+.picList1 h3{color:#000;font-family:"ºÚÌå","ËÎÌå";font-size:16px;font-weight:normal;margin:6px 0 0 -10px}
+.picList1 .pic img{width:228px;height:282px;background:#fff;border:2px solid #666;padding:2px}
+.picList1 .info{margin:0 10px 4px 0;color:#888;}
+.picList1 .info a{color:#888;}
+.picList1 .info a:hover{color:#f60;}
+.picList1 .info1{margin:3px 0;color:#555;}
+.picList1 .button{top:440px;right:13px;width:95px;height:43px;}
+.picList1 .button a{display:block;width:95px;height:30px;}
+.end .picList1 .button{top:395px;height:47px;}
+.picList2{float:left;width:304px;height:128px;display:inline;margin:18px 10px 0 20px;position:relative;zoom:1}
+.picList2 h3{margin-left:104px;font-size:14px;font-weight:normal}
+.picList2 h3 a{font-weight:bold}
+.picList2 .pic{position:absolute;top:0;left:0}
+.picList2 .pic img{width:96px;height:120px;background:#fff;border:1px solid #ccc;padding:1px}
+.vip .picList2{height:143px;}
+.picList2 .info{margin:0 0 0 110px;color:#888;overflow:hidden;word-warp:break-word;word-break:break-all;text-overflow:ellipsis;width:195px;}
+.picList2 .info a{color:#888;}
+.picList2 .info a:hover{color:#f60;}
+.picList2 .info1{margin:3px 0 3px 110px;color:#555;}
+.picList2 .button{background-position:-106px 0;top:125px;right:5px;width:64px;height:35px;}
+.picList2 .button a{display:block;width:64px;height:24px;}
+.end .picList2 .button{top:105px;}
+.fy .mod h3 a{color:#000;}
+.fy .mod h3 a:hover{color:#f00;}
+.fy .mod .info1 a{color:#1F8300;}
+.fy .mod .info1 a:hover{color:#f00;}
+.mod-2{background:#fff url(http://img.readnovel.com/web/sprite-repeat1.png) repeat-x;padding:2px 2px 0;position:relative;zoom:1;}
+.mod-2 .x1,.mod-2 .x1a,.mod-2 .mod-hd h2,.mod-2 .sell_2,.mod-2 .table1 .Num1,.mod-2 .table1 .Num2{background-image:url(http://img.readnovel.com/web/sprite.png);background-repeat:no-repeat}
+.mod-2 .mod-hd,.mod-2 .mod-bd,.mod-2 thead tr{background-image:url(http://img.readnovel.com/web/sprite-repeat.png);background-repeat:repeat-x}
+.mod-2 .x1,.mod-2 .x1a{position:absolute;width:12px;height:12px;display:block;z-index:100;overflow:hidden}
+.mod-2 .x1{top:0;left:0;background-position:-169px -124px;}
+.mod-2 .x1a{top:0;right:0;background-position:-169px -143px;}
+.mod-2 .mod-hd{background-position:0 -771px;}
+.mod-2 .mod-hd h2{background-position:-350px -110px;height:35px;margin:0 20px;line-height:35px;padding-left:20px;font-size:14px;color:#f30;line-height:35px;}
+.mod-2 .mod-bd{background-position:0 -1255px;background-color:#fff;padding:0 20px;position:relative;zoom:1;}
+.mod-2 table{width:100%;margin-bottom:10px}
+.mod-2 table tr.bg{background-color:#F6F6F6}
+.mod-2 table .center{text-align:center;}
+.mod-2 table td{padding:7px 5px;}
+.mod-2 table thead{font-size:12px;}
+.mod-2 thead tr{background-position:0 -130px;color:#000}
+.mod-2 tbody th{font-size:14px}
+.mod-2 .author a,.mod-2 .type a{color:#666;}
+.mod-2 .author a:hover,.mod-2 .type a:hover{color:#f60;}
+.mod-2 .table1 tbody{border-bottom-width:0}
+.mod-2 .table1 tbody th,.mod-2 .table1 tbody td{border-bottom:1px solid #e7e7e7;}
+.mod-2 .Num{width:40px;font-weight:bold;color:#999;text-align:center;font-family:Arial, Helvetica, sans-serif}
+.mod-2 .table1 .Num1,.mod-2 .table1 .Num2{width:40px;text-align:center;font-weight:bold;color:#fff;font-family:Arial, Helvetica, sans-serif}
+.mod-2 .table1 .Num1{background-position:-215px -121px;}
+.mod-2 .table1 .Num2{background-position:-215px -162px;}
+.mod-2 td.button1 a{background:url(http://img.readnovel.com/web/lhl_all_button.png) no-repeat -116px -46px;height:17px;width:54px;display:block;margin:0 auto;font-weight:normal;text-indent:3px;text-align:left;line-height:18px;color:#f30;overflow:hidden;}
+.mod-2 td.button1 a:hover{text-decoration:none}
+.mod-2 .sub_nav_m{right:20px;}
+.mod-2 .line{border-top:2px solid #ddd;height:16px;}
+.list4col .mod-sub,.list3col .mod-sub{float:left;margin:15px 0 0 19px;display:inline;width:210px;}
+.list3col .mod-sub{width:290px;}
+.mod_top{border:1px solid #ccc;margin-top:10px;}
+.mod_top .mod-hd{background:url(http://img.readnovel.com/web/lhl_top_bg.png) repeat-x 0 -98px;height:29px;}
+.mod_top .mod-hd h2{background:url(http://img.readnovel.com/web/lhl_top_bg.png) no-repeat -284px -170px;height:29px;line-height:29px;font-size:14px;color:#000;padding-left:15px;}
+.mod_top .mod-bd{padding-bottom:15px;}
+.mm .mod_top{border:1px solid #fdcfd9;}
+.xy .mod_top{border:1px solid #9bc987;}
+.mm .mod_top .mod-hd{background-position:0 -22px;}
+.xy .mod_top .mod-hd{background-position:0 -59px;}
+.xy .mod_top .mod-hd h2{background-position:-284px -136px;}
+.mod-subhd{background:url(http://img.readnovel.com/web/lhl_top_bg.png) no-repeat 0 8px;font-size:12px;color:#333;line-height:22px;padding-left:15px;position:relative;margin-bottom:10px;}
+.mod-subhd .mod-subhd-m{position:absolute;top:0px;right:5px;color:#999;}
+.mod-subhd .mod-subhd-m a{color:#999;}
+.mod-subhd .mod-subhd-m a:hover{color:#f00;}
+.more{margin:5px 5px 0;text-align:right;}
+.more a{color:#f60;}
+.more a:hover{color:#f00;}
+.picList3{height:128px;margin:0 0 15px 0;position:relative;zoom:1}
+.picList3 h4{font-size:12px;font-weight:normal;margin-left:-5px;}
+.picList3 h4 a{font-weight:bold}
+.picList3 .pic{position:absolute;top:20px;left:0}
+.picList3 .pic img{width:80px;height:100px;background:#fff;border:1px solid #ccc;padding:3px}
+.picList3 .info{margin:0 0 0 96px;color:#888;}
+.picList3 .info a{color:#888;}
+.picList3 .info a:hover{color:#f60;}
+.picList3 .info1{margin:0 0 0 96px;color:#555;}
+.list3col .picList3{height:108px;}
+.list3col .picList3 h4{margin-left:90px;}
+.list3col .pic{top:0}
+span.num{position:absolute;right:5px;top:0;color:#999;}
+.fy .picList3 h4 a,
+.fy .topList1 li a,
+.fy .topList2 li a,
+.fy .topList3 li a,
+.fy .topList4 li a{color:#000;}
+.fy .picList3 h4 a:hover,
+.fy .topList1 li a:hover,
+.fy .topList2 li a:hover,
+.fy .topList3 li a:hover,
+.fy .topList4 li a:hover{color:#f00;}
+.fy .picList3 .info1 a{color:#060;}
+.fy .picList3 .info1 a:hover{color:#f00;}
+.topList1 li,.topList2 li,.topList3 li,.topList4 li{background-image:url(http://img.readnovel.com/web/lhl_top_icon.png);background-repeat:no-repeat;border-bottom:1px dashed #ccc;line-height:27px;height:27px;padding-left:27px;overflow:hidden;position:relative;zoom:1}
+li.No1{background-position:5px -363px}
+li.No2{background-position:5px -404px}
+li.No3{background-position:5px -445px}
+li.No4{background-position:5px -486px}
+li.No5{background-position:5px -527px}
+li.No6{background-position:5px -568px}
+li.No7{background-position:5px -609px}
+li.No8{background-position:5px -650px}
+li.No9{background-position:5px -691px}
+li.No10{background-position:5px -732px}
+li.No11{background-position:5px -773px}
+li.No12{background-position:5px -814px}
+li.No13{background-position:5px -855px}
+li.No14{background-position:5px -996px}
+li.No15{background-position:5px -1037px}
+.topList2 li.No1{background-position:5px 6px}
+.topList2 li.No2{background-position:5px -35px}
+.topList2 li.No3{background-position:5px -76px}
+.topList3 li.No1{background-position:5px -117px}
+.topList3 li.No2{background-position:5px -158px}
+.topList3 li.No3{background-position:5px -199px}
+.topList4 li.No1{background-position:5px -240px}
+.topList4 li.No2{background-position:5px -281px}
+.topList4 li.No3{background-position:5px -322px}
+.toptable{border:1px solid #ccc;}
+.mm .toptable{border:1px solid #fdcfd9;}
+.xy .toptable{border:1px solid #9bc987;}
+.toptable,.toptable .mod-hd{background-image:none;}
+.toptable .mod-hd h2{background:url(http://img.readnovel.com/web/lhl_top_bg.png) no-repeat -279px -208px;height:28px;margin:0 10px;line-height:35px;padding-left:20px;font-size:14px;color:#f30;line-height:28px;}
+.toptable .mod-hd .mod-m{position:absolute;top:8px;right:15px}
+.toptable .mod-hd .mod-m a{color:#666;}
+.toptable .mod-hd .mod-m a:hover{color:#f00;}
+.toptable .mod-bd{padding:0 10px 5px;}
+.mod_top .mod-2{background-image:none;padding:10px;}
+.mod_topMenu{border:1px solid #ccc;}
+.mod_topMenu h2{text-align:center;font-size:14px;background:url(http://img.readnovel.com/web/lhl_top_bg.png) repeat-x 0 -98px;height:29px;line-height:29px;color:#000;}
+.mod_topMenu ul{margin:15px 10px 80px;}
+.mod_topMenu li{height:29px;line-height:29px;border-bottom:1px dashed #ccc;}
+.mod_topMenu li a{display:block;height:29px;line-height:29px;background:url(http://img.readnovel.com/web/lhl_top_bg.png) no-repeat 5px -132px;padding-left:15px;font-size:14px;color:#666;}
+.mod_topMenu li a:visited{color:#666;}
+.mod_topMenu li.Cur a,.mod_topMenu li.Cur a:visited,.mod_topMenu li a:hover{background-position:5px -152px;color:#f03;font-weight:bold;text-decoration:none;}
+.list .mod_top{margin-top:0;border:1px solid #ccc;}
+.list .mod_top .mod-hd{background-position:0 -98px}
+.list .mod-bd{background:url("http://img.readnovel.com/web/sprite-repeat.png") repeat-x scroll 0 -771px #FFFFFF;}
+.list .mod-bd .title{background:#fff;position:relative;height:30px;}
+.list .mod-bd .title h2 a{float:left;display:block;width:67px;line-height:30px;color:#222;text-align:center;}
+.list .mod-bd .title h2 a.Cur,.list .mod-bd .title h2 a:hover{background:url(http://img.readnovel.com/web/lhl_top_bg.png) no-repeat 30px -214px;color:#f03;text-decoration:none}
+.list .mod-bd .title h2 a.wCur,.list .mod-bd .title h2 a.wCur:hover{background:url(http://img.readnovel.com/web/lhl_top_bg.png) no-repeat 46px -214px;color:#f03;text-decoration:none}
+.clicks{position:absolute;top:4px;right:10px;height:26px;}
+.clicks a{float:left;line-height:18px;width:20px;text-align:center;border:1px solid #f06;background:#fff;font-weight:bold;margin-right:5px;color:#000}
+.clicks a:hover{text-decoration:none}
+.clicks a.Cur{background:url(http://img.readnovel.com/web/lhl_top_bg.png) no-repeat -222px -225px;color:#fff;line-height:20px;border:none;width:20px;}
+.list .mod-2 .Num{color:#333;font-size:12px;font-weight:bold;text-align:center;font-family:Arial, Helvetica, sans-serif}
+.xy .mod_topMenu li.Cur a,.xy .mod_topMenu li.Cur a:visited,.xy .mod_topMenu li a:hover{background-position:5px -172px;color:#060;}
+.xy .mod-bd .title{border-bottom:2px solid #060;}
+.xy .mod-bd .title h2 a.Cur,.xy .mod-bd .title h2 a:hover{background-position:-21px -214px;color:#060;}
+.xy .clicks a{border:1px solid #060;}
+.xy .clicks a.Cur{background-position:-194px -225px;border:0;}
+.xy .mod-2 .Table_list thead tr{background-position:0 -132px}
+.fy .mod_topMenu li.Cur a,.fy .mod_topMenu li.Cur a:visited,.fy .mod_topMenu li a:hover{background-position:5px -196px;color:#c00;}
+.fy .mod-bd .title h2 a.Cur,.fy .mod-bd .title h2 a:hover{background-position:-84px -214px;color:#c00;}
+.fy .clicks a{border:1px solid #333;}
+.fy .clicks a.Cur{background-position:-163px -225px;border:0;}
+.present{}
+.present th,.present td{vertical-align:top;padding:7px 5px}
+.mod-2 table.present tr.bg{background:#f1f1f1;}
+.present li{height:26px;line-height:26px;}
+.Friend_link{margin-bottom:10px;border:1px solid #ccc;}
+.Friend_link .mod-hd{height:30px;position:relative;zoom:1;}
+.Friend_link .mod-hd h2{color:#000;font-size:14px;line-height:30px;padding-left:10px;}
+.Friend_link .mod-hd-m{position:absolute;top:4px;right:5px;width:35px;line-height:26px;}
+.Friend_link .mod-hd-m a{font-size:12px;}
+.Friend_link .mod-bd{border:0;background:#fff;border-top:0 none;padding:10px;position:relative;zoom:1;}
+.Friend_link .mod-bd a{color:#000;}
+.Friend_link .mod-bd a:hover{color:#f60;}
+.mm .Friend_link{border:1px solid #79E1FE;}
+.mm .Friend_link .mod-hd{background:url("http://img.readnovel.com/web/mm-bg-201005.png") repeat-x 0 -398px;}
+.xy .Friend_link{border:1px solid #A6D67C}
+.xy .Friend_link .mod-hd{background:url("http://img.readnovel.com/web/xy_repeat.png") repeat-x 0 -37px;height:28px;}
+.fy .Friend_link .mod-hd{background:url("http://img.readnovel.com/web/fy-bg-201005.png") repeat-x 0 -447px;}
+.fy .Friend_link .mod-hd h2{color:#fff;}
+.fy .Friend_link .mod-hd-m{background:url("http://img.readnovel.com/web/fy-bg-201005.png") no-repeat 30px -240px;}
+.fy .Friend_link .mod-hd-m a{color:#fff;}
+.fy .Friend_link .mod-hd-m a:hover{color:#f60;}
+#footer{color:#000;background:url(http://img.readnovel.com/web/sprite-repeat.png) repeat-x 0 -770px;width:950px;margin:0 auto;text-align:center;line-height:21px;padding:0 0 20px;font-family:Arial;position:relative}
+#foot_Navi{text-align:center;background:#f6f6f6;border-bottom:1px solid #E1E1E1;line-height:25px;padding:0 10px;margin-bottom:10px}
+#foot_Navi a{margin:0 30px}
+#footer p.Copyright *,#footer p.black *{color:#000;text-decoration:none}
+#footer .police{position:absolute;top:60px;right:80px}
+#page{line-height:28px;text-align:right;color:#000;margin:-15px 10px 10px}
+#page a,#page span{padding:2px 6px;color:#196bb4;vertical-align:middle;margin-right:4px;border:1px solid #ddd}
+#page a:hover{color:#fff;text-decoration:none;background-color:#2E6AB1;border:1px solid #2E6AB1}
+#page .CurrentPage{font-weight:bold;color:#fd0002;text-decoration:none;background-color:transparent;border:0}

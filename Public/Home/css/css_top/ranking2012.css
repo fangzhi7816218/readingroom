@@ -1,0 +1,62 @@
+@charset "gb2312";.Table_list th{font-size:12px;color:#000;}
+.Table_list th a:link,.Table_list th a:visited,.Table_list th a:active{color:#1952FF;}
+.Table_list th a:hover{color:#ff6600;text-decoration:underline;}
+span.more a:link,span.more a:visited,span.more a:active{color:#666;}
+span.more a:hover{color:#F00;text-decoration:underline;}
+.rankMain{width:950px;margin:0 auto;}
+.rankLeft{width:178px;border:1px solid #E5E5E5;float:left;}
+.rankFy,.rankXy{width:178px;height:35px;line-height:35px;text-align:left;text-indent:30px;font-size:14px;color:#333;font-weight:bold;background:url(http://img.readnovel.com/web/ranking_bg.png) repeat-x 0 0;position:relative;}
+.rankFy a,.rankXy a{height:35px;display:block;}
+.rankXy a.rankpicsj{background:url(http://img.readnovel.com/web/rankpicsj.png) no-repeat 15px 11px;}
+.rankGirl{width:178px;}
+.rankFy a:link,.rankFy a:visited,.rankFy a:active{color:#333;}
+.rankFy a:hover{color:#F00;text-decoration:none;}
+.rankXy a:link,.rankXy a:visited,.rankXy a:active{color:#333;}
+.rankXy a:hover{color:#F00;text-decoration:none;}
+.rankGirl li a:link,.rankGirl li a:visited,.rankGirl li a:active{color:#333;}
+.rankGirl li a:hover{color:#F00;text-decoration:underline;}
+.rankGirl h2{width:178px;height:38px;line-height:38px;text-align:center;font-size:14px;color:#333;font-weight:bold;background:url(http://img.readnovel.com/web/ranking_bg.png) repeat-x 0 -65px;}
+.rankGirl ul,rankGirlList1 ul{width:158px;padding:10px;}
+.rankGirl li,rankGirlList1 li{height:26px;line-height:26px;font-size:12px;color:#333;text-indent:20px;text-align:left;font-weight:normal;}
+.rankGirlList1{width:178px;}
+.rankGirlList1 h2{width:148px;height:32px;background:#F7F7F7;border-top:1px solid #E5E5E5;border-bottom:1px solid #E5E5E5;text-align:left;padding-left:30px;height:35px;line-height:35px;font-size:14px;color:#333;font-weight:bold;}
+.rankRight{width:758px;border:1px solid #E5E5E5;float:right;overflow:hidden;margin-bottom:10px;*padding-bottom:8px;_padding-bottom:3px;position:relative;}
+.rankRight a {color:#333333}
+.rankRight h2{width:728px;height:35px;line-height:35px;text-align:left;padding-left:30px;font-size:14px;color:#333;font-weight:bold;background:url(http://img.readnovel.com/web/ranking_bg.png) repeat-x 0 0;position:relative;}
+.rankMain .rankRightTime{font-size:12px;font-weight:normal;color:#666;top:1px;right:5px;position:absolute;width:auto;}
+.rankRightList{width:234px;height:370px;border:1px solid;margin:8px;float:left;position:relative;display:inline;overflow:hidden;}
+.rankRightList h3{height:29px;line-height:29px;padding-left:20px;font-size:14px;color:#333;font-weight:bold;}
+.rankRightList p{font-size:12px;color:#333;background:#EFEFEB;border:1px dashed #CCCCCC;margin:10px 10px 0px 10px;padding:5px;*padding:6px 5px 4px;text-align:center;}
+.J_Tab_Content p{font-size:12px;color:#333;background:#FFFFE6;border:1px dashed #CCCCCC;margin:10px 10px 0px 10px;padding:5px;*padding:6px 5px 4px;text-align:center;display:block;width:202px;}
+.rankRightList .rankRightNr1{}
+.rankRightNr1 ul{height:270px;padding:5px;}
+ul.yearPosin{position:absolute;top:3px;right:3px;font-size:12px;color:#333;width:74px;height:25px;}
+ul.yearPosin li{float:left;width:22px;height:25px;line-height:25px;text-align:center;cursor:pointer;padding:1px 1px 0;}
+ul.yearPosin li.active{border:1px solid #ABDBE9;border-bottom:none;background:#FFF;padding:0}
+ul.yearPosin1{position:absolute;top:3px;right:3px;font-size:12px;color:#333;width:92px;height:25px;}
+ul.yearPosin1 li{float:left;width:44px;height:25px;line-height:25px;text-align:center;cursor:pointer;padding:1px 1px 0;}
+.rankRightNr1 li{height:26px;color:#333;line-height:26px;font-size:12px;border-bottom:1px dotted #ccc;position:relative;}
+.rankRightNr1 .bookid{display:inline-block;font-size:13px;color:#333;width:22px;text-align:right;}
+.rankRightNr1 .bookname{height:13px;left:22px;color:#333333;word-wrap:break-word;}
+.rankRightNr1 .amout{height:13px;color:#666;position:absolute;right:6px;top:2px;width:48px;text-align:right;}
+.amout a:link,.amout a:visited,.amout a:active{color:#666;}
+.amout a:hover{color:#F00;text-decoration:underline;}
+.rankRightList .bookmore{padding-right:7px;font-size:12px;color:#333;text-align:right;}
+.bookmore .time{font-size:12px;color:#999;float:left;text-align:left;text-indent:5px;}
+.girlRank .rankRightList{border-color:#cacac6}
+.girlRank .rankRightList h3{background:#e5f9ff;}
+.girlRank ul.yearPosin li.active{border:1px solid #ABDBE9;border-bottom:none;background:#FFF;padding:0}
+.boyRank .rankRightList{border-color:#DFDFDF}
+.boyRank .rankRightList h3{background:#f0f0f0;}
+.boyRank ul.yearPosin li.active{border:1px solid #DFDFDF;border-bottom:none;background:#FFF;padding:0}
+.schoolRank .rankRightList{border-color:#9BC987;}
+.schoolRank .rankRightList h3{background:#e4f3de;}
+.schoolRank ul.yearPosin li.active{border:1px solid #9BC987;border-bottom:none;background:#FFF;padding:0}
+.rankLidtTab{border-collapse:collapse;border:1px solid #efefef;margin:15px auto;width:95%;font-family:"ËÎÌו";}
+.rankLidtTab th{line-height:30px;font-size:12px;background:url("http://img.readnovel.com/web/ranking_bg.png") repeat-x 0 -35px;color:#08C;text-align:left;text-indent:5px;}
+.rankLidtTab th.tc{text-align:center;}
+.rankLidtTab td{line-height:34px;font-size:14px;border:solid 1px #C9EAF8;text-indent:5px;color:#333;}
+.rankLidtTab td.Num{text-align:center;font-weight:bold;color:#4D4D4D}
+#page{color:#000;line-height:28px;padding:0 20px 15px;text-align:right;font-size:12px;}
+#page .CurrentPage{border:0 none;color:#FD0002;font-weight:bold;text-decoration:none;}
+#page a, #page span{border:1px solid #DDD;color:#196BB4;margin-right:4px;padding:2px 6px;vertical-align:middle;}

@@ -1,0 +1,192 @@
+﻿<include file="Public/header" />
+<link href="__CSS__/New_Public.css" rel="stylesheet" type="text/css" />
+<link href="__CSS__/search_index.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__JS__/search-select.js"></script>
+<div id="layout">
+	
+	<!--==================== search-left begin   ====================-->
+	<div id="search-left" class="left">
+    <!--===== 分类 begin   =====-->
+    <div class="category">
+                    <div class="category_top">
+                        <a href="__MODULE__/Book.html">图书</a>
+                        <a href="__MODULE__/Magazine.html">杂志</a> 
+                       </div>
+                   <h1>图书分类</h1>
+		
+		<ul>
+			<foreach name="book_cate" item="vo">
+				<li><a href="__MODULE__/Index/book_search.html?cate_id={$vo['id']}" class="tit" title="时尚生活">{$vo['name']}</a></li>
+			</foreach>
+			
+		</ul>
+		<h2>杂志分类</h2>
+		<ul>
+			<foreach name="mag_cate" item="vo">
+				<li><a href="__MODULE__/Index/book_search.html?cate_id={$vo['id']}" class="tit" title="时尚生活">{$vo['name']}</a></li>
+			</foreach>
+		</ul>
+
+                </div>
+            <!--===== 分类 end   =====-->
+            
+
+            
+           
+    </div>
+    <!--==================== search-left end    ====================-->
+    
+    <!--==================== search-center begin   ====================-->
+    <div id="search-center" class="margin_left12">
+    	<div class="search_title">高级搜索</div>
+        
+        <!--===== 杂志列表 begin     =====-->
+        <div class="magazine-list">
+        	<!--===== 杂志列表菜单 begin     =====-->
+            <div class="magazine-menu">
+            	<ul>
+                <li class="on"><a href="javascript:;" onMouseOver="nTabshow_new('adva_mag','adva_book',this)">杂志</a></li>
+                <li><a href="javascript:;" onMouseOver="nTabshow_new('adva_book','adva_mag',this)">图书</a></li>
+                </ul>
+            </div>
+            <!--===== 杂志列表菜单 end     =====-->
+            
+            <!--===== 杂志高级搜索 begin     =====-->
+            <div class="adva-magazine" id="adva_mag">
+            	<div class="form">
+                <form action="__URL__/book_search.html" method="post"  id="formsearch2" name="formsearch2" onsubmit="return check_mag_new();">
+                	<div class="item">
+                    	<div class="label">杂志名称：</div>
+                        <div class="fl"><input name="magtitle" type="text" class="search-input" /></div>
+                    </div>
+                    <div class="item">
+                    	<div class="label">刊号：</div>
+                        <div class="fl"><input name="mag_issn" type="text" class="search-input" /></div>
+                    </div>
+                  
+                    
+                    <div class="search-but1">
+                    	<input type="hidden" name="s" value="5" />
+                    	<input type="hidden" name="act" value="search_post_mag" />
+                        <input type="image" src="__IMAGE__/search_new/search-but.jpg" style="margin-right: 20px;">
+                        <a href="javascript:;" onClick="resetinputmag_new();"><img src="__IMAGE__/search_new/search-turn.jpg" /></a>
+                    </div>
+                    </form>
+                </div>
+            </div>
+            <!--===== 杂志高级搜索 end       =====-->
+            
+            <!--===== 图书高级搜索 begin       =====-->
+            <div class="adva-book" id="adva_book" style="display: none; ">
+            	<div class="form">
+                <form action="__URL__/book_search.html" method="post" id="form1" name="form1" onsubmit="return check_book_new();">
+                    <div class="item">
+                    	<div class="label">书名：</div>
+                        <div class="fl"><input name="title" type="text" class="search-input" /></div>
+                    </div>
+                    
+                    <div class="item">
+                    	<div class="label">作者：</div>
+                        <div class="fl"><input name="author" type="text" class="search-input" /></div>
+                    </div>
+                    
+                    <div class="item">
+                    	<div class="label">出版社：</div>
+                        <div class="fl"><input name="book_press" type="text" class="search-input" /></div>
+                    </div>
+                    
+                    <div class="item">
+                    	<div class="label">ISBN：</div>
+                        <div class="fl"><input name="isbn" type="text" class="search-input" /></div>
+                    </div>
+                    
+                  
+   
+                    
+                    <div class="search-but">
+                    	<input type="hidden" name="s" value="4" />
+                    	<input type="hidden" name="act" value="search_post" />
+                        <input type="image" src="__IMAGE__/search_new/search-but.jpg" style="margin-right: 20px;">
+                        <a href="javascript:;" onClick="resetinputbook_new();"><img src="__IMAGE__/search_new/search-turn.jpg" /></a>
+                    </div>
+                    </form>
+                </div>
+            </div>
+            <!--===== 图书高级搜索 end         =====-->
+    
+        </div>
+        <!--===== 杂志列表 end       =====-->
+        
+        
+    </div>
+    <!--==================== search-center end    ====================-->
+    
+    <!--==================== search-right begin   ====================-->
+    <div id="search-right">
+       
+       <!--===== 热搜排行 begin     =====-->
+		<div class="margin_top12 xs_cursor">
+          <div class="hot4">
+       		<div>
+            	<ul class="hot_title">
+                    
+                    <li id="li01" class="on" style="cursor:pointer" onMouseOver="nTabshow_new1('hot_search','hot_attention',this)">热搜排行</li>
+                    <li id="li02" style="cursor:pointer" onMouseOver="nTabshow_new1('hot_attention','hot_search',this)">最受关注</li>
+                </ul>
+        	</div>
+        <!-- 热搜排行 -->
+             <div class="hot_bott" id="hot_search" >
+                <ul>
+                	<foreach name="book_hot" item="vo" key="k">
+                		<if condition="($k+1 eq 1) or ($k+1 eq 2)or($k+1 eq 3)">
+                			<li class="ico{$k+1}">
+			                    <div class="pic">
+			                    <a href="__MODULE__/Book/book_detail.html?book_id={$vo['id']}" target="_blank" title="{$vo['name']}">
+			                    <img style="width:59px; height:77px;" src="{$vo['img']}" /></a>
+			                        <div class="sTit">
+			                        <img src="__IMAGE__/hot.gif" />
+			                        </div>
+			                        <b><a href="magazine/84299" target="_blank" title="{$vo['name']}">{$vo['name']|msubstr=0,5}</a></b>
+			                        <b><h3>{$vo['add_time']|date="Y年m月",###}</h3></b>
+									</div>
+			               	 </li>
+                		<else />
+                			<li class="ico{$k+1}"><span>{$vo['add_time']|date="Y年m月",###}</span><a href="__MODULE__/Book/book_detail.html?book_id={$vo['id']}" target="_blank" title="{$vo['name']}">{$vo['name']}</a></li>
+                		</if>
+                	</foreach>
+                </ul>
+            </div>
+            
+            <!-- 关注排行 -->
+            <div class="hot_bott" style="display:none;" id="hot_attention">
+                <ul>
+                	<foreach name="book_atten" item="vo" key="k">
+                		<if condition="($k+1 eq 1) or ($k+1 eq 2)or($k+1 eq 3)">
+                			<li class="ico{$k+1}">
+			                    <div class="pic">
+			                    <a href="__MODULE__/Book/book_detail.html?book_id={$vo['id']}" target="_blank" title="{$vo['name']}">
+			                    <img style="width:59px; height:77px;" src="{$vo['img']}" /></a>
+			                        <div class="sTit">
+			                        <img src="__IMAGE__/hot.gif" />
+			                        </div>
+			                        <b><a href="magazine/84299" target="_blank" title="{$vo['name']}">{$vo['name']|msubstr=0,5}</a></b>
+			                        <b><h3>{$vo['add_time']|date="Y年m月",###}</h3></b>
+									</div>
+			               	 </li>
+                		<else />
+                			<li class="ico{$k+1}"><span>{$vo['add_time']|date="Y年m月",###}</span><a href="__MODULE__/Book/book_detail.html?book_id={$vo['id']}" target="_blank" title="{$vo['name']}">{$vo['name']}</a></li>
+                		</if>
+                	</foreach>
+                 </ul>
+            </div>
+          <!----------------- 关注排行 end--------------------- -->
+          </div>
+        </div>
+       <!--===== 热搜排行 end   =====-->
+
+      
+    </div>
+    <!--==================== search-right begin   ====================-->
+    
+</div>
+<include file="Public/fooder" />

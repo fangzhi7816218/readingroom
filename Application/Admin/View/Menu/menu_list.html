@@ -1,0 +1,94 @@
+
+<!-- $Id: goods_list.htm 17126 2010-04-23 10:30:26Z liuhui $ -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>权限管理 - 管理员列表 </title>
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="__ADMINCSS__/general.css" rel="stylesheet" type="text/css" />
+<link href="__ADMINCSS__/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__ADMINJS__/transport.js"></script>
+<script type="text/javascript" src="__ADMINJS__/common.js"></script>
+<style>
+	.list-div table td{
+		text-align:center;
+	}
+</style>
+
+</head>
+<body>
+
+<h1>
+<span class="action-span"><a href="__URL__/menu_add">添加菜单</a></span>
+<span class="action-span1"><a href="index.php?act=main">后台布局</a> </span><span id="search_id" class="action-span1"> - 菜单列表</span>
+<div style="clear:both"></div>
+</h1>
+<script type="text/javascript" src="__ADMINJS__/utils.js"></script><script type="text/javascript" src="js/listtable.js"></script>
+<!-- 商品搜索 -->
+<!-- $Id: goods_search.htm 16790 2009-11-10 08:56:15Z wangleisvn $ -->
+<div class="form-div">
+  <form action="__ACTION__" id="searchForm" method="post">
+    <img src="__ADMINIMAGE__/icon_search.gif" width="26" height="22" border="0" alt="SEARCH" />
+
+        <!-- 关键字 -->
+     菜单名称：<input type="text" name="menu_name" size="15" />
+    <input type="submit" value=" 搜索 " class="button" />
+  </form>
+</div>
+
+
+
+<!-- 商品列表 -->
+  <!-- start goods list -->
+  <div class="list-div" id="listDiv">
+<table cellpadding="3" cellspacing="1">
+  <tr>
+    <th>编号</th>
+    <th>菜单名称</th>
+    <th>所属上级菜单</th>
+    <th>动作名称</th>
+        <th>操作</th>
+  </tr>
+  <notempty name="menu_list">
+  <foreach name="menu_list" item="vo">
+  <tr>
+  	<td class="first-cell">{$vo['id']}</td>
+  	<td >{$vo['menu_name']}</td>
+  	<td>
+  		<notempty name="vo['menu']['menu_name']">{$vo['menu']['menu_name']}<else />顶级菜单</notempty>
+  	</td>
+  	<td>{$vo['action']}</td>
+  	<td><a href="__URL__/menu_edit?id={$vo['id']}">编辑 </a>|<a href="__URL__/menu_remove?id={$vo['id']}" onclick="return confirm('确定要删除吗？')"> 删除</a></td>
+  	</tr>
+     </foreach>
+  <else />
+    <tr><td class="no-records" colspan="10">没有找到任何记录</td></tr>
+  </notempty>
+  </table>
+<!-- end goods list -->
+
+<!-- 分页 -->
+<table id="page-table" cellspacing="0">
+  <tr>
+    <td align="right" nowrap="true">
+            <div id="turn-page">
+            {$page}
+          <select id="gotoPage" onchange="listTable.gotoPage(this.value)">
+            <option value='1'>1</option>          </select>
+        </span>
+      </div>
+    </td>
+  </tr>
+</table>
+
+</div>
+
+<script>
+            document.getElementById('searchForm').menu_name.value="{$param['menu_name']}";
+</script>
+
+<include file="Public/fooder" />
+</body>
+</html>

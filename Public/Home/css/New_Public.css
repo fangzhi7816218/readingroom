@@ -1,0 +1,483 @@
+/*  ++++++++++++++++++++++++++++++++      杂志      ++++++++++++++++++++++++++++++++   */
+
+/*  ====================  首页 分类 begin    ====================   */
+.category{ width:150px; height:506px; background:#fafafa; border:1px solid #bdbdbd; border-top:none;}
+.category a{color:#4e4d4d;}
+.category .category_top{ width:150px; height:33px; border-bottom:1px solid #cb1b2a;}
+.category .category_top a{padding:10px 0 0 25px; font-size:14px; font-weight:bold; color:#d7252e; line-height:33px;}
+.category h1{ font-size:14px; color:#cb1b2a; padding:10px 0 0 23px; background:url(http://www.dooland.com/magazine/images/category_magazine_bg.jpg) no-repeat 90px 16px;}
+.category h2{ font-size:14px; color:#f2852a; padding:10px 0 0 23px; border-top:1px solid #f2852a; background:url(http://www.dooland.com/magazine/images/category_book_bg.jpg) no-repeat 90px 16px;}
+.category ul{ margin-top:5px;_ margin-top:0px;}
+.category li{ display:block; /*position:relative;*/ width:116px; height:28px;*height:24px;_height:26px;margin:0 0 0 24px;_margin:0 0 0 24px;line-height:28px;_line-height:26px; background:url(http://www.dooland.com/magazine/images/category_ico.jpg) no-repeat right center; }
+.category li ul{position:absolute; margin:0; padding:0;background:#fff;border:1px #999999 solid; top:-100px; left:125px;display:none;width:642px;}
+.category li ul li{margin:0; background:none;}
+.category li.selected{z-index:99; position:relative; }
+.category li.selected .h2-tit{position:absolute; z-index:88; border:1px solid #999999; border-right:0; border-left:0; background-color:#fff;width:126px; margin-left:-24px; padding-left:24px; height:28px; line-height:26px;}
+.category dt{ width:127px; height:29px; line-height:29px; padding-left:23px; border-top:1px solid #9f9f9f;}
+.category dt .mun_magazine{width:125px; height:40px;line-height:40px; font-size:14px; font-weight:bold; background:url(http://www.dooland.com/magazine/images/category_apaper_bg.jpg) no-repeat 65px 18px;}
+.category dt .mun_magazine a{ color:#1856a3; }
+/*  ==================== 首页 分类 end   ====================   */
+
+/*  ====================      杂志  left     ====================   */
+*{ margin:0; padding:0;font-family:'宋体';}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{ padding:0;margin:0;font-size:12px; font-family:'宋体';}
+fieldset,img {border: 0; }
+ol,ul,li {list-style: none;}
+a{ text-decoration:none;}
+img{ border:0;}
+.clear{ clear:both;}
+.margin_left12{ margin-left:12px;}
+.margin_rihgt12{ margin-rihgt:12px;}
+.margin_top12{ margin-top:12px;}
+.margin_bottom12{ margin-bottom:12px;}
+
+/*  *******      杂志  当前地址    *******  */
+.local{ width:990px; height:32px; color:#333; line-height:32px;}
+.local a{color:#333; text-decoration:none; padding:0 10px;}
+.local a:hover{ color:#D7252F;}
+.local .ico{ background:url(http://www.dooland.com/magazine/images/mag_det/mag_deta_ico.jpg) no-repeat right center;}
+/*  *******      杂志  当前地址 end   *******  */
+
+/*  *******      杂志  flash    *******  */
+#flash{ width:630px; height:188px; background-color:#000;}
+#flash_new{ width:826px; height:188px; background-color:#000;}
+/*  *******      杂志  flash    *******  */
+
+/*  *******      杂志  分类    *******  */
+.m_sort{ width:150px; /*height:568px;*/border: 1px solid #D7D7D7; border-top:none;}
+.m_sort .sort-on{ background:#FAFAFA;}
+.m_sort .red-cont{ color:#D7252E;}
+.m_sort .orange-cont{ color:#D7252E;}
+.m_sort h1{ width:150px; height:31px; background:url(../images/mag_index/m_bd1_title.jpg) no-repeat 0 0;}
+.m_sort dl{ border-top:1px solid #d7d7d7;}
+.m_sort dl dt{ padding:0 8px; line-height:30px; font-size:12px; background:url(../images/mag_index/m_sort_dt.jpg) no-repeat 80px 12px;}
+.m_sort dl dt a{color:#333232; font-weight:bold;}
+.m_sort dl dd{padding:0 2px 2px 8px;line-height:21px;}
+.m_sort dl dd a{color:#333232; padding-right:3px;_padding-right:3px;}
+.m_sort dl dd a:hover{ color:#cb1b2a;}
+.m_sort span{ height:30px;}
+.m_sort .red{ color:#cb1b2a;}
+.m_sort .orange{ color:#FC7A2B;}
+.m_sort .ty{ height:34px;line-height:34px; border-top:1px solid #cb1b2a;}
+.m_sort .ty a{ color:#d7252e; font-size:14px; padding-left:20px; font-weight:bold; }
+/*  *******      杂志  分类  end   *******  */
+
+/*  *******      杂志  专题推荐   *******  */
+.left_look{ width:150px; height:317px; border:1px solid #d7d7d7;}
+.left_look .left_look_ti{ width:150px; height:30px; color:#333232; line-height:30px; text-indent:10px; background:#f7f7f7; font-weight:bold;}
+.left_look .zt-tuijian-ti{ width:152px; height:33px; background:url(../images/category/zt-tuijian-title.jpg) no-repeat 0 0;}
+.left_look .look_pic{ width:150px; margin: 10px 0; text-align:center;}
+.left_look ul{margin:0 0 0 10px;}
+.left_look li{ line-height:20px;}
+.left_look a{ color:#4b4a4a;}
+/*  *******      杂志  专题推荐  end   *******  */
+
+/*  *******      杂志  最受欢迎的品牌  *******  */
+.hot_brand{ width:150px; height:284px;  border:1px solid #d7d7d7; }
+.hot_brand ul{ padding-top:5px;}
+.hot_brand li{ line-height:24px; margin-left:10px; text-indent:5px; }
+.hot_brand li a{ color:#646464;}
+.hot_brand .hot_bg{ background:#F7F7F7 url(../images/category/hot_brand_bg.jpg) no-repeat 105px 8px}
+.m_ico_1{ background:url(http://www.dooland.com/magazine/images/mag_index/1_ico.jpg) no-repeat 0 6px; padding-left:10px;}
+.m_ico_2{ background:url(http://www.dooland.com/magazine/images/mag_index/m_2_ico.jpg) no-repeat 0 6px; padding-left:10px;}
+.m_ico_3{ background:url(http://www.dooland.com/magazine/images/mag_index/m_3_ico.jpg) no-repeat 0 6px; padding-left:10px;}
+.m_ico_4{ background:url(http://www.dooland.com/magazine/images/mag_index/4_ico.jpg) no-repeat 0 6px; padding-left:10px;}
+.m_ico_5{ background:url(http://www.dooland.com/magazine/images/mag_index/5_ico.jpg) no-repeat 0 6px; padding-left:10px;}
+.m_ico_6{ background:url(http://www.dooland.com/magazine/images/mag_index/6_ico.jpg) no-repeat 0 6px; padding-left:10px;}
+.m_ico_7{ background:url(http://www.dooland.com/magazine/images/mag_index/7_ico.jpg) no-repeat 0 6px; padding-left:10px;}
+.m_ico_8{ background:url(http://www.dooland.com/magazine/images/mag_index/8_ico.jpg) no-repeat 0 6px; padding-left:10px;}
+.m_ico_9{ background:url(http://www.dooland.com/magazine/images/mag_index/9_ico.jpg) no-repeat 0 6px; padding-left:10px;}
+.m_ico_10{ background:url(http://www.dooland.com/magazine/images/mag_index/10_ico.jpg) no-repeat 0 6px; padding-left:10px;}
+/*  *******      杂志  最受欢迎的品牌  end *******  */
+
+/*  *******      杂志  合作媒体  *******  */
+.hz_media{ width:150px; height:264px; border:1px solid #d7d7d7; }
+.hz_media .title{width: 150px;height: 32px;background: #F7F7F7;line-height: 32px;text-indent: 10px;color: #333232;font-weight: bold;}
+.hz_media ul{ margin-top:5px;}
+.hz_media li{ line-height:25px;}
+.hz_media a{ margin:0 0 0 10px; color:#646464;}
+.hz_media li span{ float:right; margin-right:5px;}
+.hz_media li strong{ font-weight:lighter; float:left;}
+.hz_media li p{ clear:both; color:#333333;}
+.hz_media li p a{color:#333333; margin-right:10px;}
+/*  *******      杂志  合作媒体 end  *******  */
+/*  ====================      杂志  left  end    ====================   */
+
+/*  *******      杂志  字母搜索  *******  */
+.eng_search{ width:825px; height:30px; border:1px solid #d7d7d7;}
+.eng_search a{ width:17px; height:17px; display:block;  color:#333333; margin:8px 9px 0 0;float:left; text-align:center; line-height:17px;}
+.eng_search .on,.eng_search a:hover{ width:17px; height:17px;background:url(http://www.dooland.com/magazine/images/mag_index/m_eng_search_bg.jpg) no-repeat right top; color:#fff;}
+.eng_search .txt{ width:85px; height:30px; line-height:30px; text-align:center; color:#333333; float:left;}
+.eng_search span a{ width:30px; height:17px;}
+.eng_search span .on,.eng_search span a:hover{ width:30px; height:17px;background:url(http://www.dooland.com/magazine/images/mag_index/m_eng_search_span_bg.jpg) no-repeat right top;}
+.h_brand{ float:left;width: 140px;margin-left: 25px; height:30px; overflow:hidden;line-height: 30px;}
+.h_brand a{ color:#515659;}
+.h_brand a:hover{ padding:5px 2px;background:#cb1b2a; color:#fff;}
+/*  *******      杂志  字母搜索 end  *******  */
+
+/*  ====================      杂志  center      ====================   */
+/*  *******      杂志  重磅推荐  *******  */
+.dy_sale{ width:628px; height:300px; border:1px solid #d7d7d7;}
+.dy_sale .sale_tit{ width:628px; height:39px; border-bottom:1px solid #d7d7d7;}
+.dy_sale .sale_tit h3{height:40px; float:left; color:#333333; font-size:14px;line-height:40px; margin-left:20px; text-indent:10px; display:inline;}
+.m_more{ width:45px; height:39px;background:url(http://www.dooland.com/magazine/images/mag_index/m_more_bg.jpg) no-repeat 32px 16px; float:right; text-indent:5px; line-height:40px;}
+.m_more a{color: #838383;}
+.mag_bg{ background:url(../images/category/mag_LargeClass_title_bg.jpg) no-repeat left center;}
+.book_bg{ background:url(../images/category/book_LargeClass_title_bg.jpg) no-repeat left center;}
+.dy_sale .sale_tit ul{ width:400px; height:40px; float:left; padding-left:80px;}
+.dy_sale .sale_tit ul li{ width:75px; margin-right:10px;float:left; margin-top: 7px;}
+.dy_sale .sale_tit ul li a{ display:block; width:75px; height:32px; line-height:32px; text-align:center; color:#4B4A4A; }
+.dy_sale .sale_tit li.sale_on,.dy_sale .sale_tit li:hover{ width:75px; height:30px; border:1px solid #d7d7d7; border-bottom:none;padding-bottom:2px;background-color: white;}
+.dy_sale .sale_tit li.sale_on a,.dy_sale .sale_tit a:hover{color: #D7252E;}
+.dy_sale .dy_cont{ width:628px; height:260px;overflow:hidden;}
+.dy_sale .dy_cont .left{ width:25px; height:260px; float:left;}
+.dy_sale .dy_cont .left a{ width:20px; height:260px; display:block; background:url(http://www.dooland.com/magazine/images/cont_jx_top_left.jpg) no-repeat left center; margin-left:5px;}
+.dy_sale .dy_cont .center{ width:628px; height:260px; float:left;}
+.dy_sale .dy_cont .right{ width:25px; height:260px; float:right;}
+.dy_sale .dy_cont .right a{ width:20px; height:260px; display:block; background:url(http://www.dooland.com/magazine/images/cont_jx_top_right.jpg) no-repeat right center; margin-right:5px;}
+
+.dy_sale .Subscribe_sale{ width:628px; height:260px;overflow:hidden;}
+.dy_sale .Subscribe_sale .left{ width:25px; height:260px; float:left;}
+.dy_sale .Subscribe_sale .left a{ width:20px; height:260px; display:block; background:url(http://www.dooland.com/magazine/images/cont_jx_top_left.jpg) no-repeat left center; margin-left:5px;}
+.dy_sale .Subscribe_sale .center{ width:628px; height:260px; float:left;}
+.dy_sale .Subscribe_sale .right{ width:25px; height:260px; float:right;}
+.dy_sale .Subscribe_sale .right a{ width:20px; height:260px; display:block; background:url(http://www.dooland.com/magazine/images/cont_jx_top_right.jpg) no-repeat right center; margin-right:5px;}
+
+.dy_sale .book_tit{ width:628px; height:39px; border-bottom:1px solid #d7d7d7;}
+.dy_sale .book_tit h3{height:40px; float:left; color:#333333; font-size:14px;line-height:40px; margin-left:20px; text-indent:10px; display:inline;}
+.dy_sale .book_tit ul{ width:400px; height:40px; float:left; padding-left:80px;}
+.dy_sale .book_tit ul li{ width:75px; margin-right:10px;float:left; margin-top: 7px;}
+.dy_sale .book_tit ul li a{ display:block; width:75px; height:32px; line-height:32px; text-align:center; color:#4B4A4A; }
+.dy_sale .book_tit li.sale_on,.dy_sale .book_tit li:hover{ width:75px; height:30px; border:1px solid #d7d7d7; border-bottom:none;padding-bottom:2px;background-color: white;}
+.dy_sale .book_tit li.sale_on a,.dy_sale .book_tit a:hover{color: #F2852A;}
+
+.dy_magazine{ width:122px; height:240px; float:left;font-weight:lighter; margin:20px 10px 0 12px;_margin:20px 9px 0 9px;}
+.dy_magazine .pic{width:114px; height:152px;overflow:hidden;padding: 3px;border-right: 1px solid #9C9C9C;border-bottom: 1px solid #9C9C9C;border-top: 1px solid #E4E4E4;border-left: 1px solid #E4E4E4;}
+.dy_magazine .tit{ width:122px; margin-top:10px; float:left; height:20px; overflow:hidden;}
+.dy_magazine .date{ width:122px; height:15px; overflow:hidden;color: #9B9B9B;float:left;}
+.dy_magazine .Price{ width:122px; height:20px; overflow:hidden;color:#4b4a4a;float:left; line-height:20px;}
+.dy_magazine .Price strong{ color:#D7252E; font-weight:bold;}
+.dy_magazine .title{ width:122px; height:20px; overflow:hidden;}
+.dy_magazine a{line-height:20px;color:#4b4a4a;float:left;}
+.dy_magazine .Price-sale{ width:122px; height:20px; overflow:hidden;color:#D7252E; font-weight:bold;float:left;}
+.dy_magazine .Price-sale b{ color:#9B9B9B; font-weight:lighter; padding-left:10px;}
+.dy_magazine .Price-sale b span{ text-decoration:line-through;}
+/*  *******      杂志  重磅推荐  *******  */
+
+/*  *******      杂志  人物志  *******  */
+.renwu-z{width:628px; height:300px; border:1px solid #d7d7d7;}
+.renwu-z .title{width:628px; height:40px;}
+.renwu-z .title h4{height:40px; float:left; color:#333333; font-size:14px;line-height:40px; margin-left:20px; text-indent:10px; display:inline;}
+.renwu-z .content{ width:628px; height:260px;padding: 0 25px; }
+.renwu-z .content2{ width:628px; height:260px;}
+
+/*  *******      杂志  人物志  *******  */
+
+/*  *******      杂志  浏览历史  *******  */
+.mag_deta_tuijian{ width:150px;border:1px solid #d7d7d7;}
+.mag_deta_tuijian .dashed_bot{ width:141px; border-bottom:1px dashed #cdcdcd;}
+.mag_deta_tuijian ul{ margin:5px 0;}
+.mag_deta_tuijian li{ line-height:30px; width:145px; margin-left:4px;}
+.mag_deta_tuijian li a{color:#313131; margin:0 10px;*margin:0 5px;_margin:0 0px;text-indent:10px;}
+.mag_deta_tuijian li span{color:#707070;}
+/*  *******      杂志  浏览历史  *******  */
+/*  ====================      杂志  center  end    ====================   */
+
+
+/*  ====================      杂志  right      ====================   */
+
+/*  *******      杂志  升级vip    *******  */
+.tag_vip{width:150px;z-index:99;position: relative; top: 85px; height: 45px; padding-top: 5px; left: 65px; margin-top: -50px;}
+.m_vip{width:182px; height:32px; border:1px solid #cb1b2a;}
+.m_vip a{ float:left; line-height:32px; margin:0 2px; color:#282828;}
+.m_vip a strong{ color:#c11226;}
+.m_vip a:hover{ text-decoration:underline;}
+.m_lines{background:url(http://www.dooland.com/magazine/images/header_fg.jpg) no-repeat right center; padding:0 5px;}
+/*  *******      杂志  升级vip  end  *******  */
+
+/*  *******      杂志  最近即将更新    *******  */
+.hot_update{ width:184px; height:123px;}
+.hot_update .hot_tit{ width:184px; height:32px;background:#efefef;}
+.hot_update .hot_tit li{width:92px; height:32px; line-height:32px; float:left; text-align:center;border-bottom:1px solid #d7d7d7;}
+.hot_update .hot_tit li a{color: #4B4A4A; display: block;height: 32px; }
+.hot_update .hot_tit .hot_on,.hot_update .hot_tit li:hover {border:1px solid #d7d7d7; border-bottom:none; background:#fff;color:#000; width:90px;}
+.hot_update .hot_cont{ width:182px; height:91px; border:1px solid #d7d7d7; border-top:none;}
+.hot_update .hot_cont ul{ padding:0 5px 0 0px;}
+.hot_update .hot_cont li{ width:175px; line-height:25px; height:25px;}
+.hot_update .hot_cont li a{ color:#646464; float:left; margin-left:5px;}
+.hot_update .hot_cont li span{ float:right; color:#a4a4a4;}
+/*  *******      杂志  最近即将更新  end  *******  */
+
+/*  *******      杂志  销售排行榜    *******  */
+.xs_cursor{ width:184px;}
+.xs_cursor .xs_cursor_top{ width:184px; height:41px;}
+.xs_cursor .book_cursor_top{ width:182px; height:39px; background:url(../images/category/book_ph_top.jpg) no-repeat 0 0; line-height:39px; text-indent:10px;border: 1px solid #D7D7D7; font-weight:bold;color: #333;}
+.xs_cursor .mag_cursor_top{ width:182px; height:39px; background:url(http://www.dooland.com/magazine/images/category/news_renwu_top.jpg) no-repeat 0 0; line-height:39px; text-indent:10px;border: 1px solid #D7D7D7; font-weight:bold;color: #333;}
+.xs_cursor .xs_cursor_week{width:182px; height:30px; background:#EFEFEF; border-left:1px solid #d7d7d7;border-right:1px solid #d7d7d7;}
+.xs_cursor .xs_cursor_week ul{ width:184px; margin:0 -1px;}
+.xs_cursor .xs_cursor_week li{width:91px; height:30px; line-height:30px; float:left; text-align:center;border-bottom:1px solid #d7d7d7;}
+.xs_cursor .xs_cursor_week li a{color: #4B4A4A; display: block;height: 32px; }
+.xs_cursor .xs_cursor_week .on,.xs_cursor .xs_cursor_week li:hover {border:1px solid #d7d7d7; border-bottom:none;border-top:none; background:#fff;color:#000; width:91px;}
+
+.xs_cursor .xs_cursor_hot{width:182px; height:30px; border:1px solid #d7d7d7;border-bottom:none;background:url(http://www.dooland.com/magazine/images/category/xs_cursor_hot_bg.jpg) repeat-x 0 0}
+.xs_cursor .xs_cursor_hot ul{ width:184px; margin:0 -1px;}
+.xs_cursor .xs_cursor_hot li{width:61px; height:30px; line-height:30px; float:left; text-align:center;}
+.xs_cursor .xs_cursor_hot li a{color: #4B4A4A; display: block;border-bottom:1px solid #d7d7d7; }
+.xs_cursor .xs_cursor_hot .on,.xs_cursor .xs_cursor_hot a:hover {border:1px solid #d7d7d7; border-bottom:none;border-top:none; background:#fff;color:#000; width:60px; }
+.xs_cursor .xs_cursor_hot .on a,.xs_cursor .xs_cursor_hot a:hover{color:#D7252F;}
+
+.xs_cursor .xs_cursor_week02{ width:182px; height:39px;border:1px solid #d7d7d7; border-top:none;}
+.xs_cursor .xs_cursor_week02 li{ width:44px;float:left;text-align:center;}
+.xs_cursor .xs_cursor_week02 li a{width:39px; height:20px; color:#333; line-height:20px; display:block; margin:10px 0 0 5px;}
+.xs_cursor .xs_cursor_week02 li .week_on,.xs_cursor .xs_cursor_week02 li a:hover{ width:39px; height:20px;/*background:url(../images/mag_index/m_week02_bg.jpg) no-repeat left top;*/ }
+.xs_cursor .xs_cursor_week02 li .week_on{font-weight:bold;}
+.xs_cursor .xs_cursor_cont{ width:182px; height:469px; border:1px solid #d7d7d7; border-top:none;}
+.xs_cursor .xs_cursor_cont ul{ width:165px; margin-left:8px;padding-top: 10px;}
+.xs_cursor .xs_cursor_cont li{ padding-left:20px; width:165px; overflow:hidden;}
+.xs_cursor .xs_cursor_cont li a{ color:#4b4a4a; line-height:26px;}
+.xs_cursor .xs_cursor_cont li strong{ float:left;}
+.xs_cursor .xs_cursor_cont li span{ float:right; color:#777; line-height:26px;}
+.xs_cursor .xs_cursor_cont .pic{ width:150px; height:87px;}
+.xs_cursor .xs_cursor_cont .pic .cover{ float:left; width:59px; height:77px;overflow: hidden;}
+.xs_cursor .xs_cursor_cont .pic .content{ float:right; width:90px; padding-top:20px;}
+.xs_cursor .xs_cursor_cont .pic .sTit{ width:80px; float:left; margin-left:10px; margin-bottom:0px;}
+.xs_cursor .xs_cursor_cont .pic b{ width:88px; float:left;font-weight:lighter; line-height:20px; color:#4b4a4a; height:20px; overflow:hidden; margin-left:5px;}
+.xs_cursor .xs_cursor_cont .pic h3{ color:#777777; font-weight:lighter;}
+.xs_cursor .xs_cursor_cont .pic strong{ color:#d7252f;padding-right: 2px;float:none;}
+.xs_cursor .xs_cursor_cont .pic .tit{ width:80px; float:left;font-weight:lighter; line-height:20px; color:#4b4a4a; height:20px; overflow:hidden;}
+.xs_cursor .xs_cursor_cont .pic .date{ width:80px; float:left;line-height:20px; color:#4b4a4a; height:20px; overflow:hidden; color:#777777; font-weight:lighter;}
+.xs_cursor .xs_cursor_cont .pic .price{width:80px; float:left;font-weight:lighter; line-height:20px; color:#4b4a4a; height:20px; overflow:hidden; color:#d7252f;padding-right: 2px;float:none;}
+.xs_cursor .xs_cursor_cont .pic .price strong{ float:left; padding-right:10px;}
+.xs_cursor .xs_cursor_cont .pic .price span{ color:#777;text-decoration: line-through; font-weight:lighter; float:left; line-height:20px;}
+.xs_cursor .xs_cursor_cont .pic .magazine_jg{float:left;}
+.xs_cursor .ico1{ background: url(http://www.dooland.com/magazine/images/hot_ico1.jpg) no-repeat left top; margin-bottom:5px; *margin-bottom:2px;_margin-bottom:0px;}
+.xs_cursor .ico2{ background: url(http://www.dooland.com/magazine/images/hot_ico2.jpg) no-repeat left top; margin-bottom:5px; *margin-bottom:2px;_margin-bottom:0px;}
+.xs_cursor .ico3{ background: url(http://www.dooland.com/magazine/images/hot_ico3.jpg) no-repeat left top;}
+.xs_cursor .book-ico1{ background: url(http://www.dooland.com/book/images/book_img/b_ico1.jpg) no-repeat left top; margin-bottom:5px; *margin-bottom:2px;_margin-bottom:0px;}
+.xs_cursor .book-ico2{ background: url(http://www.dooland.com/book/images/book_img/b_ico2.jpg) no-repeat left top; margin-bottom:5px; *margin-bottom:2px;_margin-bottom:0px;}
+.xs_cursor .book-ico3{ background: url(http://www.dooland.com/book/images/book_img/b_ico3.jpg) no-repeat left top;}
+.xs_cursor .ico4{ background: url(http://www.dooland.com/magazine/images/hot_ico4.jpg) no-repeat left center;}
+.xs_cursor .ico5{ background: url(http://www.dooland.com/magazine/images/hot_ico5.jpg) no-repeat left center;}
+.xs_cursor .ico6{ background: url(http://www.dooland.com/magazine/images/hot_ico6.jpg) no-repeat left center;}
+.xs_cursor .ico7{ background: url(http://www.dooland.com/magazine/images/hot_ico7.jpg) no-repeat left center;}
+.xs_cursor .ico8{ background: url(http://www.dooland.com/magazine/images/hot_ico8.jpg) no-repeat left center;}
+.xs_cursor .ico9{ background: url(http://www.dooland.com/magazine/images/hot_ico9.jpg) no-repeat left center;}
+.xs_cursor .ico10{ background: url(http://www.dooland.com/magazine/images/hot_ico10.jpg) no-repeat left center;}
+/*  *******      杂志  销售排行榜  end  *******  */
+
+/*  *******      杂志  点击排行榜    *******  */
+.click_cursor{ width:184px; height:534px;}
+.click_cursor .border_bott{ border-bottom:1px solid #eaeaea;}
+.click_cursor .marg_bott{ padding-bottom:5px; margin-top:10px;_margin-top:5px;}
+.click_cursor .click_cursor_top{ width:184px; height:41px;}
+.click_cursor .click_cursor_cont{ width:182px; height:492px; border:1px solid #d7d7d7; border-top:none;}
+.click_cursor .click_cursor_cont ul{ width:166px; margin-left:8px;padding-top: 5px;}
+.click_cursor .click_cursor_cont li{ padding-left:20px;}
+.click_cursor .click_cursor_cont li a{ color:#4b4a4a; line-height:28px;}
+.click_cursor .click_cursor_cont li span{ float:right; color:#777; line-height:28px;}
+.click_cursor .click_cursor_cont .pic{ width:150px; height:78px;}
+.click_cursor .click_cursor_cont .pic .cover{ float:left; width:59px; height:77px;}
+.click_cursor .click_cursor_cont .pic .content{ float:right; width:88px; padding-top:20px;}
+.click_cursor .click_cursor_cont .pic img{ float:left;}
+.click_cursor .click_cursor_cont .pic .sTit{ width:80px; float:left; margin-left:10px;}
+.click_cursor .click_cursor_cont .pic b{ width:88px; float:left;font-weight:lighter; line-height:20px; color:#4b4a4a; height:20px; overflow:hidden;}
+.click_cursor .click_cursor_cont .pic h3{ color:#777777; font-weight:lighter;}
+.click_cursor .click_cursor_cont .pic strong{ color:#d7252f;padding-right:10px;}
+.click_cursor .click_cursor_cont .pic b span{ text-decoration:line-through; float:right;}
+.click_cursor .ico1{ background: url(http://www.dooland.com/magazine/images/mag_index/click_ico1.jpg) no-repeat left top;}
+.click_cursor .ico2{ background: url(http://www.dooland.com/magazine/images/mag_index/click_ico2.jpg) no-repeat left top;}
+.click_cursor .ico3{ background: url(http://www.dooland.com/magazine/images/mag_index/click_ico3.jpg) no-repeat left top;}
+.click_cursor .ico4{ background: url(http://www.dooland.com/magazine/images/mag_index/click_ico4.jpg) no-repeat left center; margin-top:5px;}
+.click_cursor .ico5{ background: url(http://www.dooland.com/magazine/images/mag_index/click_ico5.jpg) no-repeat left center;}
+.click_cursor .ico6{ background: url(http://www.dooland.com/magazine/images/mag_index/click_ico6.jpg) no-repeat left center;}
+.click_cursor .ico7{ background: url(http://www.dooland.com/magazine/images/mag_index/click_ico7.jpg) no-repeat left center;}
+.click_cursor .ico8{ background: url(http://www.dooland.com/magazine/images/mag_index/click_ico8.jpg) no-repeat left center;}
+.click_cursor .ico9{ background: url(http://www.dooland.com/magazine/images/mag_index/click_ico9.jpg) no-repeat left center;}
+.click_cursor .ico10{ background: url(http://www.dooland.com/magazine/images/mag_index/click_ico10.jpg) no-repeat left center;}
+
+/*  *******      杂志  点击排行榜  end  *******  */
+
+/*  *******      杂志  小分类 杂志列表  begin  *******  */
+.mag-cover{ width:826px;}
+.mag-cover ul{ clear:both;}
+.mag-cover li{ width:165px;height:325px; float:left; display:block;padding: 25px 20px 0 20px;}
+.mag-cover .pic{ width:154px; height:200px; margin-left:3px;padding: 3px;border-right: 1px solid #9C9C9C;border-bottom: 1px solid #9C9C9C;border-top: 1px solid #E4E4E4;border-left: 1px solid #E4E4E4; text-align:center; overflow:hidden; background:#fff;}
+.mag-cover .txt{ width:162px; margin-left:3px; padding-top:10px;}
+.mag-cover .txt a{ color:#4b4a4a; line-height:18px; font-weight:bold; width:162px; height:20px; overflow:hidden; display:block;}
+.mag-cover .txt p{ color:#777777; line-height:22px; width:162px; height:22px; overflow:hidden;}
+.mag-cover .txt b{color:#4B4A4A; font-weight:lighter;}
+.mag-cover .txt b strong{color:#d7252f; padding-right:1px;}
+.mag-cover .txt span{text-decoration:line-through; color:#777777;}
+.mag-cover .txt .but{ width:162px; height:22px; margin-top:15px;}
+.mag-cover .txt .but .buy-but{ width:74px; height:22px; float:left;padding-right: 14px;}
+.mag-cover .txt .but .buy-but a{width:74px; height:22px;display: block; background:url(../images/category/mag-cover-gm-but.png) no-repeat 0 0;}
+.mag-cover .txt .but .buy-but a:hover, .mag-cover .li_bg-now .txt .but .buy-but a{width:74px; height:22px;display: block; background:url(../images/category/mag-cover-gm-but-on.png) no-repeat 0 0;}
+.mag-cover .txt .but .read-but{ width:74px; height:22px; float:left;}
+.mag-cover .txt .but .read-but a{width:74px; height:22px; display:block; background:url(../images/category/mag-cover-yd-but.png) no-repeat 0 0;}
+.mag-cover .txt .but .more-but{ width:74px; height:22px; float:left; margin-left:14px; display:inline;}
+.mag-cover .txt .but .more-but a{width:74px; height:22px; display:block; background:url(../images/category/mag-cover-more-but.png) no-repeat 0 0;}
+.mag-cover .li_bg-now{ background:#efefef;}
+.mag-cover .txt .but .read-but a:hover, .mag-cover .li_bg-now .txt .but .read-but a{width:74px; height:22px; display:block; background:url(../images/category/mag-cover-yd-but-on.jpg) no-repeat 0 0;}
+.mag-cover .li_bg-now{ background:#efefef;}
+.mag-cover .txt .but .dow-but{ width:74px; height:22px; float:left;padding-right: 14px;}
+.mag-cover .txt .but .dow-but a{width:74px; height:22px;display: block; background:url(../images/category/mag-cover-dow-but.png) no-repeat 0 0;}
+.mag-cover .txt .but .dow-but a:hover,.mag-cover .li_bg-now .txt .but .dow-but a{width:74px; height:22px;display: block; background:url(../images/category/mag-cover-dow-but-on.png) no-repeat 0 0;}
+/*  *******      杂志  小分类 杂志列表  end  *******  */
+
+/*  *******      杂志  小分类 分页  begin  *******  */
+#page{ width:600px; height:25px; float:right;padding: 30px 0;}
+#page .left{ width:400px; height:25px; float:left; line-height:25px;color:#4B4A4A;}
+#page .left a{ padding:0px 8px;border: 1px solid #D7D7D7; float:left; margin:0 6px 0 6px; height:23px; color:#4B4A4A; display:inline;}
+#page .left a:hover{ display:block; background:#CB1B2A; color:#fff;border:1px solid #CB1B2A;}
+#page .left .page-next{ padding:0;width: 25px;height: 23px;}
+#page .left a.page-next:hover{border: 1px solid #D7D7D7;}
+#page .right{ width:200px; height:25px; float:right;color:#4B4A4A; line-height:23px;}
+#page .right .input-float{ float:left; line-height:18px; padding-right:10px;}
+#page .right a{ width:45px; text-align:center;border: 1px solid #D7D7D7;height:23px; color:#4B4A4A; display:block;font-weight:bold; line-height:23px;}
+#page .right .page-text{ width:28px; height:17px; border:1px solid #d7d7d7; margin:0 5px; padding:3px 0; line-height:23px; float:left;}
+/*  *******      杂志  小分类 分页  end   *******  */
+/*  ====================      杂志  right      ====================   */
+
+
+
+/*  ++++++++++++++++++++++++++++++++      杂志  end    ++++++++++++++++++++++++++++++++   */
+
+
+
+/*  ++++++++++++++++++++++++++++++++      图书      ++++++++++++++++++++++++++++++++   */
+.b_sort{ width:151px;border: 1px solid #D7D7D7;}
+.b_sort .orange-cont{ color:#D7252E;}
+.b_sort .sort-on {background: #FAFAFA;}
+.b_sort h1{ width:151px; height:31px; background:url(http://www.dooland.com/book/images/book_img/b_bd1_title.jpg) no-repeat 0 0;}
+.b_sort dl{border-top:1px  solid #d7d7d7;}
+.b_sort dl dt{ padding:0 15px; line-height:33px; font-size:12px; background:url(http://www.dooland.com/book/images/book_img/m_sort_dt.jpg) no-repeat 80px 13px; font-weight:bold;}
+.b_sort dl dt a{color:#333232;}
+.b_sort dl dd{padding:0 5px 5px 15px; line-height:23px;}
+.b_sort dl dd a{color:#333232; padding:0 5px 0 0;}
+/* Firefox */
+@-moz-document url-prefix(){.b_sort dl dd a{ padding: 0 3px 0 0; }}
+.b_sort dl dd a:hover{color:#f59d55;}
+.b_sort span{ height:30px;}
+.b_sort .orange{ color:#f59d55;}
+.b_sort .orange a {color: #F59D55;}
+.hot_author{ width:151px; height:264px;border:1px solid #d7d7d7; }
+.hot_author ul{ padding-top:5px;}
+.hot_author li{ line-height:22px; margin-left:10px; text-indent:5px; }
+.hot_author li a{ color:#646464;}
+
+
+.b_ico_1{ background:url(http://www.dooland.com/book/images/book_img/b_1_ico.jpg) no-repeat 0 6px; padding-left:10px;}
+.b_ico_2{ background:url(http://www.dooland.com/book/images/book_img/b_2_ico.jpg) no-repeat 0 6px; padding-left:10px;}
+.b_ico_3{ background:url(http://www.dooland.com/book/images/book_img/b_3_ico.jpg) no-repeat 0 6px; padding-left:10px;}
+.b_ico_4{ background:url(http://www.dooland.com/book/images/book_img/4_ico.jpg) no-repeat 0 6px; padding-left:10px;}
+.b_ico_5{ background:url(http://www.dooland.com/book/images/book_img/5_ico.jpg) no-repeat 0 6px; padding-left:10px;}
+.b_ico_6{ background:url(http://www.dooland.com/book/images/book_img/6_ico.jpg) no-repeat 0 6px; padding-left:10px;}
+.b_ico_7{ background:url(http://www.dooland.com/book/images/book_img/7_ico.jpg) no-repeat 0 6px; padding-left:10px;}
+.b_ico_8{ background:url(http://www.dooland.com/book/images/book_img/8_ico.jpg) no-repeat 0 6px; padding-left:10px;}
+.b_ico_9{ background:url(http://www.dooland.com/book/images/book_img/9_ico.jpg) no-repeat 0 6px; padding-left:10px;}
+.b_ico_10{ background:url(http://www.dooland.com/book/images/book_img/10_ico.jpg) no-repeat 0 6px; padding-left:10px;}
+
+.b_hz{ width:151px; height:264px;border:1px solid #d7d7d7;}
+.b_hz ul{ padding-top:5px;}
+.b_hz li{ line-height:25px;}
+.b_hz a{ margin:0 0 0 10px; color:#646464;}
+.b_hz li span{ float:right; margin-right:5px;}
+.b_hz li strong{ font-weight:lighter; float:left;}
+.b_hz li p{ clear:both; color:#333333;}
+.b_hz li p a{color:#333333; margin-right:10px;}
+
+/*  *******      图书  大分类 时尚馆  begin  *******  */
+.fashion{width: 628px;height: 390px;border: 1px solid #D7D7D7;}
+.fashion .title{ width:628px; height:39px; border-bottom:1px solid #D7D7D7;}
+.fashion h2{height:39px; color:#333; line-height:39px; text-indent:10px; margin-left:20px;font-size: 14px; color:#F2852A; float:left;}
+.smal-tit{ height:39px; line-height:39px; color:#9B9B9B; float:left; padding-left:10px;}
+.fashion ul{ margin-top:28px;}
+.fashion li{ width:290px; height:130px; float:left; display:block;padding-right:7px; margin:0 0 30px 15px; display:inline;}
+.fashion a{}
+.fashion .pic{width: 88px;height: 122px;float: left;padding: 3px;border-right: 1px solid #9C9C9C;border-bottom: 1px solid #9C9C9C;border-top: 1px solid #E4E4E4;border-left: 1px solid #E4E4E4; overflow:hidden;}
+.fashion .content{ width:175px; height:128px; float:right; position:relative;}
+.fashion .content .tit{ width:175px; height:20px; overflow:hidden; line-height:20px; color:#4B4A4A;}
+.fashion .content .tit a{color:#4B4A4A; font-weight:bold;}
+.fashion .content .Pub{width:175px; height:20px; overflow:hidden; line-height:20px; color:#9B9B9B;}
+.fashion .content .Price{width:175px; height:20px; overflow:hidden; line-height:20px; color:#4B4A4A;}
+.fashion .content .Price strong{color: #D7252E;font-weight: bold;}
+.fashion .content p{ color:#9B9B9B; line-height:18px; position:absolute; bottom:0; left:0;}
+.fashion .fg{ border-right:1px dashed #D7D7D7;}
+/*  *******      图书  大分类 时尚馆 end  *******  */
+
+/*  *******      图书  大分类 一周好书  begin  *******  */
+.good_book{ width:182px; height:280px; border:1px solid #d7d7d7;}
+.good_book .cont2{ width:182px; text-align:center;}
+.good_book .cont2 img{margin-top:10px;text-align:center;padding: 3px;border-right: 1px solid #9C9C9C;border-bottom: 1px solid #9C9C9C;border-top: 1px solid #E4E4E4;border-left: 1px solid #E4E4E4;}
+.good_book .cont2 h2{ width:172px; height:20px; margin-left:5px; text-align:center; overflow:hidden;}
+.good_book .cont2 h2 a{ display:block; font-weight:lighter; line-height:20px; color:#333;}
+.good_book .cont2 b{ font-weight:lighter; color:#787878; display:block; height:15px; overflow:hidden; padding-top:5px;}
+.good_book .cont2 .but img{ margin-top:5px; padding:0; border:0;}
+/*  *******      图书  大分类 一周好书 end  *******  */
+
+/*  *******      图书  大分类 关注排行榜  begin  *******  */
+.gz_cursor{ width:184px; height:440px;}
+.gz_cursor .border_bott{ border-bottom:1px solid #eaeaea;}
+.gz_cursor .marg_bott{ padding-bottom:5px; margin-top:5px;}
+.gz_cursor .click_cursor_top{ width:184px; height:41px;}
+.gz_cursor .click_cursor_cont{ width:182px; height:400px; border:1px solid #d7d7d7; border-top:none;}
+.gz_cursor .click_cursor_cont ul{ width:160px; margin-left:8px;padding-top: 5px;}
+.gz_cursor .click_cursor_cont li{ padding-left:22px;}
+.gz_cursor .click_cursor_cont li a{ color:#4b4a4a; line-height:33px;}
+.gz_cursor .click_cursor_cont .pic{ width:150px; height:78px;}
+.gz_cursor .click_cursor_cont .pic img{ float:left;}
+.gz_cursor .click_cursor_cont .pic .sTit{ width:80px; float:left; margin-left:10px; margin-bottom:8px;}
+.gz_cursor .click_cursor_cont .pic b{ width:80px; float:left; margin-left:10px; font-weight:lighter; line-height:20px; color:#4b4a4a;}
+.gz_cursor .click_cursor_cont .pic h3{ color:#777777; font-weight:lighter;}
+.gz_cursor .click_cursor_cont .pic strong{ color:#d7252f;}
+.gz_cursor .click_cursor_cont .pic b span{ text-decoration:line-through;}
+
+.b-ico1{ background: url(http://www.dooland.com/book/images/book_img/b_gz_ico1.jpg) no-repeat left top;}
+.b-ico2{ background: url(http://www.dooland.com/book/images/book_img/b_gz_ico2.jpg) no-repeat left center;}
+.b-ico3{ background: url(http://www.dooland.com/book/images/book_img/b_gz_ico3.jpg) no-repeat left center;}
+.b-ico4{ background: url(http://www.dooland.com/book/images/book_img/click_ico4.jpg) no-repeat left center; margin-top:5px;}
+.b-ico5{ background: url(http://www.dooland.com/book/images/book_img/click_ico5.jpg) no-repeat left center;}
+.b-ico6{ background: url(http://www.dooland.com/book/images/book_img/click_ico6.jpg) no-repeat left center;}
+.b-ico7{ background: url(http://www.dooland.com/book/images/book_img/click_ico7.jpg) no-repeat left center;}
+.b-ico8{ background: url(http://www.dooland.com/book/images/book_img/click_ico8.jpg) no-repeat left center;}
+.b-ico9{ background: url(http://www.dooland.com/book/images/book_img/click_ico9.jpg) no-repeat left center;}
+.b-ico10{ background: url(http://www.dooland.com/book/images/book_img/click_ico10.jpg) no-repeat left center;}
+/*  *******      图书  大分类 关注排行榜  end  *******  
+/*  ++++++++++++++++++++++++++++++++      图书 end     ++++++++++++++++++++++++++++++++   */
+
+/*  ++++++++++++++++++++++++++++++++      搜索页面 begin   ++++++++++++++++++++++++++++++++   */
+.hot-label{ width:150px; border:1px solid #d7d7d7; height:238px; overflow:hidden;}
+.hot-label ul{ width:140px; margin:10px 5px;}
+.hot-label li{ display:block; float:left; height:24px;}
+.hot-label a{ padding:0 4px; line-height:24px; color:#777; display:block;white-space:nowrap;}
+.hot-label .label01{ color:#4B4A4A; font-size:14px;}
+
+.cooper{ width:182px; height:48px; border:1px solid #d7d7d7; background:url(http://www.dooland.com/magazine/images/ebook.jpg) no-repeat top left;}
+.cooper a{ float:left;margin: 25px 0px 0 0px;}
+.cooper a img{ padding:0 9px;}
+.lines_01{background:url(http://www.dooland.com/magazine/images/header_fg.jpg) no-repeat right center;padding:0 2px;}
+
+.small_title{ width:182px; height:40px;border:1px solid #d7d7d7; border-top:none; border-bottom:none;}
+.small_title li{ width:91px; float:left; line-height:40px; text-align:center; }
+.small_title a{ color:#707070; padding:2px 11px;}
+.small_title .on{color:#d7252e; font-weight:bold;}
+
+.won-activity{ width:182px; height:148px;border:1px solid #d7d7d7; }
+.won-activity .title{ width:182px; height:32px; font-weight:bold; text-indent:10px; color:#333232; line-height:32px;}
+.won-activity ul{ width:162px; padding:0 0 0 10px;}
+.won-activity li{ width:162px; height:22px; overflow:hidden; line-height:22px;background:url(http://www.dooland.com/magazine/images/gg_list_bg.jpg) no-repeat left center; padding-left:8px;}
+.won-activity a{ color:#333333;}
+
+.Sort-tit{ float:left;height:17px;margin-top:12px;}
+.Sort{ width: 132px; height:17px;border: 1px solid #D7D7D7; border-right:none; background:#fff; float:left; margin-top:10px; }
+.Sort .Sort-news{ width:43px; height:17px; float:left; background:url(http://www.dooland.com/magazine/images/category/Sort-news-bg.jpg) no-repeat 90% 50%;border-right: 1px solid #D7D7D7; line-height:17px; text-indent:3px; }
+.Sort-news-on{width:43px; height:17px; background:url(http://www.dooland.com/magazine/images/category/Sort-news-bg-on.jpg) no-repeat 90% 50%; float:left; line-height:17px; text-indent:3px;border-right: 1px solid #D7D7D7;  }
+
+.sort-right .num{ width:45px; float:left; height:20px; line-height:20px; }
+.sort-right .Previous{ width:20px; height:20px; float:left;}
+.sort-right .Next-page{ width:59px; height:20px; float:left; margin-left:5px;}
+
+.search-page{ width:628px; height:40px;text-align:center; padding:20px 0; float:left; _float:none;}
+.search-page a{ padding:7px 10px; border:1px solid #d7d7d7; color:#4a4b4b;}
+.search-page a:hover,.search-page .on{ color:#D7252F;border:1px solid #D7252F;}
+/*  ++++++++++++++++++++++++++++++++      搜索页面 end     ++++++++++++++++++++++++++++++++   */

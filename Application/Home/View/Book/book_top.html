@@ -1,0 +1,135 @@
+<include file="Public/header" />
+<link rel="stylesheet" href="__CSS__/css_top/zm_base.css?v=20150225" />
+<link rel="stylesheet" href="__CSS__/css_top/lhl_base.css?v=20150225" />
+<link rel="stylesheet" href="__CSS__/css_top/lhl_End.css?v=20150225" />
+<link rel="stylesheet" href="__CSS__/css_top/ranking2012.css?v=20150225" />
+<link rel="stylesheet" href="__CSS__/css_top/zm_top2011.css?v=20150225" />
+<link rel="stylesheet" href="__CSS__/css_top/lhl_common.css?v=20150225" />
+
+<style>
+	.mag_sort{
+		width:151px;
+		height:1093px;
+		overflow:scroll;
+	}
+	.mag_sort dl {
+	display: block;
+	border-bottom: 1px solid #ebebeb;
+	height:auto;
+	margin: auto
+}
+.mag_sort dl dt {
+
+	font-weight: bold;
+	height: 26px;
+	line-height: 22px
+}
+.mag_sort dl dt.nobold {
+	font-weight: normal
+}
+.mag_sort dl dt.nobold a {
+	padding-left: 16px
+}
+ .mag_sort dl dd {
+	color: #bfbfbf;
+	line-height: 24px;
+	padding: 0 7px
+}
+.mag_sort dl dd a {
+color:#343;
+	padding: 3px; #
+	padding: 3px 5px;
+	_padding: 3px
+}
+
+	.mag_sort dl dt{margin-left:8px;
+	font-weight: bold;
+	height: 26px;
+	line-height: 22px}
+	.mag_sort dl dt a {color:#243}
+</style>
+<div id="pagetop" style="background: -webkit-gradient(linear, left top, left bottom, from(#DDE0DB), color-stop(0.5, rgb(213, 200, 177)), to(rgb(239, 227, 227)));">排行榜</div>
+<!--主体内容 开始-->
+<div class="rankMain">
+		
+	<div class="rankLeft">
+	
+	<div class="mag_sort">
+<foreach name="big_cate" item="vo">
+             	<dl>
+				<dt>
+				<a href="__MODULE__/Index/book_search.html?cate_id={$vo['id']}">{$vo['name']}</a>
+				</dt>
+				<dd>
+	             	<foreach name="small_cate" item="vo1">
+	             		<if condition="$vo1['p_id'] eq $vo['id'] ">
+	             			<a href="__MODULE__/Index/book_search.html?cate_id={$vo1['id']}"> {$vo1['name']} </a>
+	             		</if>
+	             	</foreach>
+             	</dd>
+				</dl>
+             		
+ </foreach> 
+</div>
+
+	</div>
+	  <div class="rankRight girlRank">
+    <h2 >排行榜</h2>
+    <div class="rankRightList">
+    <h3 style="background: -webkit-gradient(linear, left top, left bottom, from(#DDE0DB), color-stop(0.5, rgb(213, 200, 177)), to(rgb(239, 227, 227)));">点击排行</h3>
+    <p>点击排行</p>
+    <div class="rankRightNr1">
+    <ul>
+		<foreach name="top_hit" item="vo" key="k">
+			<li><span style="width:30%;"> {$k+1} &nbsp;&nbsp;</span><a href="__URL__/book_detail.html?book_id={$vo['id']}">{$vo['name']|msubstr=0,8}</a></li>
+		</foreach>
+	</ul>
+    
+    </div>
+    </div>
+    
+    <div class="rankRightList">
+    <h3 style="background: -webkit-gradient(linear, left top, left bottom, from(#DDE0DB), color-stop(0.5, rgb(213, 200, 177)), to(rgb(239, 227, 227)));">关注排行</h3>
+    <p>关注排行</p>
+    <div class="rankRightNr1">
+    <ul>
+		<foreach name="top_atten" item="vo" key="k">
+			<li><span style="width:30%;"> {$k+1} &nbsp;&nbsp;</span><a href="__URL__/book_detail.html?book_id={$vo['id']}">{$vo['name']|msubstr=0,8}</a></li>
+		</foreach>
+	</ul>
+    
+    </div>
+    </div>
+    
+    <div class="rankRightList">
+    <h3 style="background: -webkit-gradient(linear, left top, left bottom, from(#DDE0DB), color-stop(0.5, rgb(213, 200, 177)), to(rgb(239, 227, 227)));">收藏排行</h3>
+    <p>收藏排行</p>
+    <div class="rankRightNr1">
+    <ul>
+		<foreach name="top_collect" item="vo" key="k">
+			<li><span style="width:30%;"> {$k+1} &nbsp;&nbsp;</span><a href="__URL__/book_detail.html?book_id={$vo['id']}">{$vo['name']|msubstr=0,8}</a></li>
+		</foreach>
+	</ul>
+    
+    </div>
+    </div>
+    <div class="rankRightList">
+    <h3 style="background: -webkit-gradient(linear, left top, left bottom, from(#DDE0DB), color-stop(0.5, rgb(213, 200, 177)), to(rgb(239, 227, 227)));">评论排行</h3>
+    <p>评论排行</p>
+    <div class="rankRightNr1">
+    <ul>
+		<foreach name="top_comm" item="vo" key="k">
+			<li><span style="width:30%;"> {$k+1} &nbsp;&nbsp;</span><a href="__URL__/book_detail.html?book_id={$vo['id']}">{$vo['name']|msubstr=0,8}</a></li>
+		</foreach>
+	</ul>
+    
+    </div>
+    </div>
+    
+    
+	</div>
+		
+</div>
+</div>
+<!--主体内容 结束-->
+<include file="Public/fooder" />
